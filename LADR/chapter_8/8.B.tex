@@ -1,0 +1,243 @@
+\textit{Theorem 8.21}{\kaishu 广义特征空间分解}
+
+设$V$是有限维复向量空间且$T \in L(V)$，$\lambda_1,\cdots,\lambda_m$是$T$所有的不同特征值.求证：
+
+(\textit{a})$\forall i=1,\cdots,m,G(\lambda_i,T)$是$T$下的不变子空间.
+
+(\textit{b})$\forall i=1,\cdots,m,(T-\lambda_i I)|_{G(\lambda_i,T)}$是幂零算子.
+
+(\textit{c})$V=\oplus_{i=1}^m G(\lambda_i,T)$.
+
+\textit{lemma/Theorem 8.20}:
+$\Ker p(T)$和$\Img p(T)$是$T$下的不变子空间.
+
+\textit{Proof}:
+    对$\Ker p(T)$和$\Img p(T)$逐一验证即可.
+    \begin{align*}
+        &\forall v \in \Ker p(T),p(T)(Tv)=T(p(T)v)=0 \Rightarrow Tv \in \Ker p(T) \\
+        &\forall v \in \Img p(T),\exists u \in V,p(T)u=v \Rightarrow Tv=T(p(T)u)=p(T)(Tu),Tv \in \Img p(T)
+    \end{align*}
+\textit{a.Proof}:
+考虑$p(z)=(z-\lambda_i)^n$，从而$\Ker p(T)=G(\lambda_i,T)$.
+
+根据引理，$G(\lambda_i,T)$是$T$下的不变子空间.
+
+\textit{b.Proof}:
+$\Ker (T-\lambda_i I)^n=G(\lambda_i,T)$，显然$(T-\lambda_i I)|_{G(\lambda_i,T)}$是幂零算子.
+
+\textit{c.Proof}:
+使用第二数学归纳法.当$n=1$时，$V=G(\lambda,T)$，命题成立.
+
+现在给出假设：对于任意有限维复向量空间$U$和$R \in L(U)$满足$\mydim U<\mydim V=n$，
+
+$R$的所有特征值分别为$\mu_1,\cdots,\mu_\zeta$，
+都有$U=\oplus_{i=1}^\zeta G(\mu_i,R)$.
+
+则当$\mydim V=n$时，首先有$V=\Ker (T-\lambda_1 I)^n \oplus \Img (T-\lambda_i I)^n$.
+不妨令$U=\Img (T-\lambda_i I)^n$.
+
+根据引理，$U$是$T$下的不变子空间，且满足$\mydim U<\mydim V$，因此$T|_U$存在.
+
+这满足我们的归纳假设，由于$T|_U$的所有特征值是$\lambda_2,\cdots,\lambda_m$，
+得到$U=\oplus_{i=2}^m G(\lambda_i,T|_U)$.
+
+以下将证明$\forall i=2,\cdots,m,G(\lambda_i,T) \subseteq G(\lambda_i,T|_U)$，
+设$\forall i=2,\cdots,m,v_i^\alpha \in G(\lambda_i,T) \subseteq V$.
+
+由于$V=G(\lambda_1,T) \oplus U=G(\lambda_1,T) \oplus_{j=2}^m G(\lambda_i,T|_U)$，
+
+故$\exists v_j^\beta \in G(\lambda_i,T|_U),v_i^\alpha=v_1^\alpha+\sum_{j=2}^m v_j^\beta$.
+因而$v_i^\alpha-v_i^\beta=v_1^\alpha+\sum_{j=2}^m v_j^\beta(j \ne i)$.
+
+根据定理8.19，若这些向量为$T$的广义特征向量，那么它们必须线性无关.
+
+然而它们的系数均为$1$，因此它们只能为零向量，这表明$v_i^\alpha-v_i^\beta=v_1^\alpha=v_j^\beta=0$.
+
+因此$v_i^\alpha=v_i^\beta \in G(\lambda_i,T|_U)$，即$G(\lambda_i,T) \subseteq G(\lambda_i,T|_U)$.
+
+结合$G(\lambda_i,T|_U) \subseteq G(\lambda_i,T)$，得到$G(\lambda_i,T|_U)=G(\lambda_i,T)$.
+
+于是$U=\oplus_{i=2}^m G(\lambda_i,T),V=G(\lambda_1,T) \oplus U=\oplus_{i=1}^m G(\lambda_i,T)$，证毕.
+
+\newpage
+
+\textit{Theorem 8.33}{\kaishu 可逆算子的平方根}
+设$V$是有限维复向量空间，$T \in L(V)$是可逆算子.
+
+证明：$T$存在一个平方根$R$，使得$R^2=T$.
+
+\textit{lemma/Theorem 8.31}:
+若$N \in L(V)$是幂零算子，则$I+N$有一个平方根$R$.
+
+\textit{Proof}:
+根据$\sqrt{1+x}=\sum_{i=1}^\infty a_ix^i,a_0=1$，
+可以猜想$I+N$的平方根具有类似形式
+    \begin{align*}
+        R=\sum_{i=1}^{m-1} a_iN^i,a_0=1,N^m=0
+    \end{align*}
+因此尝试对左右两边平方，得到
+    \begin{align*}
+        I+N = (\sum_{i=1}^{m-1} a_iN^i)^2 
+            = I+2a_1N+\sum_{i=2}^{m-1} (2a_i+f(a_1,\cdots,a_{i-1}))N^i
+    \end{align*}
+显然$a_1=1/2$.对于第$i$项，其中的$f(a_1,\cdots,a_{i-1})$是已知的.
+
+因此只需解出$a_i$，使得$2a_i+f(a_1,\cdots,a_{i-1})=0$即可.
+
+\textit{Theorem.Proof}:
+设$\lambda_1,\cdots,\lambda_m$是$T$的所有不同特征值.
+
+根据\textit{Theorem 8.21.b}，$N_i=(T-\lambda_i I)|_{G(\lambda_i,T)}$是幂零算子.
+
+因此可以将$T|_{G(\lambda_i,T)}$分解为
+    \begin{align*}
+        \forall i=1,\cdots,m,T|_{G(\lambda_i,T)}=\lambda_i(I+N_i/\lambda_i)
+    \end{align*}
+由于$T$是可逆变换，因而$\lambda_1,\cdots,\lambda_m \ne 0$，该等式始终有意义.
+
+因此根据引理，$T|_{G(\lambda_i,T)}$有平方根$R_i$.
+
+由于$V=\oplus_{i=1}^m G(\lambda_i,T)$，
+因此$\forall v \in V,\exists u_i \in G(\lambda_i,T),v=\sum_{i=1}^m u_i$.定义$R$为
+    \begin{align*}
+        Rv=\sum_{i=1}^m R_iu_i i=1,\cdots,m \Rightarrow
+        R^2v=\sum_{i=1}^m R_i^2 u_i=\sum_{i=1}^m T|_{G(\lambda_i,T)}u_i=Tv
+    \end{align*}
+因此$R$是$T$的一个平方根.
+
+\newpage
+
+\textit{3.}
+设$T,S \in L(V)$，且$S$是可逆算子.证明：$T$和$S^{-1}TS$的相同特征值有相同的重数.
+
+\textit{Proof}:
+根据\textit{5.A.15}，$T$和$S^{-1}TS$拥有相同的特征值，设$\lambda$是其中之一.
+
+现在考虑$(S^{-1}TS-\lambda I)^{\mydim V}$.根据\textit{5.B.5}，
+    \begin{align*}
+        &(S^{-1}TS-\lambda I)^{\mydim V}=(S^{-1}TS-\lambda S^{-1}S)^{\mydim V}=(S^{-1}(TS-\lambda S))^{\mydim V} \\
+        &=(S^{-1}(T-\lambda I)S)^{\mydim V}=S^{-1}(T-\lambda I)^{\mydim V}S
+    \end{align*}
+对于$v \in \Ker G(\lambda,T)$，考虑$S^{-1}v$，有
+$(S^{-1}(T-\lambda I)^{\mydim V}S)(S^{-1}v)=S((T-\lambda I)^{\mydim V}v)=0$.
+
+因此$S^{-1}(G(\lambda,T)) \subseteq G(\lambda,S^{-1}TS)$，
+同理$S(G(\lambda,S^{-1}TS)) \subseteq G(\lambda,T)$.
+
+从而$\mydim G(\lambda,T)=\mydim G(\lambda,S^{-1}TS)$.
+
+\hspace*{\fill}
+
+\textit{5.}
+设$V$是复向量空间且$T \in L(V)$.
+
+求证：$T$有由特征向量组成的基等价于$T$的所有广义特征向量都是特征向量.
+
+\textit{Proof}:
+必要性：根据定理8.23，$T$有一组由广义特征向量组成的基，
+而$T$的所有广义特征向量都是特征向量，从而$T$有由特征向量组成的基.
+
+充分性：设$\lambda_1,\cdots,\lambda_m$是$T$的不同特征值.
+
+根据定理5.41，$T$有由特征向量组成的基等价于$V=\oplus_{i=1}^m E(\lambda_i,T)$.
+
+根据定理8.21，$V=\oplus{i=1}^m G(\lambda_i,T)$.
+
+由定理8.13指出的广义特征向量的无关性，得$\forall i=1,\cdots,m,G(\lambda_i,T)=E(\lambda_i,T)$.
+
+即$T$的所有广义特征向量都是特征向量，证毕.
+
+\hspace*{\fill}
+
+\textit{7.}
+设$V$是复向量空间且$T \in L(V)$，求证：$\forall T \in L(V),\exists S \in L(V),S^3=T$.
+
+\textit{Proof}:
+参考引理8.31的证明，猜想$I+N$的立方根也具有形式
+    \begin{align*}
+        R=\sum_{i=1}^{m-1} a_iN^i,a_0=1,N^m=0
+    \end{align*}
+令$R^3=I+N$，得到
+    \begin{align*}
+        I+N=I+3a_1N+\sum_{i=2}^{m-1} (2a_i+f(a_1,\cdots,a_{i-1}))N^i
+    \end{align*}
+得到$a_1=1/3$，依次解出剩下的$a_2,\cdots,a_{m-1}$即可，
+下设$\lambda_1,\cdots,\lambda_m$是$T$的不同特征值.
+
+考虑幂零算子$N_i=(T-\lambda_i I)|_{G(\lambda,T)}$，
+将$T|_{G(\lambda_i,T)}$分解为$\lambda_i(I+N_i/\lambda_i)$.
+
+从而$\forall i=1,\cdots,m$，$N_i$都有立方根$R_i$.
+
+由于$V=\oplus_{i=1}^m G(\lambda_i,T)$，
+因此$\forall v \in V,\exists! u_i \in G(\lambda_i,T),v=\sum_{i=1}^m u_i$.
+
+定义$R$为$Rv=\sum_{i=1}^m R_iu_i$，则$R$是$T$的一个立方根，证毕.
+
+\newpage
+
+\textit{10.}
+设$V$是有限维复向量空间且$T \in L(V)$.
+
+求证：存在$D,N \in L(V)$满足$T=D+N$且$D$可对角化，$N$是幂零算子，$DN=ND$.
+
+\textit{Proof}:
+设$\lambda_1,\cdots,\lambda_m$是$T$的不同特征值，考虑$T|_{G(\lambda_i,T)}$.
+
+令$D_i=\lambda_i I|_{G(\lambda_i,T)},N_i=(T-\lambda_i I)|_{G(\lambda_i,T)}$，
+显然$D_i$可对角化，$N_i$是幂零算子.
+
+根据定理8.21，$V=\oplus_{i=1}^m G(\lambda_i,T)$.
+因此$\forall v \in V,\exists! v_i \in G(\lambda_i,T),v=\sum_{i=1}^m v_i$.
+
+分别定义$D$和$N$为$Dv=\sum_{i=1}^m D_iv_i,Nv=\sum_{i=1}^m N_iv_i$.
+
+$M(D)$只有对角线元素不为$0$，即$D$可对角化；$M(N)$的对角线元素均为$0$，即$N$是幂零算子.
+
+下证$DN=ND$.考虑$\forall v \in V$，有
+    \begin{align*}
+        (ND)v=N\sum_{i=1}^m D_iv_i=\sum_{i=1}^m \lambda_iN_iv_i=(DN)v
+    \end{align*}
+
+\hspace*{\fill}
+
+\textit{11.}
+设$V$是有限维复向量空间且$T \in L(V)$.
+
+设$v_1,\cdots,v_n$是$V$的一组基，并满足$M(T,(v_1,\cdots,v_n))$是上三角矩阵.
+
+求证：$T$的每个特征值$\lambda$在矩阵对角线上出现的次数即为$\lambda$作为$T$的特征值的重数.
+
+\textit{Proof}:
+设$\lambda_1,\cdots,\lambda_m$是$T$的不同特征值，并设矩阵对角线元素依次为$\alpha_1,\cdots,\alpha_n$.
+
+由于$M(T)$是上三角矩阵，故$\forall j=1,\cdots,m,\exists i=1,\cdots,n,\alpha_j=\lambda_i$.
+
+将$\lambda_j$在矩阵对角线上出现的次数记为$d_i$，则$\sum_{i=1}^m d_i=n$.
+
+现在考虑$(T-\lambda_i I)^n$.显然$M((T-\lambda_i I)^n)$也是上三角矩阵，
+
+且其对角线元素依次为$(\alpha_1-\lambda_i)^n,\cdots,(\alpha_n-\lambda_i)^n$.
+显然，其中有$d_i$个元素为$0$.
+
+将剩下的非零元素标记为$\alpha_1',\cdots,\alpha_{n-d_i}'$，
+其对应的基向量也标记为$v_1',\cdots,v_{n-d_i}'$.
+
+另将$\forall k=1,\cdots,n-d_i,v_k'$的前一个基向量依次标记为$v_k''$.
+
+因此$(T-\lambda_i)^n v_k'=\alpha_k'v_k'+u_k$，其中$u_k \in \myspan (v_1,\cdots,v_k'')$，
+即$(T-\lambda_i)^n v_k' \notin \myspan (v_1,\cdots,v_k'')$.
+
+根据\textit{2.A.11}，$(T-\lambda_i)^n v_1',\cdots,(T-\lambda_i)^n v_{n-d_i}'$线性无关.
+
+故$\myspan ((T-\lambda_i)^n v_1',\cdots,(T-\lambda_i)^n v_{n-d_i}') \subseteq \Img (T-\lambda_i)^n$，
+得$\mydim \Img (T-\lambda_i)^n \geq n-d_i$.
+
+由$V=\Ker (T-\lambda_i)^n \oplus \Img (T-\lambda_i)^n,
+\mydim V=\mydim \Ker (T-\lambda_i)^n \oplus \mydim \Img (T-\lambda_i)^n$，
+
+得到$\forall i=1,\cdots,m,\mydim \Ker (T-\lambda_i)^n \leq d_i$，
+从而$\sum_{i=1}^m \mydim \Ker (T-\lambda_i)^n \leq \sum_{i=1}^m d_i=n$.
+
+因此只能有$\forall i=1,\cdots,m,\mydim G(\lambda_i,T)=d_i$.
+
