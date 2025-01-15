@@ -1,0 +1,34 @@
+\textit{Theorem 4.8.}
+设\(p,s \in P(F),s \ne 0\)，则存在唯一的\(q,r \in P(F)\)使得\(p=sq+r,\mydeg r < \mydeg s\).
+
+\textit{Proof}:
+令\(\mydeg p=n,\mydeg s=m\).由\(\mydeg p=\mydeg s+\mydeg q,\mydeg r < \mydeg s\).
+
+因此\(q \in P_{n-m}(F),r \in P_{m-1}(F)\).
+定义\(T:P_{n-m}(F) \times P_{m-1}(F) \rightarrow P_{n}(F)\)为 
+    \begin{equation*}
+        T(q,r)=sq+r=p
+    \end{equation*}
+首先验证该变换是线性变换.
+    \begin{align*}
+        &T(c_1q_1+c_2q_2,c_1r_1+c_2r_2)=s(c_1q_1+c_2q_2)+(c_1r_1+c_2r_2) \\
+        &=c_1(sq_1+r_1)+c_2(sq_2+r_2)=c_1T(q_1,r_1)+c_2T(q_2,r_2)
+    \end{align*}
+如果该变换是一个单射变换，则对于任意给定的\(p,s\)，其商多项式和余数多项式均唯一；
+
+如果该变换是一个满射变换，则对于任意给定的\(p,s\)，都有对应的商多项式和余数多项式.
+
+下面将证明两条性质都是成立的，先从单射开始.
+
+令\(sq+r=p=0\).由于\(\mydeg r < \mydeg sq\)，
+因此\(sq \ne -r \Rightarrow sq=0 \wedge r=0 \Rightarrow q=0 \wedge r=0\).
+
+即\(T\)是单射变换，且下证该变换是满射变换.
+    \begin{align*}
+        &\mydim (P_{n-m}(F) \times P_{m-1}(F))=\mydim P_{n-m}(F)+\mydim P_{m-1}(F) \\
+        &=(n-m+1)+(m-1+1)=n+1=\mydim P_n(F)
+    \end{align*}
+两者采用的标准基一致，因此根据定理2.41，\(\mydim \Img T=\mydim  P_n(F)\)，从而\(T\)是满射变换.
+
+于是\(T\)是可逆变换，存在性和唯一性均得证.
+

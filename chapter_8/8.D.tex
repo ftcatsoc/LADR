@@ -1,0 +1,44 @@
+\textit{Theorem 8.55}\textit{Jordan}{\kaishu 基的存在性}
+考虑有限维复向量空间\(V\)和幂零算子\(N \in L(V)\).
+
+证明：\(V\)存在一些线性无关的向量\(v_1,\cdots,v_n\)，
+
+满足\(N^{m_1}v_1,\cdots,v_1,\cdots,N^{m_n}v_n,\cdots,v_n\)是\(V\)的一组基，
+且\(N^{m_1+1}v_1=\cdots=N^{m_n+1}v_n=0\).
+
+\textit{Proof}:
+使用数学归纳法.考虑\(\mydim V=1\)的情况.取\(\forall v \in V,m=0\)，则\(v\)即为\(V\)的基.
+
+现在假设对于任意的\(W\)满足\(\mydim U<\mydim V\)，都存在一组如上形式的基.
+
+任取\(v_1 \in V\)，考虑一列向量\(v_1,\cdots,N^{m_1}v_1\)，其中\(N^{m_1+1}v_1=0\).
+
+根据\textit{8.A.5}，\(v_1,\cdots,N^{m_1}v_1\)线性无关.令\(U=\myspan (v_1,\cdots,N^{m_1}v_1)\)，
+
+则\(N(U)=\myspan (Nv_1,\cdots,N^{m_1}v_1) \subset U\)，因此\(U\)是\(N\)下的不变子空间.
+
+考虑商空间\(V/U,\mydim (V/U)=\mydim V-\mydim U < \mydim V\)，因此可以对\(V/U\)使用归纳.
+
+构造\(N\)在\(N/U\)上的诱导变换\((N/U) \in L(V/U)\)满足\(\forall v+U \in V/U,(N/U)(v+U)=Nv+U\).
+
+下面验证这个构造的合法性.考虑\(v_1+U=v_2+U \in V/U\)，于是\(v_1-v_2 \in U\).
+
+由于\(U\)是\(N\)下的不变子空间，因而\(N(v_1-v_2)=Nv_1-Nv_2 \in U\)，
+
+得到\(Nv_1+U=Nv_2+U\)，即\((N/U)(v_1+U)=(N/U)(v_2+U)\).
+
+随后验证\((N/U)\)是线性变换，依旧考虑\(v_1+U,v_2+U \in V/U\).
+    \begin{align*}
+        &(N/U)(c_1(v_1+U)+c_2(v_2+U))=(N/U)((c_1v_1+c_2v_2)+U)=N(c_1v_1+c_2v_2)+U \\
+        &=c_1Nv_1+c_2Nv_2+U=c_1(Nv_1+U)+c_2(Nv_2+U)=c_1(N/U)(v_1+U)+c_2(N/U)(v_2+U) 
+    \end{align*}
+另外，\((N/U)\)也是幂零算子.考虑\(\forall v+U \in V/U\)，则\((N/U)^m(v+U)=N^m v+U\).
+
+由\(N\)是幂零算子得\(\forall v \in V,N^{\mydim V}v \in U=0,(N/U)^{\mydim V}(v+U)=0+U \in \Ker (N/U)^{\mydim V}\).
+
+对\(V/U\)使用归纳，即\((N/U)^{m_2}(v_2+U),\cdots,v_2+U,\cdots,(N/U)^{m_n}(v_n+U),\cdots,v_n+U\)
+
+是\(V/U\)的一组基，且满足\((N/U)^{m_2+1}(v_2+U)=\cdots=(N/U)^{m_n+1}(v_n+U)=0\).
+
+根据\textit{3.E.13}，\(N^{m_1}v_1,\cdots,v_1,\cdots,N^{m_n}v_n,\cdots,v_n\)即为\(V\)的一组基.
+
