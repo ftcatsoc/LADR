@@ -40,10 +40,10 @@
         &=c^\alpha \sum_{i=1}^m(S_i^\alpha \circ R_i)+c^\beta \sum_{i=1}^m(S_i^\beta \circ R_i)
         =c^\alpha \Gamma(S^\alpha)+c^\beta \Gamma(S^\beta)
     \end{align*}
-考虑构造其逆变换.定义\(R_j' \in L(V^n)\)为\(R_j'(v)=(0,\cdots,v_j,\cdots,0)\).验证\(R_j'\)的线性性.
+考虑构造其逆变换.定义\(R'_j \in L(V^n)\)为\(R'_j(v)=(0,\cdots,v_j,\cdots,0)\).验证\(R'_j\)的线性性.
 
-\(R_j'(c^\alpha v^\alpha+c^\beta v^\beta)=(0,\cdots,c^\alpha v_j^\alpha+c^\beta v_j^\beta,\cdots,0)\)
-\(=c^\alpha R_j' v^\alpha+c^\beta R_j' v^\beta\).
+\(R'_j(c^\alpha v^\alpha+c^\beta v^\beta)=(0,\cdots,c^\alpha v_j^\alpha+c^\beta v_j^\beta,\cdots,0)\)
+\(=c^\alpha R'_j v^\alpha+c^\beta R'_j v^\beta\).
 
 定义\(S_j \in L(V_j,W)\)为\(S_jv_j=(T \circ R_j)(v)\)，其中\(T \in L(\prod_{i=1}^m V_i,W)\).
 
@@ -54,10 +54,10 @@
     \end{align*}
 下面验证\(\psi \circ \Gamma\)和\(\Gamma \circ \psi\)是单位变换.
     \begin{align*}
-        &\psi(\Gamma(S))=\psi(\sum_{i=1}^m S_i \circ R_i)=\psi \sum_{i=1}^m (T(R_i'v))
-        =\psi(\sum_{i=1}^m T \circ R_i')=\psi(T)=S \\
+        &\psi(\Gamma(S))=\psi(\sum_{i=1}^m S_i \circ R_i)=\psi \sum_{i=1}^m (T(R'_iv))
+        =\psi(\sum_{i=1}^m T \circ R'_i)=\psi(T)=S \\
         &(\Gamma(\psi(T)))v=(\Gamma(S))v=\sum_{i=1}^m S_iv_i
-        =\sum_{i=1}^m (T \circ R_i')(v)=T\sum_{i=1}^m (R_i'v)=Tv
+        =\sum_{i=1}^m (T \circ R'_i)(v)=T\sum_{i=1}^m (R'_iv)=Tv
     \end{align*}
 
 \newpage

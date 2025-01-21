@@ -220,17 +220,17 @@
 且其对角线元素依次为\((\alpha_1-\lambda_i)^n,\cdots,(\alpha_n-\lambda_i)^n\).
 显然，其中有\(d_i\)个元素为\(0\).
 
-将剩下的非零元素标记为\(\alpha_1',\cdots,\alpha_{n-d_i}'\)，
-其对应的基向量也标记为\(v_1',\cdots,v_{n-d_i}'\).
+将剩下的非零元素标记为\(\alpha'_1,\cdots,\alpha'_{n-d_i}\)，
+其对应的基向量也标记为\(v'_1,\cdots,v'_{n-d_i}\).
 
-另将\(\forall k=1,\cdots,n-d_i,v_k'\)的前一个基向量依次标记为\(v_k''\).
+另将\(\forall k=1,\cdots,n-d_i,v'_k\)的前一个基向量依次标记为\(v''_k\).
 
-因此\((T-\lambda_i)^n v_k'=\alpha_k'v_k'+u_k\)，其中\(u_k \in \myspan (v_1,\cdots,v_k'')\)，
-即\((T-\lambda_i)^n v_k' \notin \myspan (v_1,\cdots,v_k'')\).
+因此\((T-\lambda_i)^n v'_k=\alpha'_kv'_k+u_k\)，其中\(u_k \in \myspan (v_1,\cdots,v''_k)\)，
+即\((T-\lambda_i)^n v'_k \notin \myspan (v_1,\cdots,v''_k)\).
 
-根据\textit{2.A.11}，\((T-\lambda_i)^n v_1',\cdots,(T-\lambda_i)^n v_{n-d_i}'\)线性无关.
+根据\textit{2.A.11}，\((T-\lambda_i)^n v'_1,\cdots,(T-\lambda_i)^n v'_{n-d_i}\)线性无关.
 
-故\(\myspan ((T-\lambda_i)^n v_1',\cdots,(T-\lambda_i)^n v_{n-d_i}') \subseteq \Img (T-\lambda_i)^n\)，
+故\(\myspan ((T-\lambda_i)^n v'_1,\cdots,(T-\lambda_i)^n v'_{n-d_i}) \subseteq \Img (T-\lambda_i)^n\)，
 得\(\mydim \Img (T-\lambda_i)^n \geq n-d_i\).
 
 由$V=\Ker (T-\lambda_i)^n \oplus \Img (T-\lambda_i)^n,

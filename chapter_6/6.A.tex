@@ -83,7 +83,7 @@
 \hspace*{\fill}
 
 \textit{23.}
-设\(V_1,\cdots,V_m\)是内积空间.证明：\(V_1 \times \cdots \times V_m\)上一个合法的内积定义是
+设\(V_1,\cdots,V_m\)是内积空间.证明：\(\prod_{i=1}^m V_i\)上一个合法的内积定义是
     \begin{align*}
         \ip{(u_1,\cdots,u_m)}{(v_1,\cdots,v_m)}=\sum_{i=1}^m \ip{u_i}{v_i}
     \end{align*}
@@ -93,13 +93,13 @@
 当\(\sum_{i=1}^m \ip{v_i}{v_i}=0\)时，有\(\forall i=1,\cdots,m,\ip{v_i}{v_i}=0\)，从而\(v_i=0\).
 
 左变元线性：设\(u^\alpha=(u_1^\alpha,\cdots,u_m^\alpha),u^\beta=(u_1^\beta,\cdots,u_m^\beta),\)
-\(v=(v_1,\cdots,v_m) \in V_1 \times \cdots \times V_m\).
+\(v=(v_1,\cdots,v_m) \in \prod_{i=1}^m V_i\).
     \begin{align*}
         \ip{\lambda u^\alpha+\mu u^\beta}{v}=\sum_{i=1}^m \ip{\lambda u_i^\alpha+\mu u_i^\beta}{v_i}
         =\lambda \sum_{i=1}^m \ip{u_i^\alpha}{v_i}+\mu \sum_{i=1}^m \ip{u_i^\beta}{v_i}
         =\lambda \ip{u^\alpha}{v}+\mu \ip{u^\beta}{v} 
     \end{align*}
-共轭对称性：设\(u=(u_1,\cdots,u_m),v=(v_1,\cdots,v_m) \in V_1 \times \cdots \times V_m\)，
+共轭对称性：设\(u=(u_1,\cdots,u_m),v=(v_1,\cdots,v_m) \in \prod_{i=1}^m V_i\)，
 
 从而\(\overline{u}=(\overline{u_1},\cdots,\overline{u_m}),\overline{v}=(\overline{v_1},\cdots,\overline{v_m})\).
     \begin{align*}

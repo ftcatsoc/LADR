@@ -1,0 +1,110 @@
+\textit{Theorem 6.31 Gram-Schmidt}{\kaishu 正交化}
+
+设\(v_1,\cdots,v_m\)是内积空间\(V\)中线性无关的向量组，构造正交向量组\(u_1,\cdots,u_m\).
+    \begin{align*}
+        u_1=v_1,\forall i=2,\cdots,m,u_i=v_i-\sum_{j=1}^{i-1} \dfrac{\ip{v_i}{u_j}}{\ip{u_j}{u_j}}u_j
+    \end{align*}
+令\(\forall i=1,\cdots,m,e_i=\dfrac{u_i}{\norm{u_i}}\)，则\(e_1,\cdots,e_m\)规范正交.
+
+\textit{Proof}:
+由于\(\forall i=1,\cdots,m,v_i \notin \myspan(v_1,\cdots,v_{i-1})\)，故\(u_i \ne 0,\norm{u_i} \ne 0\).
+
+因此\(\forall i=1,\cdots,m,\norm{e_i}=1\)，故只需证明\(u_1,\cdots,u_m\)正交即可.
+
+根据定理6.14呈现的正交分解，\(\forall j=1,\cdots,i-1,\ip{v_i-\dfrac{\ip{v_i}{u_j}}{\ip{u_j}{u_j}}u_j}{u_j}=0\).
+
+因此\(\forall j=1,\cdots,i-1,\ip{u_i}{u_j}=0\).因此\(u_1,\cdots,u_m\)两两正交，证毕.
+
+进一步，有\(\forall i=1,\cdots,m,v_i=u_i+\sum_{j=1}^{i-1} \dfrac{\ip{v_i}{u_j}}{\ip{u_j}{u_j}}u_j \in \myspan(u_1,\cdots,u_i)\).
+
+从而\(\myspan(v_1,\cdots,v_i) \subseteq \myspan(u_1,\cdots,u_i)\).由于两组向量均线性无关且长度相等，
+
+故\(\myspan(v_1,\cdots,v_i)=\myspan(u_1,\cdots,u_i)=\myspan(e_1,\cdots,e_i)\).
+
+\hspace*{\fill}
+
+\textit{Theorem 6.42 Risez}{\kaishu 表示定理}
+设\(V\)是有限维内积空间且\(\varphi\)是\(V\)上的线性泛函.
+
+求证：存在唯一的\(u \in V\)，使得对于任意的\(v \in V\)，都有\(\varphi(v)=\ip{v}{u}\).
+
+\textit{Proof}:
+存在性：设\(e_1,\cdots,e_m\)是\(V\)的一组正交基，从而
+    \begin{align*}
+        \varphi(v)=\varphi(\sum_{i=1}^m \ip{v}{e_i}e_i)=\sum_{i=1}^m \ip{v}{e_i}\varphi(e_i)
+        =\ip{v}{\sum_{i=1}^m \overline{\varphi(e_i)}e_i}=\ip{v}{u}
+    \end{align*}
+因此只需令\(u=\sum_{i=1}^m \overline{\varphi(e_i)}e_i\)即可，存在性得证.
+
+唯一性：若存在\(u_1,\cdots,u_2 \in V\)满足\(\varphi(v)=\ip{v}{u_1}=\ip{v}{u_2}\)，则
+    \begin{align*}
+        0=\ip{v}{u_1}-\ip{v}{u_2}=\ip{v}{u_1-u_2}
+    \end{align*}
+由\(V\)的任意性，取\(v=u_1-u_2\)时得到\(u_1-u_2=0,u_1=u_2\)，唯一性得证.
+
+\newpage
+
+\textit{1*.} \footnote{标*的为第四版上的习题.}
+设\(e_1,\cdots,e_m\)是\(V\)中的一向量组，使得\(\forall a_i \in F,\norm{\sum_{i=1}^m a_ie_i}^2=\sum_{i=1}^m \abs{a_i}^2\).
+
+证明：\(e_1,\cdots,e_m\)是规范正交组．
+
+\textit{Proof}:
+    \begin{align*}
+        \norm{\sum_{i=1}^m a_ie_i}^2=\sum_{i=1}^m \sum_{i=1}^m \ip{a_ie_i}{a_je_j}=\sum_{i=1}^m \abs{a_i}^2
+    \end{align*}
+令\(\forall i \ne i_0,a_i=0\)，可得\(\abs{a_{i_0}}^2\norm{e_{i_0}}^2=\abs{a_{i_0}}^2,\norm{e_{i_0}}=1\).
+因此\(\forall i=1,\cdots,m,\norm{e_i}=1\).
+
+令\(\forall i \ne j,k,a_i=0\)，可得\(\ip{a_je_j}{a_ke_k}+\ip{a_ke_k}{a_je_j}=0\).
+
+从而\(\mathrm{Re}(a_j\overline{a_k}\ip{e_j}{e_k})=0\).由\(a_j,a_k\)的任意性，必有\(\ip{e_j}{e_k}=0\).
+
+从而\(e_1,\cdots,e_m\)是规范正交组，证毕.
+
+\hspace*{\fill}
+
+\textit{4.}
+设\(n \in N^*\).求证：向量空间\(C[-\pi,\pi]\)中的
+    \begin{align*}
+        \dfrac{1}{\sqrt{2\pi}},\dfrac{\cos x}{\sqrt{\pi}},\cdots,\dfrac{\cos nx}{\sqrt{\pi}},
+        \dfrac{\sin x}{\sqrt{\pi}},\cdots,\dfrac{\sin nx}{\sqrt{\pi}}
+    \end{align*}
+规范正交，其内积定义为\(\ip{f}{g}=\int_{-\pi}^{\pi}f(x)g(x)dx\).
+
+\textit{Proof}:
+先证明其范数均为\(1\).
+    \begin{equation*}
+        \begin{array}{cc}
+            \begin{aligned}
+                \norm{\dfrac{\cos kx}{\sqrt{\pi}}}^2 &= \int_{-\pi}^{\pi}(\dfrac{\cos kx}{\sqrt{\pi}})^2dx
+                =\dfrac{1}{\pi} \int_{-\pi}^{\pi} \cos^2 kx \\
+                &=\dfrac{1}{\pi} \int_{-\pi}^{\pi} \dfrac{1+\cos 2kx}{2} \\
+                &=\dfrac{1}{2\pi}(\dfrac{\sin 2k(\pi-\pi)}{2k}+2\pi)=1
+            \end{aligned}
+            &
+            \begin{aligned}
+                \norm{\dfrac{\sin kx}{\sqrt{\pi}}}^2 &= \int_{-\pi}^{\pi}(\dfrac{\sin kx}{\sqrt{\pi}})^2dx
+                =\dfrac{1}{\pi} \int_{-\pi}^{\pi} \sin^2 kx \\
+                &=\dfrac{1}{\pi} \int_{-\pi}^{\pi} \dfrac{1-\cos 2kx}{2} \\
+                &=\dfrac{1}{2\pi}(\dfrac{\sin 2k(\pi-\pi)}{2k}+2\pi)=1
+            \end{aligned}
+        \end{array}
+    \end{equation*}
+随后证明这些函数两两正交.
+    \begin{align*}
+        \ip{\dfrac{\cos k_1x}{\sqrt{\pi}}}{\dfrac{\cos k_2x}{\sqrt{\pi}}}&
+        =\dfrac{1}{2\pi} \int_{-\pi}^{\pi}(\cos((k_1+k_2)x)+\cos((k_1-k_2)x))dx=0 \\
+        \ip{\dfrac{\sin k_1x}{\sqrt{\pi}}}{\dfrac{\sin k_2x}{\sqrt{\pi}}}&
+        =\dfrac{1}{2\pi} \int_{-\pi}^{\pi}(-\cos((k_1+k_2)x)+\cos((k_1-k_2)x))dx=0 \\
+        \ip{\dfrac{\cos k_1x}{\sqrt{\pi}}}{\dfrac{\sin k_2x}{\sqrt{\pi}}}&
+        =\dfrac{1}{2\pi} \int_{-\pi}^{\pi}(-\sin((k_1+k_2)x)+\sin((k_1-k_2)x))dx=0 \\
+        \ip{\dfrac{\sin k_1x}{\sqrt{\pi}}}{\dfrac{\cos k_2x}{\sqrt{\pi}}}&
+        =\dfrac{1}{2\pi} \int_{-\pi}^{\pi}(\sin((k_1+k_2)x)+\sin((k_1-k_2)x))dx=0 \\
+    \end{align*}
+因此它们确实是两两正交且范数为\(1\)的函数，即构成一组规范正交基.
+
+\newpage
+
+
+
