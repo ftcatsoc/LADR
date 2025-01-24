@@ -2,7 +2,7 @@
 设\(T \in L(V)\)满足\(\forall v \in V,\norm{Tv} \leq \norm{v}\).
 求证：\(T-\sqrt{2}I\)可逆.
 
-\textit{Proof}:
+\textit{Proof}
 假设\(T-\sqrt{2}I\)不可逆，则\(\exists u \in V,Tu=\sqrt{2}I\).
 从而\(\norm{Tu}=\norm{\sqrt{2}u} \leq \norm{u}\)，矛盾.
 
@@ -11,7 +11,7 @@
 \textit{7.}
 设\(u,v \in V,a,b \in R\).证明：\(\norm{au+bv}=\norm{bu+av}\)和\(\norm{u}=\norm{v}\)等价.
 
-\textit{Proof}:
+\textit{Proof}
 两边平方，得到
     \begin{align*}
         &a^2\norm{u}^2+\ip{au}{bv}+\ip{bv}{au}+b^2\norm{v}^2=b^2\norm{u}^2+\ip{bu}{av}+\ip{av}{bu}+a^2\norm{v}^2 \\
@@ -26,7 +26,7 @@
 设\(u,v \in V\)满足\(\norm{u} \leq 1,\norm{v} \leq 1\).
 证明：\(\sqrt{1-\norm{u}^2}\sqrt{1-\norm{v}^2} \leq 1-\abs{\ip{u}{v}}\).
 
-\textit{Proof}:
+\textit{Proof}
 利用\textit{Cauchy-Schwarz}不等式，得到
     \begin{align*}
         &\sqrt{1-\norm{u}^2}\sqrt{1-\norm{v}^2} \leq 1-\norm{u}\norm{v} \leq 1-\abs{\ip{u}{v}} \\
@@ -39,7 +39,7 @@
 \textit{12.}
 证明：\(\forall n \in N^*,x_1,\cdots,x_n \in R,(\sum_{i=1}^n x_i)^2 \leq n\sum_{i=1}^n x_i^2\).
 
-\textit{Proof}:
+\textit{Proof}
 考虑\((x_1,\cdots,x_n),(1,\cdots,1) \in R^n\).利用\textit{Cauchy-Schwarz}不等式，得到
     \begin{align*}
         (x_1 \cdot 1+\cdots+x_n \cdot 1)^2 \leq (1^2+\cdots+1^2)(x_1^2+\cdots+x_n^2),
@@ -51,7 +51,7 @@
 \textit{14.}
 设\(u,v \in R^n\).证明：\(\ip{u}{v}=\norm{u}\norm{v}\cos \theta\)，其中\(\theta\)是\(u,v\)的夹角.
 
-\textit{Proof}:
+\textit{Proof}
 注意到\(x,y,x-y\)构成三角形，根据余弦定理，有
     \begin{align*}
         \cos \theta =\dfrac{\norm{x}^2+\norm{y}^2-\norm{x-y}^2}{\norm{x}\norm{y}}
@@ -67,7 +67,7 @@
     \begin{align*}
         \ip{u}{v}=\dfrac{\norm{u+v}^2-\norm{u-v}^2+\norm{u+iv}^2i-\norm{u-iv}^2i}{4}
     \end{align*}
-\textit{Proof}:
+\textit{Proof}
 直接将等式右边展开即可.
     \begin{align*}
         &\norm{u+v}^2=\norm{u}^2+\norm{v}^2+2\mathrm{Re}\ip{u}{v},
@@ -87,7 +87,7 @@
     \begin{align*}
         \ip{(u_1,\cdots,u_m)}{(v_1,\cdots,v_m)}=\sum_{i=1}^m \ip{u_i}{v_i}
     \end{align*}
-\textit{Proof}:
+\textit{Proof}
 正定性：由于\(\forall i=1,\cdots,m,\ip{v_i}{v_i} \geq 0\)，故\(\sum_{i=1}^m \ip{v_i}{v_i} \geq 0\).
 
 当\(\sum_{i=1}^m \ip{v_i}{v_i}=0\)时，有\(\forall i=1,\cdots,m,\ip{v_i}{v_i}=0\)，从而\(v_i=0\).
@@ -115,14 +115,14 @@
 
 (\textit{b})设\(c>0\)且\(\forall t \in R,\norm{f(t)}=c\)，证明：\(\ip{f'(t)}{f(t)}=0\).
 
-\textit{a.Proof}:
+\textit{a.Proof}
     \begin{align*}
         \ip{f(t)}{g(t)}'&=\lim_{h \rightarrow 0}\dfrac{\ip{f(t+h)}{g(t+h)}-\ip{f(t)}{g(t)}}{h} \\
         &=\lim_{h \rightarrow 0}\dfrac{\ip{f(t+h)}{g(t+h)}-\ip{f(t+h)}{g(t)}+\ip{f(t+h)}{g(t)}-\ip{f(t)}{g(t)}}{h} \\
         &=\lim_{h \rightarrow 0}\dfrac{\ip{f(t+h)}{g(t+h)-g(t)}}{h}+\lim_{h \rightarrow 0}\dfrac{\ip{f(t+h)-f(t)}{g(t)}}{h} \\
         &=\ip{f'(t)}{g(t)}+\ip{f(t)}{g'(t)}
     \end{align*}
-\textit{b.Proof}:
+\textit{b.Proof}
 根据\textit{6.A.26.a}，\(\ip{f(t)}{f(t)}'=\ip{f'(t)}{f(t)}+\ip{f(t)}{f'(t)}=2\ip{f'(t)}{f(t)}\).
 
 由于\(\ip{f(t)}{f(t)}\)是常值函数，故\(\ip{f(t)}{f(t)}'=0\)，即\(\ip{f'(t)}{f(t)}=0\).
@@ -134,7 +134,7 @@
 
 求证：离\(w \in V\)最近的向量至多只有一个.
 
-\textit{Proof}:
+\textit{Proof}
 使用反证法.若有\(u \ne v\)满足\(\norm{w-u}=\norm{w-v}=c\)，则考虑\(\norm{w-\dfrac{1}{2}(u+v)}\).
     \begin{align*}
         &\norm{w-\dfrac{1}{2}(u+v)}^2=\dfrac{1}{4}\norm{(w-u)+(w-v)}^2=\dfrac{1}{4}\ip{(w-u)+(w-v)}{(w-u)+(w-v)} \\

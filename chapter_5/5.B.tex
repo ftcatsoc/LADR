@@ -3,7 +3,7 @@
 
 使得线性算子\(T\)的矩阵是上三角矩阵.
 
-\textit{Proof}:
+\textit{Proof}
 使用数学归纳法.\(\mydim V=1\)的情况显然成立.
 
 现在假设对于任意的\(W\)满足\(\mydim W<\mydim V\)，\(W\)都满足条件.
@@ -25,7 +25,7 @@
 设\(T \in L(V)\)且存在\(n \in N^+\)使得\(T^n=0\).
 求证：\(I-T\)是可逆，且\((I-T)^{-1}=\sum_{i=0}^{n-1} T^i\).
 
-\textit{Proof}:
+\textit{Proof}
 \((I-T)\sum_{i=0}^{n-1} T^i=\sum_{i=0}^{n-1} T^i-\sum_{i=1}^n T^i=I-T^n=I\).
 
 \hspace*{\fill}
@@ -33,7 +33,7 @@
 \textit{3.}
 设\(T \in L(V)\)，满足\(T^2=I\)且\(-1\)不是\(T\)的特征值.证明\(T=I\).
 
-\textit{Proof}:
+\textit{Proof}
 \(T^2=I \Rightarrow (T+I)(T-I)=0\)，因此\(1\)和\(-1\)至少有一个是\(T\)的特征值.
 
 而\(-1\)不是\(T\)的特征值，因此\(T=I\).
@@ -43,7 +43,7 @@
 \textit{4.}
 设\(P \in L(V)\)满足\(P^2=P\).证明\(V=\Ker P \oplus \Img P\).
 
-\textit{Proof}:
+\textit{Proof}
 对于\(\forall v \in V,v=Pv+(v-Pv)\).
 
 显然\(Pv \in \Img P\)，且\(P(v-Pv)=(P-P^2)v=0 \Rightarrow v-Pv \in \Ker P\)，因此\(V=\Img P+\Ker P\).
@@ -57,7 +57,7 @@
 
 求证：\(p(STS^{-1})=Sp(T)S^{-1}\)
 
-\textit{Proof}:
+\textit{Proof}
 对于\(Sv \in V\)，有\((STS^{-1})^m (Sv)=(STS^{-1})^{m-1}(S(Tv))=\cdots=(ST^m)v\).
     \begin{align*}
         p(STS^{-1})(Sv)=\sum_{i=0}^m a_i(STS^{-1})^m (Sv) 
@@ -71,7 +71,7 @@
 
 求证：对于任意多项式\(p \in P(F)\)，\(U\)都是\(p(T)\)下的不变子空间.
 
-\textit{Proof}:
+\textit{Proof}
 使用数学归纳法.先验证\(n=1\)的情况.
 
 \(\forall u \in U,(a_0I+a_1T)u=a_0u+a_1(Tu) \in U\)，情况成立.
@@ -90,7 +90,7 @@
 
 令\(p\)是能使得\(p(T)v=0\)的次数最低的多项式.求证：\(p\)的所有零点都是\(T\)的特征值.
 
-\textit{Proof}:
+\textit{Proof}
 使用反证法.设\(\exists \lambda \in F,p(\lambda)=0\)但\(T-\lambda I\)可逆.
 
 根据代数基本定理，存在\(q(T) \in L(V)\)，使得\(p(T)=(T-\lambda I)q(T),\mydeg q<\mydeg p\).
@@ -106,7 +106,7 @@
 
 求证：\(\alpha\)是\(p(T)\)的特征值和存在\(T\)的特征值\(\lambda\)使得\(\alpha=p(\lambda)\)等价.
 
-\textit{Proof}:
+\textit{Proof}
 必要性：若\(Tv=\lambda v\)且\(\alpha=p(\lambda)\)，
 则\(p(T)v=\sum_{i=0}^n a_iT^iv=\sum_{i=0}^n a_i\lambda^iv=p(\lambda)v\).
 
@@ -123,7 +123,7 @@
 
 求证：若\(U\)在\(T\)下不变，则\(U=\{0\}\)或者\(U\)为无限维向量空间.
 
-\textit{Proof}:
+\textit{Proof}
 \(\{0\}\)的情况显然成立.现在假设\(U\)是非零有限维复向量空间.
 
 则\(T|_U \in L(U)\)必有特征值\(\lambda\)，即\(T|_U u=\lambda u\).
@@ -134,7 +134,7 @@
 \textit{16.}
 令\(\varphi:P_n(C) \rightarrow V\)为\(\varphi p=p(T)v\)，以此证明定理5.21.
 
-\textit{Proof}:
+\textit{Proof}
 先证明\(\varphi\)是线性变换.
     \begin{align*}
         \varphi(\lambda p+\mu q)=(\lambda p+\mu q)(T)v=(\lambda p(T)+\mu q(T))v

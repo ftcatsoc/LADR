@@ -6,7 +6,7 @@
     \end{align*}
 令\(\forall i=1,\cdots,m,e_i=\dfrac{u_i}{\norm{u_i}}\)，则\(e_1,\cdots,e_m\)规范正交.
 
-\textit{Proof}:
+\textit{Proof}
 由于\(\forall i=1,\cdots,m,v_i \notin \myspan(v_1,\cdots,v_{i-1})\)，故\(u_i \ne 0,\norm{u_i} \ne 0\).
 
 因此\(\forall i=1,\cdots,m,\norm{e_i}=1\)，故只需证明\(u_1,\cdots,u_m\)正交即可.
@@ -28,7 +28,7 @@
 
 求证：存在唯一的\(u \in V\)，使得对于任意的\(v \in V\)，都有\(\varphi(v)=\ip{v}{u}\).
 
-\textit{Proof}:
+\textit{Proof}
 存在性：设\(e_1,\cdots,e_m\)是\(V\)的一组正交基，从而
     \begin{align*}
         \varphi(v)=\varphi(\sum_{i=1}^m \ip{v}{e_i}e_i)=\sum_{i=1}^m \ip{v}{e_i}\varphi(e_i)
@@ -49,7 +49,7 @@
 
 证明：\(e_1,\cdots,e_m\)是规范正交组．
 
-\textit{Proof}:
+\textit{Proof}
     \begin{align*}
         \norm{\sum_{i=1}^m a_ie_i}^2=\sum_{i=1}^m \sum_{i=1}^m \ip{a_ie_i}{a_je_j}=\sum_{i=1}^m \abs{a_i}^2
     \end{align*}
@@ -72,7 +72,7 @@
     \end{align*}
 规范正交，其内积定义为\(\ip{f}{g}=\int_{-\pi}^{\pi}f(x)g(x)dx\).
 
-\textit{Proof}:
+\textit{Proof}
 先证明其范数均为\(1\).
     \begin{equation*}
         \begin{array}{cc}
@@ -109,7 +109,7 @@
 \textit{8.}
 给出\(q \in P_2(R)\)满足\(\forall p \in P_2(R),\int_{0}^{1} p(x)q(x)dx=\int_{0}^{1} p(x)\cos(\pi x)dx\).
 
-\textit{Proof}:
+\textit{Proof}
 定义\(P_2(R)[0,1]\)上的内积为\(\ip{p}{q}=\int_{0}^{1} p(x)q(x)dx\).
 
 定义\(\varphi \in L(V,F)\)为\(\varphi(p)=\int_{0}^{1} p(x)\cos(\pi x)dx\)，验证\(\varphi\)是线性泛函.
@@ -133,7 +133,7 @@
 
 求证：存在正常数\(c\)，使得\(\forall v,w \in V,\ip{v}{w}_1=c\ip{v}{w}_2\).
 
-\textit{Proof}:
+\textit{Proof}
 给出\(\varphi_1,\varphi_2 \in L(V,F),w_0 \in V\)满足\(\forall v \in V,\varphi_1(v)=\ip{v}{w_0},\varphi_2(v)=\ip{v}{w_0}\).
 
 由于两种内积的正交条件相同，因此\(\Ker \varphi_1=\Ker \varphi_2\).
@@ -157,7 +157,7 @@
 
 求证：\(v_1,\cdots,v_n\)是\(V\)的一组基.
 
-\textit{Proof}:
+\textit{Proof}
 令\(a_1,\cdots,a_n \in F\)满足\(\sum_{i=1}^n a_iv_i=0\)，下证\(a_1=\cdots=a_n=0\).
 考虑\(\norm{a_i(e_i-v_i)}^2\).
     \begin{align*}
@@ -184,23 +184,23 @@
 
 (\textit{d})求证：若\(V\)是在\(R\)上的有限维向量空间，则\(\varphi\)是双射变换.
 
-\textit{a.Proof}:
+\textit{a.Proof}
     \begin{align*}
         \forall v \in V,(\varphi(\lambda u_1+\mu u_2))(v)
         &=\varphi_{\lambda u_1+\mu u_2}(v)=\ip{v}{\lambda u_1+\mu u_2} \\
         &=\lambda \ip{v}{u_1}+\mu \ip{v}{u_2}=\lambda (\varphi(u_1))(v)+\mu (\varphi(u_2))(v)
     \end{align*}
-\textit{b.Proof}:
+\textit{b.Proof}
     \begin{align*}
         \forall v \in V,(\varphi(\lambda u))(v)=\overline{\lambda} \ip{v}{u_1}
         =\overline{\lambda} (\varphi(u))(v) \ne \lambda (\varphi(u))(v)
     \end{align*}
-\textit{c.Proof}:
+\textit{c.Proof}
 令\(\varphi_u=0\)，则\(\forall v \in V,\varphi_u(v)=\ip{v}{u}=0\).取\(v=u\)，则\(\ip{u}{u}=0,u=0\).
 
 因此\(\Ker \varphi=\{0\}\)，即\(\varphi\)是单射变换.
 
-\textit{d.Proof}:
+\textit{d.Proof}
 设\(e_1,\cdots,e_n\)是\(V\)的一组规范正交基，\(\psi_1,\cdots,\psi_n\)是其对偶基.
 
 下证\(\forall i=1,\cdots,n,\varphi(e_i)=\psi_i\).考虑任意的\(v=\sum_{i=1}^n \ip{v}{e_i}e_i\)，有

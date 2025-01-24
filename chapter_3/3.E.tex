@@ -5,7 +5,7 @@
     \end{align*}
 求证：\(T\)是线性变换和\textit{graph of T}是\(V \times W\)的子空间等价.
 
-\textit{Proof}:
+\textit{Proof}
 设\(v_1,v_2 \in V\)，则\((v_1.Tv_1),(v_2,Tv_2) \in \textit{graph of T}\).
 
 若\textit{graph of T}是\(V \times W\)的子空间，则\((v_1+v_2,Tv_1+Tv_2) \in \textit{graph of T}\).
@@ -22,7 +22,7 @@
 \textit{4.}
 证明：\(\prod_{i=1}^m L(V_i,W)\)和\(L(\prod_{i=1}^m V_i,W)\)同构.
 
-\textit{Proof}:
+\textit{Proof}
 定义\(v=(v_1,\cdots,v_m) \in \prod_{i=1}^m V_i\)，其中\(v_i \in V_i\).
 
 定义\(R_j \in L(\prod_{i=1}^m V_i,V_j)\)为\(R_j(v)=v_j\).验证\(R_j\)的线性性.
@@ -65,7 +65,7 @@
 \textit{6.}
 证明：\(V^n\)和\(L(F^n,V)\)同构.
 
-\textit{Proof}:
+\textit{Proof}
 定义\(v=(v_1,\cdots,v_n) \in V^n\)，其中\(v_i \in V_i\)；
 定义\(x=(x_1,\cdots,x_n) \in F^n\)，其中\(x_i \in F\).
 
@@ -96,7 +96,7 @@ $R_j(c^\alpha x^\alpha+c^\beta x^\beta)=c^\alpha x_j^\alpha+c^\beta x_j^\beta
 \textit{7.}
 设\(U\)和\(W\)是\(V\)的子空间，\(v \in V,u \in U,v+U=u+W\)，求证：\(U=W\).
 
-\textit{Proof}:
+\textit{Proof}
 \(U=(u-v)+W\)是\(V\)的子空间，即\(u-v \in W \Rightarrow U=W\).
 
 \hspace*{\fill}
@@ -104,7 +104,7 @@ $R_j(c^\alpha x^\alpha+c^\beta x^\beta)=c^\alpha x_j^\alpha+c^\beta x_j^\beta
 \textit{8.}
 证明：\(V\)的非空子集\(A\)是\(V\)的仿射集的充要条件是\(\forall v,w \in A,\lambda \in F,\lambda v+(1- \lambda)w \in A\).
 
-\textit{Proof}:
+\textit{Proof}
 充分性：设\(A=a+U\)，其中\(a\in A\)且\(U\)是\(V\)的一个子空间.
 
 故存在\(v,w \in A\)，满足\(v=a+u_1,w=a+u_2\)，
@@ -127,7 +127,7 @@ $R_j(c^\alpha x^\alpha+c^\beta x^\beta)=c^\alpha x_j^\alpha+c^\beta x_j^\beta
 \textit{9.}
 设\(A_1\)和\(A_2\)是\(V\)的仿射集.求证：\(A_1 \cap A_2=\phi\)或也是仿射集.
 
-\textit{Proof}:
+\textit{Proof}
 \(A_1 \cap A_2=\phi\)的情况是平凡的.
 
 考虑\(A_1 \cap A_2 \ne \phi\).若\(A_1 \cap A_2=\{v\}\)，则\(A_1 \cap A_2\)是仿射集.
@@ -150,7 +150,7 @@ $R_j(c^\alpha x^\alpha+c^\beta x^\beta)=c^\alpha x_j^\alpha+c^\beta x_j^\beta
 
 (\textit{c})证明：\(V\)中存在某个向量\(v\)和某个满足\(\mydim U \leq m-1\)的子空间\(U\)，使得\(A=v+U\).
 
-\textit{a.Proof}:
+\textit{a.Proof}
 取\(A\)中的两点\(\sum_{i=1}^m \lambda_i v_i,\sum_{i=1}^m \mu_i v_i\)，
 考虑\(\gamma \sum_{i=1}^m \lambda_i v_i+(1-\gamma)\sum_{i=1}^m \lambda_i v_i\).
 
@@ -160,7 +160,7 @@ $R_j(c^\alpha x^\alpha+c^\beta x^\beta)=c^\alpha x_j^\alpha+c^\beta x_j^\beta
 \(\gamma \sum_{i=1}^m \lambda_i v_i+(1-\gamma)\sum_{i=1}^m \mu_i v_i \in A\)，
 即\(A\)是\(V\)的一个仿射集.
 
-\textit{b.Proof}:
+\textit{b.Proof}
 根据\textit{3.E.11.a}，\(A\)是一个仿射集，
 
 因此存在\(u_0 \in V\)和\(V\)的一个子空间\(U\)，满足\(A=u_0+U\).
@@ -178,7 +178,7 @@ $R_j(c^\alpha x^\alpha+c^\beta x^\beta)=c^\alpha x_j^\alpha+c^\beta x_j^\beta
 
 能够包含\(u_1,\cdots,u_m\)的子空间必然包含\(U\)，也即能够包含\(v_1,\cdots,v_m\)的仿射集必然包含\(A\).
 
-\textit{c.Proof}:
+\textit{c.Proof}
 将\textit{3.E.11.a}中的\(u_0\)替换成\(v_1\)，则\(\forall i=2,\cdots,m,u_i=v_i-v_1\).
 
 因此\(A=u_0+U=u_0+\myspan (u_1,\cdots,u_m)=v_1+\myspan (v_2-v_1,\cdots,v_m-v_1)\).
@@ -190,7 +190,7 @@ $R_j(c^\alpha x^\alpha+c^\beta x^\beta)=c^\alpha x_j^\alpha+c^\beta x_j^\beta
 \textit{12.}
 设\(U\)是\(V\)的一个子空间且\(V/U\)是有限维向量空间，求证：\(V\)和\(U \times (V/U)\)同构.
 
-\textit{Proof}:
+\textit{Proof}
 根据定理2.34，存在\(V\)的一个子空间\(W\)，使得\(V=U \oplus W\)，
 
 从而\(\forall v \in V, \exists! u \in U,w \in W,v=u+w\).
@@ -208,7 +208,7 @@ $R_j(c^\alpha x^\alpha+c^\beta x^\beta)=c^\alpha x_j^\alpha+c^\beta x_j^\beta
 
 \(u_1,\cdots,u_n\)是\(U\)的一组基.求证：\(v_1,\cdots,v_m,u_1,\cdots,u_n\)是\(V\)的一组基.
 
-\textit{Proof}:
+\textit{Proof}
 先证\(V=\myspan (v_1,\cdots,v_m,u_1,\cdots,u_n)\).
 
 \(\forall v+U \in V/U, \exists a_i \in F\)，使得\(v+U=\sum_{i=1}^m a_i(v_i+U)=\sum_{i=1}^m a_iv_i+U\).
@@ -235,10 +235,10 @@ $R_j(c^\alpha x^\alpha+c^\beta x^\beta)=c^\alpha x_j^\alpha+c^\beta x_j^\beta
 
 (\textit{b})证明\(F^\infty /U\)是无限维向量空间.
 
-\textit{a.Proof}:
+\textit{a.Proof}
 \(U\)中任意元素的加法或数乘都不会使得其中的非零元素增加到无限多个.
 
-\textit{b.Proof}:
+\textit{b.Proof}
 我们的目标是构造一列无限长的向量\(e_1,\cdots,e_m,\cdots \notin U\)，
 
 使得\(e_1+U,\cdots,e_m+U,\cdots\)线性无关.
@@ -258,7 +258,7 @@ $R_j(c^\alpha x^\alpha+c^\beta x^\beta)=c^\alpha x_j^\alpha+c^\beta x_j^\beta
 
 求证：存在\(V\)的另一个子空间\(W\)，使得\(\mydim W=\mydim V/U\)且\(V=U \oplus W\).
 
-\textit{Proof}:
+\textit{Proof}
 由于\(V/U\)是有限维向量空间，设\(v_1+U,\cdots,v_m+U\)是\(V/U\)的一组基.
 
 从而\(\forall v+U \in V/U,v+U=\sum_{i=1}^m a_i(v_i+U)=\sum_{i=1}^m a_iv_i+U\).
@@ -283,7 +283,7 @@ $R_j(c^\alpha x^\alpha+c^\beta x^\beta)=c^\alpha x_j^\alpha+c^\beta x_j^\beta
 
 求证：存在\(S \in L(V/U,W)\)满足\(T=S \circ \pi\)是\(U \subseteq \Ker T\)的充要条件.
 
-\textit{Proof}:
+\textit{Proof}
 必要性：设存在\(S \in L(V/U,W)\)满足\(T=S \circ \pi\)，
 
 则对于\(\forall u \in U\)，都有\(Tu=S \circ \pi(u)=S(0)=0\).
@@ -309,17 +309,17 @@ $R_j(c^\alpha x^\alpha+c^\beta x^\beta)=c^\alpha x_j^\alpha+c^\beta x_j^\beta
 
 (\textit{c})证明\(\Img  \Gamma=\{T \in L(V,W)|\forall u \in U,Tu=0 \}\).
 
-\textit{a.Proof}:
+\textit{a.Proof}
     \begin{align*}
         &\Gamma(\lambda S_1+\mu S_2)=(\lambda S_1+\mu S_2) \circ \pi \\
         &\lambda S_1 \circ \pi+\mu S_2 \circ \pi=\lambda \Gamma(S_1)+\mu \Gamma(S_2)
     \end{align*}
-\textit{b.Proof}:
+\textit{b.Proof}
 令\(\Gamma(S)(v)=S \circ \pi(v)=S(v+U)=0\).
 
 由于对于\(\forall v+U \in V/U\)，\(S(v+U)=0\)，故\(S=0\)，即\(\Ker  \Gamma=0\)，证毕.
 
-\textit{c.Proof}:
+\textit{c.Proof}
 若\(T \in \Img  \Gamma\)，则\(\exists S \in L(V/U,W)\)，使得\(T=S \circ \pi\).
 
 根据\textit{3.E.18}，\(U \subseteq \Ker T\).

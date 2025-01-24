@@ -5,10 +5,10 @@
 
 (\textit{b})证明：若\(\Img T \subseteq U\)，则\(U\)是\(T\)的不变子空间.
 
-\textit{a.Proof}:
+\textit{a.Proof}
 \(\forall u \in U,Tu=0 \in U\).
 
-\textit{b.Proof}:
+\textit{b.Proof}
 \(\forall u \in U,Tu \in \Img T \subseteq U\).
 
 \hspace*{\fill}
@@ -20,10 +20,10 @@
 
 (\textit{b})证明：\(\Img S\)是\(T\)的不变子空间.
 
-\textit{a.Proof}:
+\textit{a.Proof}
 \(\forall v \in \Ker S,Sv=0 \Rightarrow STv=TSv=0 \Rightarrow Tv \in \Ker S\).
 
-\textit{b.Proof}:
+\textit{b.Proof}
 \(\forall Sv \in \Img S,T(Sv)=S(Tv) \in \Img S\).
 
 \hspace*{\fill}
@@ -31,7 +31,7 @@
 \textit{4.}
 设\(T \in L(V)\)且\(U_1,\cdots,U_m\)都是\(V\)的不变子空间.求证：\(\sum_{i=1}^m U_i\)是 \(V\)的不变子空间.
 
-\textit{Proof}:
+\textit{Proof}
 由于\(\forall u \in \sum_{i=1}^m U_i,\exists u_i \in U_i,u=\sum_{i=1}^m u_i\)且\(U_1,\cdots,U_m\)都是\(V\)的不变子空间，
 
 得到\(\forall i=1,\cdots,m,Tu_i \in U_i,Tu=\sum_{i=1}^m Tu_i \in \sum_{i=1}^m U_i\).
@@ -42,7 +42,7 @@
 设\(T \in L(V)\)且\(U_1,\cdots,U_m\)都是\(V\)的不变子空间.
 求证：\(\bigcap_{i=1}^m U_i\)是 \(V\)的不变子空间.
 
-\textit{Proof}:
+\textit{Proof}
 设\(u \in \bigcap_{i=1}^m U_i\)，则\(\forall i=1,\cdots,m,Tu \in U_i\).
 因此\(\forall u \in \bigcap_{i=1}^m U_i,Tu \in \bigcap_{i=1}^m U_i\)，证毕.
 
@@ -53,7 +53,7 @@
 
 若\(U\)满足对于\(V\)上的任意算子\(T\)，\(U\)都是\(T\)的不变子空间，则有\(U=\{0\}\)或\(U=V\).
 
-\textit{Proof}:
+\textit{Proof}
 由于\(U\)是\(V\)的一个子空间且\(V\)是有限维向量空间，不妨设\(\{0\} \subset U \subset V\).
 
 令\(u_1,\cdots,u_m\)为\(U\)的一组基，\(u_1,\cdots,u_m,v_1,\cdots,v_n\)是\(V\)的一组基.
@@ -67,7 +67,7 @@
 \textit{8.}
 定义\(T \in L(F^2)\)为\(T(w,z)=(z,w)\).给出\(T\)的所有特征值和特征向量.
 
-\textit{Proof}:
+\textit{Proof}
 设\(T(w,z)=\lambda(w,z)\)，得到\(\lambda w=z\)且\(\lambda z=w\)，联立得到\(\lambda_1=1,\lambda_2=-1\).
 
 当\(\lambda=1\)时，对应的特征向量为\((1,1)\)；当\(\lambda=-1\)时，对应的特征向量为\((1,-1)\).
@@ -81,13 +81,13 @@
 
 (\textit{b})给出\(T\)的所有不变子空间.
 
-\textit{a.Proof}:
+\textit{a.Proof}
 \(T(x_1,\cdots,x_n)=(\lambda x_1,\cdots,\lambda x_n)=(x_1,\cdots,nx_n)\).
 因此只能有\(\lambda_i=i,x_{j \ne i}=0\).
 
 故\(T\)共有\(n\)个特征值\(1,\cdots,n\)，第\(i\)个特征值对应的特征向量是\((0,\cdots,1^i,\cdots,0)\).
 
-\textit{b.Proof}:
+\textit{b.Proof}
 设\(e_1,\cdots,e_n\)是\(F^n\)的标准基.
 
 根据\textit{5.A.10.a}，\(\forall i=1,\cdots,n,U_i=\myspan (e_i)\)都是\(T\)的不变子空间.
@@ -99,7 +99,7 @@
 \textit{12.}
 定义\(T \in P_4(R)\)为\((Tp)(x)=xp'(x)\).给出\(T\)的所有特征值和特征向量.
 
-\textit{Proof}:
+\textit{Proof}
 \((Tp)(x)=xp'(x)=\sum_{i=1}^4 ia_ix^i=\lambda p(x)=\lambda \sum_{i=0}^m a_ix_i\).
 
 得到\(a_0=0\)且\(\lambda a_i=i a_i\).
@@ -112,7 +112,7 @@
 
 定义\(P \in L(V)\)为\(P(u+w)=u,u \in U,w \in W\).给出\(T\)的所有特征值和特征向量.
 
-\textit{Proof}:
+\textit{Proof}
 \(P(u+w)=\lambda(u+w)=u \Rightarrow\) \(\lambda=1,w=0\)或\(\lambda=0,u=0\).
 
 因此\(T\)有\(0\)和\(1\)两个特征值，对应的特征向量分别是\(W\)和\(U\)中所有非零向量.
@@ -126,13 +126,13 @@
 
 (\textit{b})给出\(T\)和\(S^{-1}TS\)的特征向量之间的关系.
 
-\textit{a.Proof}:
+\textit{a.Proof}
 设\(\lambda \in F\)和\(v \in V\)满足\(Tv=\lambda v\).
 考虑\(S^{-1}v\).有\((S^{-1}TS)(S^{-1}v)=(S^{-1}T)v=\lambda S^{-1}v\).
 
 因此\(Tv=\lambda v \Rightarrow (S^{-1}TS)(S^{-1}v)=\lambda S^{-1}v\).
 
-\textit{b.Proof}:
+\textit{b.Proof}
 根据\textit{5.A.15.a}，
 \(S^{-1}v\)是\(S^{-1}TS\)的特征向量等价于\(v\)是\(T\)的特征向量.
 
@@ -146,10 +146,10 @@
 
 (\textit{b})证明\(T\)和\(T^{-1}\)有相同的特征向量.
 
-\textit{a.Proof}:
+\textit{a.Proof}
 \(Tv=\lambda v \Rightarrow T^{-1}Tv=\lambda T^{-1}v \Rightarrow T^{-1}v=\lambda^{-1} v\).
 
-\textit{b.Proof}:
+\textit{b.Proof}
 根据\textit{5.A.21.a}，若\(v\)是\(T\)的一个特征向量，则\(v\)也是\(T^{-1}\)的一个特征向量.
 
 \newpage
@@ -157,7 +157,7 @@
 \textit{23.}
 设\(V\)是有限维向量空间且\(S,T \in L(V)\).求证：\(ST\)和\(TS\)有相同的特征值.
 
-\textit{Proof}:
+\textit{Proof}
 设\((ST)v=\lambda v\).考虑\(Tv\)，有\((TS)(Tv)=T((ST)v)=T(\lambda v)=\lambda Tv\).
 
 若\(v \notin \Ker T\)，原式得证；若\(v \in \Ker T\)，则\(ST\)和\(TS\)都有特征值\(0\).
@@ -171,7 +171,7 @@
 
 (\textit{b})矩阵每列元素之和均为\(1\).证明\(1\)是矩阵的特征值.
 
-\textit{a.Proof}:
+\textit{a.Proof}
 不妨先猜测特征向量.定义\(x \in F^n\)为\((1,\cdots,1)^T\).
     \begin{align*}
         (A-I)x=
@@ -182,7 +182,7 @@
     \end{align*}
 因此\(1\)确实是\(T\)的特征值.
 
-\textit{b.Proof}:
+\textit{b.Proof}
     \begin{align*}
         x^T(A-I)=
             \begin{pmatrix}
@@ -199,7 +199,7 @@
 
 \(T \in L(V)\)满足任意维数为\(\mydim V-1\)的子空间都是不变子空间.求证：\(T=\lambda I,\lambda \in F\).
 
-\textit{Proof}:
+\textit{Proof}
 设\(v_1,\cdots,v_m\)是\(V\)的一组基.则\(\exists a_i^j \in F,Tv_j=\sum_{i=1}^m a_i^j v_i\).
 
 我们不妨先考虑所有包含\(\myspan (v_1)\)的且维数为\(\mydim V-1\)的子空间.
@@ -220,7 +220,7 @@
 设\(T \in L(R^3)\)且\(-4,5,\sqrt{7}\)是\(T\)的特征值.
 求证:存在\(x \in R^3\)，使得\((T-9I)x=(-4,5,\sqrt{7})\).
 
-\textit{Proof}:
+\textit{Proof}
 \(T \in L(R^3)\)最多拥有\(3\)个特征值，即\(9\)不是\(T\)的特征值.从而\(T-9I\)可逆，即满射，证毕.
 
 \newpage
@@ -230,7 +230,7 @@
 
 求证：\(v_1,\cdots,v_m\)线性无关等价于\(v_1,\cdots,v_m\)是某\(T \in L(V)\)对应不同特征值的特征向量.
 
-\textit{Proof}:
+\textit{Proof}
 必要性：根据定理5.10证毕.
 
 充分性：由于\(v_1,\cdots,v_m\)线性无关，可以令\(v_1,\cdots,v_m,v_{m+1},\cdots,v_n\)为\(V\)的一组基.
@@ -243,7 +243,7 @@
 设\(\lambda_1,\cdots,\lambda_n \in R\).
 求证：\(e^{\lambda_1 x},\cdots,e^{\lambda_n x}\)在由实值函数组成的函数空间中线性无关.
 
-\textit{Proof}:
+\textit{Proof}
 令\(V=\myspan (e^{\lambda_1 x},\cdots,e^{\lambda_n x})\)，并定义\(T \in L(V)\)为\(Tf=f'\).
 
 由于\((e^{\lambda_i x})'=\lambda_i e^{\lambda_i x}\)，即\(Tf_i=\lambda_i f_i\)，故\(e^{\lambda_i x}\)是\(T\)的特征向量.
@@ -255,6 +255,6 @@
 \textit{33.}
 设\(T \in L(V)\).证明：\(T/(\Img T)=0\).
 
-\textit{Proof}:
+\textit{Proof}
 \(\forall v \in V,(T/(\Img T))(v+(\Img T))=Tv+\Img T=\Img T\).
 

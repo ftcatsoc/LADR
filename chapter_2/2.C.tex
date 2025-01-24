@@ -3,7 +3,7 @@
 
 求证：\(p_0,p_1,\cdots,p_m\)是\(P_m(F)\)的一组基.
 
-\textit{Proof}:
+\textit{Proof}
 使用数学归纳法.先验证\(m=0\)的情况，显然成立.
 
 随后假设\(j=m\)时结论成立，需证\(\myspan (p_0,p_1,\cdots,p_m,p_{m+1})=\myspan (1,x,\cdots,x^m,x^{m+1})\).
@@ -18,7 +18,7 @@
 
 下证\(2^{\circ}\)成立.设选定的\(p_{m+1}=a_{m+1}x^{m+1}+\sum_{i=0}^m a_ix^i(a_{m+1} \ne 0)\).
 
-变形得到\(x^{i+1}=\dfrac{(p_{m+1}-\sum_{i=0}^m a_ix^i)}{a_{m+1}} \in \myspan (1,x,\cdots,x^m,p_{m+1})\).
+变形得到\(x^{i+1}=\dfrac{p_{m+1}-\sum_{i=0}^m a_ix^i}{a_{m+1}} \in \myspan (1,x,\cdots,x^m,p_{m+1})\).
 
 而\(\myspan (p_0,p_1,\cdots,p_m)=\myspan (1,x,\cdots,x^m)\)，
 
@@ -37,7 +37,7 @@
 
 求证：\(\sum_{i=1}^m U_i\)是有限维向量空间，且\(\mydim \sum_{i=1}^m U_i=\sum_{i=1}^m \mydim U_i\).
 
-\textit{Proof}:
+\textit{Proof}
 设\(U_i\)的一组基为\(u_1^i,\cdots,u_{a_i}^i\)，
 则\(\sum_{i=1}^m U_i=\myspan(u_1^1,\cdots,u_{a_1}^1,\cdots,u_{a_m}^1,\cdots,u_{a_m}^m)\).
 

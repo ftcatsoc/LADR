@@ -11,21 +11,21 @@
 \textit{lemma/Theorem 8.20}:
 \(\Ker p(T)\)和\(\Img p(T)\)是\(T\)下的不变子空间.
 
-\textit{Proof}:
+\textit{Proof}
     对\(\Ker p(T)\)和\(\Img p(T)\)逐一验证即可.
     \begin{align*}
         &\forall v \in \Ker p(T),p(T)(Tv)=T(p(T)v)=0 \Rightarrow Tv \in \Ker p(T) \\
         &\forall v \in \Img p(T),\exists u \in V,p(T)u=v \Rightarrow Tv=T(p(T)u)=p(T)(Tu),Tv \in \Img p(T)
     \end{align*}
-\textit{a.Proof}:
+\textit{a.Proof}
 考虑\(p(z)=(z-\lambda_i)^n\)，从而\(\Ker p(T)=G(\lambda_i,T)\).
 
 根据引理，\(G(\lambda_i,T)\)是\(T\)下的不变子空间.
 
-\textit{b.Proof}:
+\textit{b.Proof}
 \(\Ker (T-\lambda_i I)^n=G(\lambda_i,T)\)，显然\((T-\lambda_i I)|_{G(\lambda_i,T)}\)是幂零算子.
 
-\textit{c.Proof}:
+\textit{c.Proof}
 使用第二数学归纳法.当\(n=1\)时，\(V=G(\lambda,T)\)，命题成立.
 
 现在给出假设：对于任意有限维复向量空间\(U\)和\(R \in L(U)\)满足\(\mydim U<\mydim V=n\)，
@@ -69,7 +69,7 @@
 \textit{lemma/Theorem 8.31}:
 若\(N \in L(V)\)是幂零算子，则\(I+N\)有一个平方根\(R\).
 
-\textit{Proof}:
+\textit{Proof}
 根据\(\sqrt{1+x}=\sum_{i=1}^\infty a_ix^i,a_0=1\)，
 可以猜想\(I+N\)的平方根具有类似形式
     \begin{align*}
@@ -84,7 +84,7 @@
 
 因此只需解出\(a_i\)，使得\(2a_i+f(a_1,\cdots,a_{i-1})=0\)即可.
 
-\textit{Theorem.Proof}:
+\textit{Theorem.Proof}
 设\(\lambda_1,\cdots,\lambda_m\)是\(T\)的所有不同特征值.
 
 根据\textit{Theorem 8.21.b}，\(N_i=(T-\lambda_i I)|_{G(\lambda_i,T)}\)是幂零算子.
@@ -110,7 +110,7 @@
 \textit{3.}
 设\(T,S \in L(V)\)，且\(S\)是可逆算子.证明：\(T\)和\(S^{-1}TS\)的相同特征值有相同的重数.
 
-\textit{Proof}:
+\textit{Proof}
 根据\textit{5.A.15}，\(T\)和\(S^{-1}TS\)拥有相同的特征值，设\(\lambda\)是其中之一.
 
 现在考虑\((S^{-1}TS-\lambda I)^{\mydim V}\).根据\textit{5.B.5}，
@@ -133,7 +133,7 @@
 
 求证：\(T\)有由特征向量组成的基等价于\(T\)的所有广义特征向量都是特征向量.
 
-\textit{Proof}:
+\textit{Proof}
 必要性：根据定理8.23，\(T\)有一组由广义特征向量组成的基，
 而\(T\)的所有广义特征向量都是特征向量，从而\(T\)有由特征向量组成的基.
 
@@ -152,7 +152,7 @@
 \textit{7.}
 设\(V\)是复向量空间且\(T \in L(V)\)，求证：\(\forall T \in L(V),\exists S \in L(V),S^3=T\).
 
-\textit{Proof}:
+\textit{Proof}
 参考引理8.31的证明，猜想\(I+N\)的立方根也具有形式
     \begin{align*}
         R=\sum_{i=1}^{m-1} a_iN^i,a_0=1,N^m=0
@@ -181,7 +181,7 @@
 
 求证：存在\(D,N \in L(V)\)满足\(T=D+N\)且\(D\)可对角化，\(N\)是幂零算子，\(DN=ND\).
 
-\textit{Proof}:
+\textit{Proof}
 设\(\lambda_1,\cdots,\lambda_m\)是\(T\)的不同特征值，考虑\(T|_{G(\lambda_i,T)}\).
 
 令\(D_i=\lambda_i I|_{G(\lambda_i,T)},N_i=(T-\lambda_i I)|_{G(\lambda_i,T)}\)，
@@ -208,7 +208,7 @@
 
 求证：\(T\)的每个特征值\(\lambda\)在矩阵对角线上出现的次数即为\(\lambda\)作为\(T\)的特征值的重数.
 
-\textit{Proof}:
+\textit{Proof}
 设\(\lambda_1,\cdots,\lambda_m\)是\(T\)的不同特征值，并设矩阵对角线元素依次为\(\alpha_1,\cdots,\alpha_n\).
 
 由于\(M(T)\)是上三角矩阵，故\(\forall j=1,\cdots,m,\exists i=1,\cdots,n,\alpha_j=\lambda_i\).

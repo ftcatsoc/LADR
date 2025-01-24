@@ -5,10 +5,10 @@
 
 (\textit{b})若\(v_1,\cdots,v_m\)线性无关，则\(T\)具有怎样的性质？
 
-\textit{a.Proof}:
+\textit{a.Proof}
 由于\(\Img T=\myspan (v_1,\cdots,v_m)=V\)，故\(T\)满射.
 
-\textit{b.Proof}:
+\textit{b.Proof}
 令\(T(z_1,\cdots,z_m)=\sum_{i=1}^m z_iv_i=0\).
 
 由于\(v_1,\cdots,v_m\)线性无关，故\(z_1=\cdots=z_m=0\)，即\(\Ker T=\{0\}\)，从而\(T\)单射.
@@ -20,10 +20,8 @@
 
 求证：\(Tv_1,\cdots,Tv_m\)在\(W\)中线性无关.
 
-\textit{Proof}:
-令\(\sum_{i=1}^m a_iTv_i=0\)，\(Tv_1,\cdots,Tv_m\)在\(W\)中线性无关即要证\(a_1=\cdots=a_m=0\).
-
-对于\(\sum_{i=1}^m a_iTv_i=T\sum_{i=1}^m a_iv_i=0\)，由于\(T\)是单射变换，故\(\sum_{i=1}^m a_iv_i=0\).
+\textit{Proof}
+令\(\sum_{i=1}^m a_iTv_i=T\sum_{i=1}^m a_iv_i=0\)，由于\(T\)是单射变换，故\(\sum_{i=1}^m a_iv_i=0\).
 
 而\(v_1,\cdots,v_m\)线性无关，则\(a_1=\cdots=a_m=0\)，证毕.
 
@@ -32,7 +30,7 @@
 \textit{10.}
 设\(V=\myspan (v_1,\cdots,v_m)\)且\(T\in L(V,W)\)，求证：\(\Img T=\myspan (Tv_1,\cdots,Tv_m)\).
 
-\textit{Proof}:
+\textit{Proof}
 \(\Img T=\{Tv|v\in V\}=\{Tv|v\in \myspan(v_1,\cdots,v_m)\}\).
 
 \(\forall u=T\sum_{i=1}^m a_iv_i \in \Img T,u=\sum_{i=1}^m a_iTv_i \in \myspan(Tv_1,\cdots,Tv_m)\)；
@@ -50,7 +48,7 @@
 
 求证：存在\(V\)的一个子空间\(U\)，满足\(U \cap \Ker T=\{0\}\)且\(\Img T=\{Tu|u\in U\}\).
 
-\textit{Proof}:
+\textit{Proof}
 令\(v_1,\cdots,v_m\)为\(\Ker T\)的一组基，故存在线性无关的\(u_1,\cdots,u_n\)，
 
 使得\(v_1,\cdots,v_m,u_1,\cdots,u_n\)为\(V\)的一组基.
@@ -68,7 +66,7 @@
 \textit{17.}
 设\(V\)和\(W\)是有限维的.求证：当且仅当\(\mydim V\leq \mydim W\)，存在单射的\(T\in L(V,W)\).
 
-\textit{Proof}:
+\textit{Proof}
 必要性：若存在单射的\(T\in L(V,W)\)，
 
 则\(\mydim V=\mydim \Ker T+\mydim \Img T=\mydim \Img T \leq \mydim W\)，证毕.
@@ -88,7 +86,7 @@
 
 求证：当且仅当\(\mydim U \geq \mydim V-\mydim W\)，存在\(T\in L(V,W)\)，满足\(\Ker T=U\).
 
-\textit{Proof}:
+\textit{Proof}
 必要性：原式等价于\(\mydim U=\mydim \Ker T=\mydim V-\mydim \Img T \geq \mydim V-\mydim W\)，
 
 即\(\mydim \Img T \leq \mydim W\)，证毕.
@@ -114,7 +112,7 @@
 
 求证：\(T\)是单射变换与存在\(S\in L(W,V)\)满足\(ST\)是在\(V\)上的单位变换等价.
 
-\textit{Proof}:
+\textit{Proof}
 必要性：利用反证法.设\(T\)不是单射变换，
 即\(\exists v_\alpha,v_\beta \in V\)满足\(Tv_\alpha=Tv_\beta\)且\(v_\alpha \ne v_\beta\).
 
@@ -141,7 +139,7 @@
 
 求证：\(T\)是满射变换与存在\(S\in L(W,V)\)满足\(TS\)是在\(W\)上的单位变换等价.
 
-\textit{Proof}:
+\textit{Proof}
 必要性：利用反证法.设\(T\)不是满射变换，即\(\exists w\in W,w\notin \Img T\).
 
 \(\exists S,TS=I\)，从而\(T(Sw)=w,w\in \Img T\)，矛盾，必要性得证.
@@ -166,7 +164,7 @@
 
 求证：\(\Ker T_1 \subseteq \Ker T_2\)的充要条件是\(\exists S \in L(W)\)，使得\(T_2=ST_1\).
 
-\textit{Proof}:
+\textit{Proof}
 必要性：设\(\forall v \in \Ker T_1\)，有\(T_2v=ST_1v=0\).
 
 故\(\forall v \in \Ker T_1, v \in \Ker T_2\)，即\(\Ker T_1 \subseteq \Ker T_2\)，必要性得证.
@@ -199,7 +197,7 @@
 
 求证：\(\Img T_1 \subseteq \Img T_2\)的充要条件是\(\exists S \in L(V)\)，使得\(T_1=T_2S\).
 
-\textit{Proof}:
+\textit{Proof}
 必要性：设\(\forall v \in V\)，有\(T_1v=T_2Sv \in \Img T_2\).
 
 故\(\forall v \in \Img T_1, v \in \Img T_2\)，即\(\Img T_1 \subseteq \Img T_2\)，必要性得证. 
@@ -225,7 +223,7 @@
 
         求证：\(D\)是满射变换.
 
-        \textit{Proof}:
+        \textit{Proof}
         根据\textit{3.B.10}，命题等价于
             \begin{align*}
                 \myspan (D(x),D(x^2),\cdots)=\Img D=P(R)=\myspan (1,x,\cdots)
@@ -241,7 +239,7 @@
 求证：\(\exists \varphi_1,\cdots,\varphi_m \in L(V,F)\)，
 故\(\forall v \in V\)均满足\(Tv=\sum_{i=1}^m{\varphi_i(v)w_i}\).
 
-\textit{Proof}:
+\textit{Proof}
 由于\(w_1,\cdots,w_m\)是\(\Img T\)的一组基，
 故\(\forall Tv \in \Img T,\exists! a_i \in F\)，使得\(Tv=\sum_{i=1}^m a_iw_i\).
 
@@ -260,7 +258,7 @@
 \textit{29.}
 设\(\varphi \in L(V,F)\).设\(u \in V \notin \Ker \varphi\).求证：\(V=\Ker \varphi \oplus \{au|a \in F\}\).
 
-\textit{Proof}:
+\textit{Proof}
 根据\textit{3.B.12}，存在\(V\)的一个子空间\(K\)，
 
 使得\(V=\Ker \varphi \oplus K\)且\(\Img \varphi=\{\varphi (v)|v \in K\}\)，因此只需证明\(K=\{au|a \in F\}\)即可.
@@ -276,7 +274,7 @@
 设\(\varphi_1,\varphi_2 \in L(V,F)\)且\(\Ker  \varphi_1=\Ker  \varphi_2\).
 求证：存在常数\(c \in F\)，使得\(\varphi_1=c \varphi_2\).
 
-\textit{Proof}:
+\textit{Proof}
 若\(\Ker \varphi_1=\Ker \varphi_2=V\)，则\(\varphi_1=\varphi_2=0\)，故\(c\)可以为任意常数.
 
 若\(\exists u \notin \Ker \varphi,u \in V\)，
