@@ -25,27 +25,26 @@
 \textit{Proof}
 定义\(v=(v_1,\cdots,v_m) \in \prod_{i=1}^m V_i\)，其中\(v_i \in V_i\).
 
-定义\(R_j \in L(\prod_{i=1}^m V_i,V_j)\)为\(R_j(v)=v_j\).验证\(R_j\)的线性性.
+定义投影映射\(R_j^P \in L(\prod_{i=1}^m V_i,V_j)\)为\(R_j^P(v)=v_j\).验证\(R_j^P\)的线性性.
 
-\(R_j(c^\alpha v^\alpha+c^\beta v^\beta)=c^\alpha v_j^\alpha+c^\beta v_j^\beta\)
-\(=c^\alpha R_j v^\alpha+c^\beta R_j v^\beta\).
+\(R_j^P(c^\alpha v^\alpha+c^\beta v^\beta)=c^\alpha v_j^\alpha+c^\beta v_j^\beta\)
+\(=c^\alpha R_j^P v^\alpha+c^\beta R_j^P v^\beta\).
 
 定义\(S=(S_1,\cdots,S_m) \in \prod_{i=1}^m L(V_i,W)\)，其中\(S_j \in L(V_j,W)\).
 
-定义\(\Gamma \in L(\prod_{i=1}^m L(V_i,W),L(\prod_{i=1}^m V_i,W))\)为\(\Gamma(S)=\sum_{i=1}^m (S_i \circ R_i)\).
+定义\(\Gamma \in L(\prod_{i=1}^m L(V_i,W),L(\prod_{i=1}^m V_i,W))\)为\(\Gamma(S)=\sum_{i=1}^m S_i \circ R_i^P\).
 验证\(\Gamma\)的线性性.
     \begin{align*}
-        &\Gamma(c^\alpha S^\alpha+c^\beta S^\beta)
-        =\sum_{i=1}^m ((c^\alpha S_i^\alpha+c^\beta S_i^\beta) \circ R_i) \\
-        &=c^\alpha \sum_{i=1}^m(S_i^\alpha \circ R_i)+c^\beta \sum_{i=1}^m(S_i^\beta \circ R_i)
+        \Gamma(c^\alpha S^\alpha+c^\beta S^\beta)
+        =c^\alpha \sum_{i=1}^m(S_i^\alpha \circ R_i^P)+c^\beta \sum_{i=1}^m(S_i^\beta \circ R_i^P)
         =c^\alpha \Gamma(S^\alpha)+c^\beta \Gamma(S^\beta)
     \end{align*}
-考虑构造其逆变换.定义\(R'_j \in L(V^n)\)为\(R'_j(v)=(0,\cdots,v_j,\cdots,0)\).验证\(R'_j\)的线性性.
+定义嵌入映射\(R_j^I \in L(V_j,\prod_{i=1}^m V_i)\)为\(R_j^I(v_j)=(0,\cdots,v_j,\cdots,0)\).验证\(R_j^I\)的线性性.
 
-\(R'_j(c^\alpha v^\alpha+c^\beta v^\beta)=(0,\cdots,c^\alpha v_j^\alpha+c^\beta v_j^\beta,\cdots,0)\)
-\(=c^\alpha R'_j v^\alpha+c^\beta R'_j v^\beta\).
+\(R_j^I(c^\alpha v_j^\alpha+c^\beta v_j^\beta)=(0,\cdots,c^\alpha v_j^\alpha+c^\beta v_j^\beta,\cdots,0)\)
+\(=c^\alpha R_j^I v_j^\alpha+c^\beta R_j^I v_j^\beta\).
 
-定义\(S_j \in L(V_j,W)\)为\(S_jv_j=(T \circ R_j)(v)\)，其中\(T \in L(\prod_{i=1}^m V_i,W)\).
+\(\forall v_i \in V_i\)，定义\(S_i \in L(V_i,W)\)为\(S_i=T \circ R_i^I\)，其中\(T \in L(\prod_{i=1}^m V_i,W)\).
 
 定义\(\psi \in L(L(\prod_{i=1}^m V_i,W),L(\prod_{i=1}^m V_i,W))\)为\(\psi(T)=(S_1,\cdots,S_m)=S\).验证\(\psi\)的线性性.
     \begin{align*}
@@ -54,10 +53,10 @@
     \end{align*}
 下面验证\(\psi \circ \Gamma\)和\(\Gamma \circ \psi\)是单位变换.
     \begin{align*}
-        &\psi(\Gamma(S))=\psi(\sum_{i=1}^m S_i \circ R_i)=\psi \sum_{i=1}^m (T(R'_iv))
-        =\psi(\sum_{i=1}^m T \circ R'_i)=\psi(T)=S \\
-        &(\Gamma(\psi(T)))v=(\Gamma(S))v=\sum_{i=1}^m S_iv_i
-        =\sum_{i=1}^m (T \circ R'_i)(v)=T\sum_{i=1}^m (R'_iv)=Tv
+        &(\psi \circ \Gamma)(S)=\psi \sum_{i=1}^m S_i \circ R_i^P
+        =\psi \sum_{i=1}^m T \circ R_i^I \circ R_i^P=\psi(T)=S \\
+        &(\Gamma \circ \psi)(T)=\Gamma(S)=\sum_{i=1}^m S_i \circ R_i^P
+        =\sum_{i=1}^m T \circ R_i^I \circ R_i^P=T
     \end{align*}
 
 \newpage
@@ -69,10 +68,10 @@
 定义\(v=(v_1,\cdots,v_n) \in V^n\)，其中\(v_i \in V_i\)；
 定义\(x=(x_1,\cdots,x_n) \in F^n\)，其中\(x_i \in F\).
 
-定义\(R_j \in (F^n,V)\)为\(R_j(x)=x_jv_j\).验证\(R_j\)的线性性.
+定义投影映射\(R_j \in (F^n,V)\)为\(R_j(x)=x_jv_j\).验证\(R_j\)的线性性.
 
-$R_j(c^\alpha x^\alpha+c^\beta x^\beta)=c^\alpha x_j^\alpha+c^\beta x_j^\beta
-=c^\alpha R_j(x^\alpha)+c^\beta R_j(x^\beta)$.
+\(R_j(c^\alpha x^\alpha+c^\beta x^\beta)=(c^\alpha x_j^\alpha+c^\beta x_j^\beta)v_j\)
+\(=c^\alpha R_j(x^\alpha)+c^\beta R_j(x^\beta)\).
 
 定义\(\Gamma \in L(V^n,L(F^n,V))\)为\(\Gamma(v)=\sum_{i=1}^n R_i\).验证\(\Gamma\)的线性性.
     \begin{align*}
@@ -82,14 +81,15 @@ $R_j(c^\alpha x^\alpha+c^\beta x^\beta)=c^\alpha x_j^\alpha+c^\beta x_j^\beta
         =c^\alpha \Gamma(v^\alpha)+c^\beta \Gamma(v^\beta)
     \end{align*}
 下面证明\(\Gamma\)是单射变换.令\(\sum_{i=1}^n R_i=\sum_{i=1}^n x_iv_i=0\).
+定义\(e_1,\cdots,e_n \in F^n\)是\(F^n\)的标准基.
 
-由于\(x_i\)是任意选取的，只能有\(v_1=\cdots=v_n=0\)，即\(v=0\).
+令\(x_i=e_i\)，则可得\(\forall i=1,\cdots,n,v_i=0\)，即\(v=0\).
 
-下面证明\(\Gamma\)是满射变换.定义\(e_1,\cdots,e_n \in F^n\)是\(F^n\)的标准基.
+下面证明\(\Gamma\)是满射变换.\(\forall R \in L(F^n,V)\)，定义\(v \in V^n\)为\(v=(Re_1,\cdots,Re_n)\)，考虑\((\Gamma(v))(x)\).
 
-\(\forall R \in L(F^n,V)\)，定义\(v \in V^n\)为\(v=(Re_1,\cdots,Re_n)\)，考虑\((\Gamma(v))(x)\).
+\(\forall x \in F^n,(\Gamma(v))(x)=(\sum_{i=1}^n Re_i)(x)=R\sum_{i=1}^n x_ie_i=R(x)\).
 
-\(\forall x \in F^n,(\Gamma(v))(x)=(\sum_{i=1}^n Re_i)(x)=R\sum_{i=1}^n x_ie_i=R(x)\)，证毕.
+因此\(\forall R \in L(F^n,V),\exists v=(Re_1,\cdots,Re_n)\)，使得\(\Gamma(v)=R\)，证毕.
 
 \hspace*{\fill}
 
