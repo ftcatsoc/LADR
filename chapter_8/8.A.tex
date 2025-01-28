@@ -8,35 +8,35 @@
 \textit{5.10 Proof}
 令\(\sum_{i=1}^m a_iv_i=0\)，下证\(a_1=\cdots=a_m=0\).
 
-设\(i_0 \in \{1,\cdots,m\}\).对等式两边施加算子\(\prod_{i=1}^m (T-\lambda_i I)(i \ne i_0)\).
+设\(k \in \{1,\cdots,m\}\).对等式两边施加算子\(\prod_{i=1}^m (T-\lambda_i I)(i \ne k)\).
     \begin{align*}
-        0=a_{i_0}\prod_{i=1}^m (T-\lambda_i I) v_{i_0}=
-        a_{i_0}\prod_{i=1}^m (\lambda_{i_0}-\lambda_i) v_{i_0}
+        0=a_{k}\prod_{i=1}^m (T-\lambda_i I) v_{k}=
+        a_{k}\prod_{i=1}^m (\lambda_{k}-\lambda_i) v_{k}
     \end{align*}
-由于这些特征值各不相同，故\(\forall i=1,\cdots,m,\lambda_i-\lambda_{i_0} \ne 0\).
-从而只能有\(a_{i_0}=0\).
+由于这些特征值各不相同，故\(\forall i=1,\cdots,m,\lambda_i-\lambda_{k} \ne 0\).
+从而只能有\(a_{k}=0\).
 
-让\(i_0\)依次等于\(1,\cdots,m\)，则\(a_1=\cdots=a_m=0\)，证毕.
+让\(k\)依次等于\(1,\cdots,m\)，则\(a_1=\cdots=a_m=0\)，证毕.
 
 \textit{8.13 Proof}
 令\(\sum_{i=1}^m a_iv_i=0\)，下证\(a_1=\cdots=a_m=0\).
 
-设\(i_0 \in \{1,\cdots,m\}\).
-令\(k\)为最大的使\((T-\lambda_{i_0})^k v_{i_0} \ne 0\)的自然数.
+设\(k \in \{1,\cdots,m\}\).
+令\(k\)为最大的使\((T-\lambda_{k})^k v_{k} \ne 0\)的自然数.
 
-令\(v_0=(T-\lambda_{i_0})^k v_{i_0}\)，则\((T-\lambda_{i_0})^{k+1} v_{i_0}=0\).
-从而\(Tv_0=\lambda_{i_0}v_0\)，进一步有
+令\(v_0=(T-\lambda_{k})^k v_{k}\)，则\((T-\lambda_{k})^{k+1} v_{k}=0\).
+从而\(Tv_0=\lambda_{k}v_0\)，进一步有
     \begin{align*}
-        (T-\lambda I)v_0=(\lambda_{i_0}-\lambda_i)v_0 \Rightarrow 
-        (T-\lambda I)^{\mydim V} v_0=(\lambda_{i_0}-\lambda_i)^{\mydim V}v_0
+        (T-\lambda I)v_0=(\lambda_{k}-\lambda_i)v_0 \Rightarrow 
+        (T-\lambda I)^{\mydim V} v_0=(\lambda_{k}-\lambda_i)^{\mydim V}v_0
     \end{align*}
-对等式两边施加算子\(\prod_{i=1}^m (T-\lambda_i I)^{\mydim V}(T-\lambda_{i_0})^k(i \ne i_0)\).
+对等式两边施加算子\(\prod_{i=1}^m (T-\lambda_i I)^{\mydim V}(T-\lambda_{k})^k(i \ne k)\).
     \begin{align*}
-        0=a_{i_0}\prod_{i=1}^m (T-\lambda_i I)^{\mydim V}(T-\lambda_{i_0})^k v_{i_0}
-        =a_{i_0}\prod_{i=1}^m (\lambda_{i_0}-\lambda_i)^{\mydim V} v_0
+        0=a_{k}\prod_{i=1}^m (T-\lambda_i I)^{\mydim V}(T-\lambda_{k})^k v_{k}
+        =a_{k}\prod_{i=1}^m (\lambda_{k}-\lambda_i)^{\mydim V} v_0
     \end{align*}
-由于这些特征值各不相同，故\(\forall i=1,\cdots,m,(\lambda_i-\lambda_{i_0})^{\mydim V} \ne 0\).
-从而只能有\(a_{i_0}=0\).
+由于这些特征值各不相同，故\(\forall i=1,\cdots,m,(\lambda_i-\lambda_{k})^{\mydim V} \ne 0\).
+从而只能有\(a_{k}=0\).
 
 两者的证明思路大体相似，但定理8.13需要多乘以一个算子来构造一个“狭义”特征向量，
 以使得定理5.10所施加的算子可操作.
@@ -192,7 +192,7 @@
 \hspace*{\fill}
 
 \textit{17.}
-设\(T \in L(V),m \in N*\)满足\(\Img T^m=\Img T^{m+1}\).
+设\(T \in L(V),m \in N^*\)满足\(\Img T^m=\Img T^{m+1}\).
 
 求证：\(\forall i \in N*,\Img T^{m+i}=\Img T^m\).
 
