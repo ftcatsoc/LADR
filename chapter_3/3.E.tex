@@ -240,17 +240,24 @@
 \(U\)中任意元素的加法或数乘都不会使得其中的非零元素增加到无限多个.
 
 \textit{b.Proof}
-我们的目标是构造一列无限长的向量\(e_1,\cdots,e_m,\cdots \notin U\)，
+构造\(e_1,\cdots,e_m,\cdots \notin U\)，使得\(e_1,\cdots,e_m,\cdots\)线性无关.
 
-使得\(e_1+U,\cdots,e_m+U,\cdots\)线性无关.
 从而根据\textit{2.A.14}，\(F^\infty /U\)是无限维向量空间.
-
-令\(e(p)\)是\(e\)中第\(p\)个槽里的数字.构造向量列\(e_m(p)\)
+令\(e(p)\)是\(e\)中第\(p\)位数.构造向量\(e_m\)
     \begin{align*}
-        e_m(p) &=1,\textit{if} \; (p-1) \bmod m=0 \\
-            &=0,\textit{otherwise}
+        e_m(p)=
+            \begin{cases}
+                0 & p<m \\
+                1 & p \geq m
+            \end{cases}
     \end{align*}
-可以证明这些向量线性无关，从而完成证明.
+显然\(e_1-e_2,\cdots,e_i-e_{i+1},\cdots,e_{m-1}-e_m,e_m\)线性无关.
+
+令\(\sum_{i=1}^{m-1} a_i(e_i-e_{i+1})=0\)，则\(a_1e_1+\sum_{i=2}^m(a_i-a_{i-1})e_i=0\).
+
+得\(a_1=\cdots=a_m=0\).于是\(a_1=\cdots=a_m-a_{m-1}=0\)，即\(e_1,\cdots,e_m\)线性无关.
+
+由于\(e_1,\cdots,e_m,\cdots \notin U\)，因而\(\forall m \in N^*,e_1+U,\cdots,e_m+U\)线性无关.
 
 \newpage
 

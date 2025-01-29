@@ -30,11 +30,10 @@
 
 现在给出假设：对于任意有限维复向量空间\(U\)和\(R \in L(U)\)满足\(\mydim U<\mydim V=n\)，
 
-\(R\)的所有特征值分别为\(\mu_1,\cdots,\mu_\zeta\)，
-都有\(U=\oplus_{i=1}^\zeta G(\mu_i,R)\).
+\(R\)的所有特征值分别为\(\mu_1,\cdots,\mu_\zeta\)，都有\(U=\oplus_{i=1}^\zeta G(\mu_i,R)\).
 
-则当\(\mydim V=n\)时，首先有\(V=\Ker (T-\lambda_1 I)^n \oplus \Img (T-\lambda_i I)^n\).
-不妨令\(U=\Img (T-\lambda_i I)^n\).
+则当\(\mydim V=n\)时，首先有\(V=\Ker (T-\lambda_1 I)^n \oplus \Img (T-\lambda_1 I)^n\).
+不妨令\(U=\Img (T-\lambda_1 I)^n\).
 
 根据引理，\(U\)是\(T\)下的不变子空间，且满足\(\mydim U<\mydim V\)，因此\(T|_U\)存在.
 
@@ -209,35 +208,24 @@
 求证：\(T\)的每个特征值\(\lambda\)在矩阵对角线上出现的次数即为\(\lambda\)作为\(T\)的特征值的重数.
 
 \textit{Proof}
-设\(\lambda_1,\cdots,\lambda_m\)是\(T\)的不同特征值，并设矩阵对角线元素依次为\(\alpha_1,\cdots,\alpha_n\).
+使用数学归纳法.当\(n=1\)时，\(V=G(\lambda,T)\)，命题成立.
 
-由于\(M(T)\)是上三角矩阵，故\(\forall j=1,\cdots,m,\exists i=1,\cdots,n,\alpha_j=\lambda_i\).
+现假设对于任意有限维复向量空间\(U\)满足\(\mydim U<\mydim V=n\)，结论均成立.
 
-将\(\lambda_i\)在矩阵对角线上出现的次数记为\(d_i\)，则\(\sum_{i=1}^m d_i=n\).
+则当\(\mydim V=n\)时，首先有\(V=\Ker (T-\lambda_1 I)^n \oplus \Img (T-\lambda_1 I)^n\).
+不妨令\(U=\Img (T-\lambda_1 I)^n\).
 
-现在考虑\((T-\lambda_i I)^n\).显然\(M((T-\lambda_i I)^n)\)也是上三角矩阵，
+根据引理8.20，\(U\)是\(T\)下的不变子空间，且满足\(\mydim U<\mydim V\)，因此可对\(U\)使用归纳假设.
 
-且其对角线元素依次为\((\alpha_1-\lambda_i)^n,\cdots,(\alpha_n-\lambda_i)^n\).
-显然，其中有\(d_i\)个元素为\(0\).
+故任意给定\(v_1,\cdots,w_p\)作为\(V\)的一组基使得\(M(T|_U,(w_1,\cdots,w_p))\)是上三角矩阵，
 
-将剩下的非零元素标记为\(\alpha'_1,\cdots,\alpha'_{n-d_i}\)，
-其对应的基向量也标记为\(v'_1,\cdots,v'_{n-d_i}\).
+\(T|_U\)的所有特征值\(\lambda_2,\cdots,\lambda_m\)在矩阵对角线上出现的次数均为其重数.
 
-另将\(\forall k=1,\cdots,n-d_i,v'_k\)的前一个基向量依次标记为\(v''_k\).
+考虑\(\Ker (T-\lambda_1 I)^n=G(\lambda_1,T)\).若有一组基使得\(M(T|_{G(\lambda_1,T)})\)是上三角矩阵，
 
-因此\((T-\lambda_i)^n v'_k=\alpha'_kv'_k+u_k\)，其中\(u_k \in \myspan (v_1,\cdots,v''_k)\)，
-即\((T-\lambda_i)^n v'_k \notin \myspan (v_1,\cdots,v''_k)\).
+则\(\lambda_1\)在矩阵对角线上出现的次数和\(\lambda_1\)的重数均为\(\mydim G(\lambda_1,T)\).
 
-根据\textit{2.A.11}，\((T-\lambda_i)^n v'_1,\cdots,(T-\lambda_i)^n v'_{n-d_i}\)线性无关.
+将\(T|_{G(\lambda_1,T)}\)上的基和\(T|_U\)上的基合并，即可得到\(M(T)\)的上三角矩阵.
 
-故\(\myspan ((T-\lambda_i)^n v'_1,\cdots,(T-\lambda_i)^n v'_{n-d_i}) \subseteq \Img (T-\lambda_i)^n\)，
-得\(\mydim \Img (T-\lambda_i)^n \geq n-d_i\).
-
-由$V=\Ker (T-\lambda_i)^n \oplus \Img (T-\lambda_i)^n,
-\mydim V=\mydim \Ker (T-\lambda_i)^n \oplus \mydim \Img (T-\lambda_i)^n$，
-
-得到\(\forall i=1,\cdots,m,\mydim \Ker (T-\lambda_i)^n \leq d_i\)，
-从而\(\sum_{i=1}^m \mydim \Ker (T-\lambda_i)^n \leq \sum_{i=1}^m d_i=n\).
-
-因此只能有\(\forall i=1,\cdots,m,\mydim G(\lambda_i,T)=d_i\).
+此时对于任意\(i=1,\cdots,m\)，\(\lambda_i\)在矩阵对角线上出现的次数即为\(\lambda\)作为\(T\)的特征值的重数.
 
