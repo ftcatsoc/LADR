@@ -44,9 +44,9 @@
 设\(P \in L(V)\)满足\(P^2=P\).证明\(V=\Ker P \oplus \Img P\).
 
 \textit{Proof}
-对于\(\forall v \in V,v=Pv+(v-Pv)\).
+对于\(\forall v \in V,v=Pv+(v-Pv),Pv \in \Img P\).
 
-显然\(Pv \in \Img P\)，且\(P(v-Pv)=(P-P^2)v=0 \Rightarrow v-Pv \in \Ker P\)，因此\(V=\Img P+\Ker P\).
+\(P(v-Pv)=(P-P^2)v=0 \Rightarrow v-Pv \in \Ker P\)，因此\(V=\Img P+\Ker P\).
 
 再考虑\(v \in \Ker P \cap \Img P\)，因此\(\exists u \in V\)，使得\(Pu=v\)，得\(v=Pu=P^2u=Pv=0\)，证毕.
 

@@ -64,3 +64,79 @@
 
 且这些特征向量两两正交，于是得到了\(V\)的一组规范正交特征基.
 
+\newpage
+
+\textit{4.}
+设\(V\)是有限维复内积空间且\(T \in L(V),\mydim V=n\).\(\lambda_1,\cdots,\lambda_m\)是\(T\)的所有相异特征值.
+
+求证：\(T\)是正规算子当且仅当\(V=\oplus_{i=1}^m E(\lambda_i,T)\)且特征空间两两正交.
+
+\textit{Proof}
+必要性直接依据复谱定理得证.
+
+充分性：构造每个特征空间\(E(\lambda_i,T)\)的规范正交基\(v_1^i,\cdots,v_{n_i}^i\).
+
+将这些规范正交基合并，就得到了\(V\)的规范正交特征基，根据复谱定理，\(T\)是正规算子.
+
+实内积空间的版本的证明是类似的.
+
+\hspace*{\fill}
+
+\textit{6.}
+证明：复内积空间\(V\)上的正规算子\(T\)是自伴算子当且仅当其特征值都是实的.
+
+\textit{Proof}
+根据复谱定理，\(V\)有一组规范正交特征基\(e_1,\cdots,e_n\).
+
+从而\(M(T)=\diag(\lambda_1,\cdots,\lambda_n),M(T^*)=\diag(\ol{\lambda_1},\cdots,\ol{\lambda_n})\).
+
+\(M(T)=M(T^*)\)等价于\(\forall i=1,\cdots,n,\lambda_i=\ol{\lambda_i}\)，
+即\(\forall i=1,\cdots,n,\lambda_i\)都是实数，证毕.
+
+\hspace*{\fill}
+
+\textit{8.}
+设\(V\)是有限维复内积空间且\(T \in L(V)\)是正规算子，满足\(T^9=T^8\).
+
+求证：\(T\)是自伴算子且为幂等算子.
+
+\textit{Proof}
+\(V\)应有一组规范正交特征基\(e_1,\cdots,e_n\)，从而\(M(T)=\diag(\lambda_1,\cdots,\lambda_n)\).
+
+若\(T^9=T^8\)，则\(\forall i=1,\cdots,n,\lambda_i^9=\lambda_i^8,\lambda_i^8(\lambda_i-1)=0\)，
+即特征值只可能为\(0\)或\(1\).
+
+根据\textit{7.B.6}，\(T\)是自伴算子；根据\textit{5.B.4}，\(T\)是幂等算子.
+
+\hspace*{\fill}
+
+\textit{14.}
+设\(V\)是有限维实内积空间且\(T \in L(V)\).
+
+求证：\(V\)存在由\(T\)的特征向量组成的基等价于存在一种内积定义，使得\(T\)为自伴算子.
+
+\textit{Proof}
+必要性：根据实谱定理，\(V\)有一组\(T\)的规范正交特征向量组成的基.
+
+充分性：将基设为\(e_1,\cdots,e_m\).考虑\(\forall i,j=1,\cdots,m,a_i,b_i \in R,\)
+\(v_1=\sum_{i=1}^m a_ie_i,v_2=\sum_{j=1}^m b_je_j\).
+
+由于\(V\)是实内积空间，故\(\ip{v_1}{v_2}\)需要对两个变元都满足线性性，于是可以定义
+    \begin{align*}
+        \ip{v_1}{v_2}=\ip{\sum_{i=1}^m a_ie_i}{\sum_{j=1}^m b_je_j}=
+        \sum_{i=1}^m \sum_{j=1}^m a_ib_j \ip{e_i}{e_j}=\sum_{i=1}^m \sum_{j=1}^m a_ib_j\delta_{i,j}
+    \end{align*}
+其中\(\delta_{i,j}\)是\textit{Kronecker}函数.下面验证内积\(\ip{v_1}{v_2}\)的正定性.
+
+令\(v_2=v_1\)，则\(\ip{v_1}{v_1}=\sum_{j=1}^m a_ia_j\delta_{i,j}=\sum_{i=1}^m \abs{a_i}^2 \geq 0\).
+
+且\(\sum_{i=1}^m \abs{a_i}^2=0\)可推出\(a_1=\cdots=a_m=0\)，从而\(v_1=0\)，满足正定性，该内积定义合法.
+
+在这种内积定义下，\(\forall i,j=1,\cdots,n,\ip{e_i}{e_j}=\delta_{i,j}\)，即\(e_1,\cdots,e_m\)是一组规范正交基.
+
+于是\(M(T)\)为对角矩阵且对角线上元素均为实数，则\(T\)是自伴算子.
+
+\hspace*{\fill}
+
+有算子范数和奇异值分解背景的\textit{12}题将单独列出.
+

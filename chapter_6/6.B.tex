@@ -32,9 +32,9 @@
 存在性：设\(e_1,\cdots,e_m\)是\(V\)的一组正交基，从而
     \begin{align*}
         \varphi(v)=\varphi(\sum_{i=1}^m \ip{v}{e_i}e_i)=\sum_{i=1}^m \ip{v}{e_i}\varphi(e_i)
-        =\ip{v}{\sum_{i=1}^m \overline{\varphi(e_i)}e_i}=\ip{v}{u}
+        =\ip{v}{\sum_{i=1}^m \ol{\varphi(e_i)}e_i}=\ip{v}{u}
     \end{align*}
-因此只需令\(u=\sum_{i=1}^m \overline{\varphi(e_i)}e_i\)即可，存在性得证.
+因此只需令\(u=\sum_{i=1}^m \ol{\varphi(e_i)}e_i\)即可，存在性得证.
 
 唯一性：若存在\(u_1,\cdots,u_2 \in V\)满足\(\varphi(v)=\ip{v}{u_1}=\ip{v}{u_2}\)，则
     \begin{align*}
@@ -58,7 +58,7 @@
 
 令\(\forall i \ne j,k,a_i=0\)，可得\(\ip{a_je_j}{a_ke_k}+\ip{a_ke_k}{a_je_j}=0\).
 
-从而\(\mathrm{Re}(a_j\overline{a_k}\ip{e_j}{e_k})=0\).由\(a_j,a_k\)的任意性，必有\(\ip{e_j}{e_k}=0\).
+从而\(\mathrm{Re}(a_j\ol{a_k}\ip{e_j}{e_k})=0\).由\(a_j,a_k\)的任意性，必有\(\ip{e_j}{e_k}=0\).
 
 从而\(e_1,\cdots,e_m\)是规范正交组，证毕.
 
@@ -144,10 +144,10 @@
 
 由\(v\)的任意性，第一处\(v\)取\(w_2\)，第二处\(v\)取\(w_1\)，得到
     \begin{align*}
-        c_2\ip{w_1}{w_2}_2=\ip{w_1}{w_2}_1=\overline{\ip{w_2}{w_1}_1}
-        =\overline{c_1\ip{w_2}{w_1}_2}=\overline{c_1}\ip{w_1}{w_2}_2
+        c_2\ip{w_1}{w_2}_2=\ip{w_1}{w_2}_1=\ol{\ip{w_2}{w_1}_1}
+        =\ol{c_1\ip{w_2}{w_1}_2}=\ol{c_1}\ip{w_1}{w_2}_2
     \end{align*}
-因此\(c_1=\overline{c_2}\).由前面\(c>0\)，得\(c_1=c_2\)，因此任意的\(w\)均对应相同的\(c\).
+因此\(c_1=\ol{c_2}\).由前面\(c>0\)，得\(c_1=c_2\)，因此任意的\(w\)均对应相同的\(c\).
 
 \hspace*{\fill}
 
@@ -192,8 +192,8 @@
     \end{align*}
 \textit{b.Proof}
     \begin{align*}
-        \forall v \in V,(\varphi(\lambda u))(v)=\overline{\lambda} \ip{v}{u_1}
-        =\overline{\lambda} (\varphi(u))(v) \ne \lambda (\varphi(u))(v)
+        \forall v \in V,(\varphi(\lambda u))(v)=\ol{\lambda} \ip{v}{u_1}
+        =\ol{\lambda} (\varphi(u))(v) \ne \lambda (\varphi(u))(v)
     \end{align*}
 \textit{c.Proof}
 令\(\varphi_u=0\)，则\(\forall v \in V,\varphi_u(v)=\ip{v}{u}=0\).取\(v=u\)，则\(\ip{u}{u}=0,u=0\).
@@ -224,5 +224,5 @@
 
 \hspace*{\fill}
 
-有奇异值分解背景的\textit{16}题将单独列出.
+有算子范数和奇异值分解背景的\textit{16}题将单独列出.
 

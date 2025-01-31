@@ -1,29 +1,29 @@
 \textit{Theorem 7.10}{\kaishu 伴随算子的矩阵}
 \(e_1,\cdots,e_m,f_1,\cdots,f_n\)分别是\(V,W\)的规范正交基.
 
-设\(T \in L(V,W)\)，则在这两组基下的\(M(T)\)是\(M(T^*)\)的共轭转置，即\(\overline{M(T)^T}=M(T^*)\).
+设\(T \in L(V,W)\)，则在这两组基下的\(M(T)\)是\(M(T^*)\)的共轭转置，即\(\ol{M(T)^T}=M(T^*)\).
 
 \textit{Proof}
 考虑\(M(T)_{i,j}\).由于\(Te_j=\sum_{i=1}^n \ip{Te_j}{f_i}f_i\)，从而\(M(T)_{i,j}=\ip{Te_j}{f_i}\).
 
 再考虑\(M(T^*)_{j,i}\).由于\(T^*f_i=\sum_{j=1}^n \ip{T^*f_i}{e_j}e_j\)，从而\(M(T^*)_{j,i}=\ip{T^*f_i}{e_j}\).
     \begin{align*}
-        M(T^*)_{j,i}=\ip{T^*f_i}{e_j}=\ip{f_i}{Te_j}=\overline{\ip{Te_j}{f_i}}=\overline{M(T)_{i,j}}
+        M(T^*)_{j,i}=\ip{T^*f_i}{e_j}=\ip{f_i}{Te_j}=\ol{\ip{Te_j}{f_i}}=\ol{M(T)_{i,j}}
     \end{align*}
-于是\(\overline{M(T)^T}=M(T^*)\)，证毕.
+于是\(\ol{M(T)^T}=M(T^*)\)，证毕.
 
 \hspace*{\fill}
 
 \textit{2.}
 设\(V\)是有限维内积空间且\(T \in L(V)\).
-证明：\(\lambda\)是\(T\)的特征值和\(\overline{\lambda}\)是\(T^*\)的特征值等价.
+证明：\(\lambda\)是\(T\)的特征值和\(\ol{\lambda}\)是\(T^*\)的特征值等价.
 
 \textit{Proof}
 利用\(\mydim \Ker(T^*)=\mydim \Ker(T)\)，有
     \begin{align*}
-        0<\mydim \Ker(T-\lambda I)=\mydim \Ker(T-\lambda I)^*=\mydim \Ker(T^*-\overline{\lambda}I)
+        0<\mydim \Ker(T-\lambda I)=\mydim \Ker(T-\lambda I)^*=\mydim \Ker(T^*-\ol{\lambda}I)
     \end{align*}
-因此\(E(\overline{\lambda},T^*) \ne \{0\}\)，即\(\overline{\lambda}\)是\(T^*\)的一个特征值.
+因此\(E(\ol{\lambda},T^*) \ne \{0\}\)，即\(\ol{\lambda}\)是\(T^*\)的一个特征值.
 
 \hspace*{\fill}
 
@@ -101,7 +101,7 @@
         &(T^*T)v=T^*(\ip{v}{u}x)=\ip{v}{u}T^*x=\norm{x}^2\ip{v}{u}u \\
         &(TT^*)v=T(\ip{x}{v}u)=\ip{x}{v}Tu=\norm{u}^2\ip{x}{v}x
     \end{align*}
-必要性：\((T^*T)v=\norm{\lambda u}^2 \ip{v}{u}u=\lambda \overline{\lambda} \norm{u}^2 \ip{v}{u}u\)
+必要性：\((T^*T)v=\norm{\lambda u}^2 \ip{v}{u}u=\lambda \ol{\lambda} \norm{u}^2 \ip{v}{u}u\)
 \(=\norm{u}^2 \ip{v}{\lambda u}\lambda u=(TT^*)v\).
 
 充分性：\(\norm{x}^2\ip{v}{u}u=\norm{u}^2\ip{x}{v}x\).取\(v=x\)，得\(\lambda=\dfrac{\ip{x}{u}}{\ip{u}{u}}\).
