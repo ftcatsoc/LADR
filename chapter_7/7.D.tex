@@ -1,0 +1,63 @@
+\textit{Lemma 7.64*}{\kaishu 奇异值分解的引理}
+设\(V\)是有限维复内积空间且\(T \in L(V)\).则有
+    \begin{align*}
+        (\textit{a})\forall v \in V,\ip{(T^*T)v}{v} \geq 0 \quad
+        (\textit{b})\Ker T^*T=\Ker T \quad (\textit{c})\Img T^*T=\Img T^*
+    \end{align*}
+\textit{a.Proof}
+由于\((T^*T)^*=T^*(T^*)^*=T^*T\)，即\(T^*T\)为自伴算子.
+
+从而\(\ip{T^*Tv}{v}=\ip{Tv}{Tv}=\norm{Tv}^2 \geq 0\)，即\(T^*T\)为正算子.
+
+\textit{b.Proof}
+设\(v \in \Ker T^*T\)，则\(\ip{T^*Tv}{v}=\ip{Tv}{Tv}=\norm{Tv}^2=0\)，即\(\Ker T^*T \subseteq \Ker T\).
+
+\(\Ker T \subseteq \Ker T^*T\)是显然的.结合之，即有\(\Ker T^*T=\Ker T\).
+
+\textit{c.Proof}
+\(\Img T^*T=(\Ker (T^*T)^*)^\bot=(\Ker T^*T)^\bot=(\Ker T)^\bot=\Img T^*\).
+
+\hspace*{\fill}
+
+\textit{Theorem 7.70*}{\kaishu 奇异值分解}
+设\(V\)是有限维复内积空间且\(T \in L(V)\)，其奇异值为\(s_1,\cdots,s_n\).
+
+那么存在\(V\)的两组规范正交基\(e_1,\cdots,e_n\)和\(f_1,\cdots,f_n\)，
+使得\(\forall v \in V,Tv=\sum_{i=1}^n s_i\ip{v}{e_i}f_i\).
+
+\textit{Proof}
+\(T^*T\)作为自伴算子有一组规范正交特征基\(e_1,\cdots,e_n\)满足\(\forall i=1,\cdots,n,T^*Tv=s_i^2 v\).
+
+定义\(\forall i=1,\cdots,n,f_i\)为\(\dfrac{1}{s_i}Te_i\)，下证\(f_1,\cdots,f_n\)为\(V\)的规范正交基.
+    \begin{align*}
+        \ip{f_j}{f_k}=\dfrac{1}{s_js_k}\ip{Te_j}{Te_k}=\dfrac{1}{s_js_k}\ip{T^*Te_j}{e_k}
+        =\dfrac{1}{s_js_k}\ip{s_j^2 e_j}{e_k}=\dfrac{s_j}{s_k}\ip{e_j}{e_k}=\delta_{j,k}
+    \end{align*}
+其中\(\delta_{i,k}\)是\textit{Kronecker}函数.因此，\(f_1,\cdots,f_n\)确实为\(V\)的规范正交基.
+    \begin{align*}
+        Tv=T\sum_{i=1}^n \ip{v}{e_i}e_i=\sum_{i=1}^n \ip{v}{e_i}Te_i
+        =\sum_{i=1}^n \ip{v}{e_i}s_if_i=\sum_{i=1}^n s_i\ip{v}{e_i}f_i
+    \end{align*}
+
+\hspace*{\fill}
+
+\textit{Theorem 7.93*}{\kaishu 极分解}
+设\(T \in L(V)\)，则存在等距映射\(S \in L(V)\)使得\(T=S\sqrt{T^*T}\).
+
+\textit{Proof}
+沿用\textit{Theorem 7.51}证明中的记号，设\(\forall v \in V,Tv=\sum_{i=1}^n s_i\ip{v}{e_i}f_i\).
+
+定义\(S \in L(V)\)为\(Sv=\sum_{i=1}^n \ip{v}{e_i}f_i\)，下面验证\(S\)是等距映射.
+    \begin{align*}
+        \norm{Sv}^2=\norm{\sum_{i=1}^n \ip{v}{e_i}f_i}^2=\sum_{i=1}^n \norm{\ip{v}{e_i}f_i}^2
+        =\sum_{i=1}^n \norm{\ip{v}{e_i}}^2=\norm{v}^2
+    \end{align*}
+其中第二个等号来自定理6.25,第四个等号来自定理6.30.
+
+由\(T^*v=\sum_{i=1}^n s_i\ip{v}{f_i}e_i\)得到\(T^*Tv=\sum_{i=1}^n s_i^2 \ip{v}{e_i}e_i\)，
+因而\(\sqrt{T^*T}v=\sum_{i=1}^n s_i\ip{v}{e_i}e_i\).
+    \begin{align*}
+        S\sqrt{T^*T}v=S\sum_{i=1}^n s_i\ip{v}{e_i}e_i=\sum_{i=1}^n s_i\ip{v}{e_i}Se_i
+        =\sum_{i=1}^n s_i\ip{v}{e_i}f_i=Tv
+    \end{align*}
+
