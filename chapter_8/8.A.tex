@@ -62,11 +62,11 @@
 也即该列后面的元素均为\(0\).特别地，\(NB_1=0\)，因此\(B_1\)列的所有元素均为\(0\).
     \begin{equation*}
         \begin{pNiceMatrix}[first-row,first-col]
-                & B_1 & B_2 & \cdots & B_n  \\
-        B_1   &  0  &  *  &   *    &  *   \\
-        B_2   &  0  &  0  &   *    &  *   \\
-        \vdots &  0  &  0  &   0    &  *   \\
-        B_n   &  0  &  0  &   0    &  0   \\
+                   & B_1 & B_2 & \cdots & B_n  \\
+             B_1   &  0  &  *  &   *    &  *   \\
+             B_2   &  0  &  0  &   *    &  *   \\
+            \vdots &  0  &  0  &   0    &  *   \\
+             B_n   &  0  &  0  &   0    &  0   \\
         \end{pNiceMatrix}
     \end{equation*}
 
@@ -111,7 +111,7 @@
 \hspace*{\fill}
 
 \textit{5.}
-设\(T \in L(V),v \in V,m \in Z^+\)，且满足\(T^{m-1}v \ne 0,T^m v=0\).
+设\(T \in L(V),v \in V,m \in N^*\)，且满足\(T^{m-1}v \ne 0,T^m v=0\).
 
 求证：\(v,Tv,\cdots,T^{m-1}v\)线性无关.
 
@@ -130,9 +130,8 @@
 设\(S,T \in L(V)\)且\(ST\)是幂零算子，证明\(TS\)也是幂零算子.
 
 \textit{Proof}
-    \begin{align*}
-        \Ker (TS)^{\mydim V}=\Ker (TS)^{\mydim V+1}=\Ker T(ST)^{\mydim V}S=V
-    \end{align*}
+\(\Ker (TS)^{\mydim V}=\Ker (TS)^{\mydim V+1}=\Ker T(ST)^{\mydim V}S=V\).
+
 其中\((ST)^{\mydim V}=0\)，因此第三个等号成立.
 
 \hspace*{\fill}
@@ -169,10 +168,9 @@
 求证：\(N\)是幂零算子且\(\forall i=1,\cdots,\mydim V,\mydim \Ker N^i=i\).
 
 \textit{Proof}
-    \begin{align*}
-        \Ker N^{\mydim V-1} \ne \Ker N^{\mydim V} \Rightarrow 
-        \forall i<j \in \{1,\cdots,\mydim V\},\mydim \Ker N^i<\mydim \Ker N^j
-    \end{align*}
+由于\(\Ker N^{\mydim V-1} \ne \Ker N^{\mydim V}\)，
+故\(\mydim \Ker N^i\)随\(i\)在\([1,\mydim V]\)上严格单调增长.
+
 因此\(\mydim \Ker N<\cdots<\mydim \Ker N^{\mydim V} \leq \mydim V\).
 
 得到\(\mydim \Ker N^{\mydim V}=\mydim V\)，即\(N\)是幂零算子，且\(\mydim \Ker N^i=i\).
@@ -180,39 +178,35 @@
 \hspace*{\fill}
 
 \textit{16.}
-设\(T \in L(V)\).求证
-    \begin{align*}
-        V=\Img T^0 \supset \Img T^1 \supset \cdots
-    \end{align*}
+设\(T \in L(V)\).求证：\(V=\Img T^0 \supset \Img T^1 \supset \cdots\)
+
 \textit{Proof}
 \(\forall v \in V,T^{i+1}v \in \Img T^{i+1},T^{i+1}v=T^i(Tv) \in \Img T^i\).
 
-因此\(\forall i \in N*,\Img T^{i+1} \subseteq \Img T^i\).特别地，\(T^0=I,\Img I=V\).
+因此\(\forall i \in N^*,\Img T^{i+1} \subseteq \Img T^i\).特别地，\(T^0=I,\Img I=V\).
 
 \hspace*{\fill}
 
 \textit{17.}
-设\(T \in L(V),m \in N^*\)满足\(\Img T^m=\Img T^{m+1}\).
-
-求证：\(\forall i \in N^*,\Img T^{m+i}=\Img T^m\).
+设\(T \in L(V),m \in N^*\)满足\(\Img T^m=\Img T^{m+1}\).求证：\(\forall i \in N^*,\Img T^{m+i}=\Img T^m\).
 
 \textit{Proof}
-根据定理3.22，\(\mydim V=\mydim \Ker T^i+\mydim \Img T^i\).
-根据定理8.3，
-    \begin{align*}
-        \Ker T^m=\Ker T^{m+1} &\Rightarrow \forall i \in N^*,\Ker T^{m+i}=\Ker T^m \\
-        \Rightarrow \mydim \Ker T^{m+i}=\mydim \Ker T^m
-        &\Rightarrow \mydim \Img T^m=\mydim \Img T^{m+1}=\cdots
-    \end{align*}
-根据\textit{2.C.1}和\textit{8.A.16}，\(\forall i \in N^*,\Img T^{i+1}=\Img T^i\).
+根据\textit{8.A.16}，\(\forall i \in N^*,\Img T^{m+i} \subseteq \Img T^m\).
+下证\(\forall i \in N^*,\mydim \Img T^{m+i}=\mydim \Img T^m\).
+
+根据定理3.22，\(\forall i \in N^*,\mydim \Img T^i=\mydim V-\mydim \Ker T^i\)，
+
+故\(\mydim \Img T^m=\mydim \Img T^{m+1}\)表明\(\mydim \Ker T^m=\mydim \Ker T^{m+1}\)，即\(\Ker T^m =\Ker T^{m+1}\).
+
+得\(\forall i \in N^*,\mydim \Img T^{m+i}=\mydim V-\mydim \Ker T^{m+i}=\mydim V-\mydim \Ker T^m=\mydim \Img T^m\).
+
+从而根据\textit{2.C.1}，\(\forall i \in N^*,\Img T^{i+1}=\Img T^i\).
 
 \hspace*{\fill}
 
 \textit{18.}
-设\(T \in L(V),\mydim V=n\).求证：
-    \begin{align*}
-        \Img T^n=\Img T^{n+1}=\cdots
-    \end{align*}
+设\(T \in L(V),\mydim V=n\).求证：\(\Img T^n=\Img T^{n+1}=\cdots\)
+
 \textit{Proof}
 根据定理3.22和定理8.4，\(\forall i>n \in N*,\mydim \Img T^{i+1}=\mydim \Img T^i\).
 
