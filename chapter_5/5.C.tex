@@ -47,30 +47,17 @@
 \textit{Proof}
 使用数学归纳法，当\(\mydim V=1\)时，\(V=E(\lambda_1,T),\Img(T-\lambda_1 I)=\{0\}\)，显然成立.
 
-现假设对于任意的\(W\)满足\(\mydim W<\mydim V\)，结论均成立.
+现假设对于任意的\(U\)满足\(\mydim U<\mydim V\)，结论均成立.
 
-由于\(\Img(T-\lambda_1 I)\)是\(T\)下的不变子空间且\(\mydim \Img(T-\lambda_1 I)<\mydim V\)，故可以对其使用归纳.
+令\(\Img(T-\lambda_1 I)=U\).\(U\)是\(T\)下的不变子空间且\(\mydim U<\mydim V\)，对其使用归纳.
 
-令\(\Img(T-\lambda_1 I)=U\).\(T|_U\)的特征值为\(\lambda_2,\cdots,\lambda_m\)，
-故\(U=\oplus_{i=2}^m E(\lambda_i,T|_U)\).
+从而\(U\)有一组由\(T|_U\)的特征向量构成的基\(v_1^U,\cdots,v_m^U\)，使得\(M(T|_U)\)为对角矩阵.
 
-以下将证明\(\forall i=2,\cdots,m,E(\lambda_i,T) \subseteq E(\lambda_i,T|_U)\)，
-设\(\forall i=2,\cdots,m,v_i^\alpha \in E(\lambda_i,T) \subseteq V\).
+\(E(\lambda_1,T)\)作为\(V\)的特征空间显然有\(T|_{E(\lambda_i,T)}\)的特征基\(v_1,\cdots,v_n\).
 
-由于\(V=E(\lambda_1,T) \oplus U=E(\lambda_1,T) \oplus_{j=2}^m E(\lambda_i,T|_U)\)，
+将这两组基合并，则有\(M(T,(v_1,\cdots,v_n,v_1^U,\cdots,v_m^U))=\diag(\lambda_1,\cdots,\lambda_m)\).
 
-故\(\exists v_j^\beta \in E(\lambda_i,T|_U),v_i^\alpha=v_1^\alpha+\sum_{j=2}^m v_j^\beta\).
-因而\(v_i^\alpha-v_i^\beta=v_1^\alpha+\sum_{j=2}^m v_j^\beta(j \ne i)\).
-
-根据定理5.10，若这些向量为\(T\)的特征向量，那么它们必须线性无关.
-
-然而它们的系数均为\(1\)，因此它们只能为零向量，这表明\(v_i^\alpha-v_i^\beta=v_1^\alpha=v_j^\beta=0\).
-
-因此\(v_i^\alpha=v_i^\beta \in E(\lambda_i,T|_U)\)，即\(E(\lambda_i,T) \subseteq E(\lambda_i,T|_U)\).
-
-结合\(E(\lambda_i,T|_U) \subseteq E(\lambda_i,T)\)，得到\(E(\lambda_i,T|_U)=E(\lambda_i,T)\).
-
-于是\(U=\oplus_{i=2}^m E(\lambda_i,T),V=E(\lambda_1,T) \oplus U=\oplus_{i=1}^m E(\lambda_i,T)\)，证毕.
+从而\(V\)有\(T\)的特征基，即\(T\)可对角化.
 
 \newpage
 
