@@ -46,10 +46,18 @@
 
 将这些向量按照所属空间重新标号为\(v_1^i,\cdots,v_{n_i}^i,i=1,\cdots,m\)，上标\(i\)表示第\(i\)个特征值.
 
-令\(U_i=\myspan(v_1^i,\cdots,v_{n_i}^i)\)，则\(V=\oplus_{i=1}^m U_i\).
-同时，\(\forall i=1,\cdots,m,U_i \subseteq G(\lambda_i,T)\).
+令\(U_i=\myspan(v_1^i,\cdots,v_{n_i}^i)\)，则\(V=\oplus_{i=1}^m U_i,\mydim V=\sum_{i=1}^m \mydim U_i\).
 
-但由广义特征向量的线性无关性只能有\(U_i=G(\lambda_i,T)\)，即\(V=\oplus_{i=1}^m G(\lambda_i,T)\).
+同时\(\forall i=1,\cdots,m,U_i \subseteq G(\lambda_i,T)\).
+于是\(\forall i=1,\cdots,m,\mydim U_i \leq \mydim G(\lambda_i,T)\).
+
+由于广义特征子空间之和为直和，得到
+    \begin{align*}
+        \mydim \oplus_{i=1}^m G(\lambda_i,T)=\sum_{i=1}^m \mydim G(\lambda_i,T) \geq \sum_{i=1}^m \mydim U_i=\mydim V
+    \end{align*}
+于是只能取等，有\(\forall i=1,\cdots,m,\mydim U_i=\mydim G(\lambda_i,T)\)，即\(U_i=G(\lambda_i,T)\).
+
+从而\(V=\oplus_{i=1}^m U_i=\oplus_{i=1}^m G(\lambda_i,T)\)，证毕.
 
 \newpage
 

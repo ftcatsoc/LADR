@@ -198,10 +198,11 @@
 \textit{a.Proof}
 设\(Tv=\sum_{i=1}^n s_i\ip{v}{e_i}f_i\)，则
     \begin{align*}
-        s_{\min}^2=s_{\min}^2 \sum_{i=1}^n \norm{\ip{v}{e_i}f_i}^2 \leq \norm{Tv}^2
-        =\sum_{i=1}^n \norm{s_i\ip{v}{e_i}f_i}^2 \leq s_{\max}^2 \sum_{i=1}^n \norm{\ip{v}{e_i}f_i}^2=s_{\max}^2
+        s_{\min}^2\norm{v}^2w=s_{\min}^2 \sum_{i=1}^n \norm{\ip{v}{e_i}f_i}^2 
+        \leq \sum_{i=1}^n \norm{s_i\ip{v}{e_i}f_i}^2 
+        \leq s_{\max}^2 \sum_{i=1}^n \norm{\ip{v}{e_i}f_i}^2=s_{\max}^2\norm{v}^2
     \end{align*}
-因此\(s_{\min}\norm{v} \leq \norm{Tv} \leq s_{\max}\norm{v}\).
+因此\(s_{\min}\norm{v} \leq \norm{Tv}=\norm{\sum_{i=1}^n s_i\ip{v}{e_i}f_i} \leq s_{\max}\norm{v}\).
 
 \textit{b.Proof}
 设\(v\)是\(\lambda\)的特征向量，
