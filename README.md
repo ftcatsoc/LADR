@@ -29,7 +29,7 @@ I would also like to acknowledge the invaluable help and resources provided by [
 
 Additionally, I would like to thank Deepseek, ChatGPT and Doubao for providing helpful guidance and support during the development of this repository.
 
-# 《Linear Algebra Done Right》习题解答 LaTeX 源代码
+# 《Linear Algebra Done Right》习题解答
 
 该仓库包含了《Linear Algebra Done Right》一书（作者：Sheldon Axler）中习题的 LaTeX 源代码。所有解答按照书中的章节进行组织，旨在帮助学生更好地理解线性代数的概念。
 
