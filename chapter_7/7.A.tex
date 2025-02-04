@@ -1,0 +1,135 @@
+\textit{Theorem 7.10}{\kaishu 伴随算子的矩阵}
+\(e_1,\cdots,e_m,f_1,\cdots,f_n\)分别是\(V,W\)的规范正交基.
+
+设\(T \in L(V,W)\)，则在这两组基下的\(M(T)\)是\(M(T^*)\)的共轭转置，即\(\ol{M(T)^T}=M(T^*)\).
+
+\textit{Proof}
+考虑\(M(T)_{i,j}\).由于\(Te_j=\sum_{i=1}^n \ip{Te_j}{f_i}f_i\)，从而\(M(T)_{i,j}=\ip{Te_j}{f_i}\).
+
+再考虑\(M(T^*)_{j,i}\).由于\(T^*f_i=\sum_{j=1}^n \ip{T^*f_i}{e_j}e_j\)，从而\(M(T^*)_{j,i}=\ip{T^*f_i}{e_j}\).
+    \begin{align*}
+        M(T^*)_{j,i}=\ip{T^*f_i}{e_j}=\ip{f_i}{Te_j}=\ol{\ip{Te_j}{f_i}}=\ol{M(T)_{i,j}}
+    \end{align*}
+于是\(\ol{M(T)^T}=M(T^*)\)，证毕.
+
+\hspace*{\fill}
+
+\textit{2.}
+设\(V\)是有限维内积空间且\(T \in L(V)\).
+证明：\(\lambda\)是\(T\)的特征值和\(\ol{\lambda}\)是\(T^*\)的特征值等价.
+
+\textit{Proof}
+利用\(\mydim \Ker(T^*)=\mydim \Ker(T)\)，有
+    \begin{align*}
+        0<\mydim \Ker(T-\lambda I)=\mydim \Ker(T-\lambda I)^*=\mydim \Ker(T^*-\ol{\lambda}I)
+    \end{align*}
+因此\(E(\ol{\lambda},T^*) \ne \{0\}\)，即\(\ol{\lambda}\)是\(T^*\)的一个特征值.
+
+\hspace*{\fill}
+
+\textit{3.}
+设\(V\)是有限维内积空间且\(T \in L(V)\)，\(U\)是\(V\)的一个子空间.
+
+求证：\(U\)在\(T\)下不变和\(U^\bot\)和\(T^*\)下不变等价.
+
+\textit{Proof}
+由\(\forall u \in U,u' \in U^\bot\)，则\(\ip{u}{u'}=0\)，考虑\(\ip{Tu}{u'}\)和\(\ip{u}{T^*u'}\).
+
+由\(\ip{Tu}{u'}=0 \Leftrightarrow \ip{u}{T^*u'}=0\)，得到\(Tu \in U\)和\(T^*u' \in U^\bot\)等价.
+
+\hspace*{\fill}
+
+\textit{4.}
+设\(T \in L(V,W)\).求证：
+\textit{a.}\(T\)单射和\(T^*\)满射等价. \quad \textit{b.}\(T\)满射和\(T^*\)单射等价.
+
+\textit{a.Proof}
+\(\Ker T=\{0\} \Leftrightarrow (\Ker T)^\bot=V \Leftrightarrow \Img T^*=V\).
+
+\textit{b.Proof}
+\(\Img T=V \Leftrightarrow (\Img T)^\bot=\{0\} \Leftrightarrow \Img T^*=\{0\}\).
+
+\hspace*{\fill}
+
+\textit{11.}
+设\(P \in L(V)\)满足\(P^2=P\).求证：\(T\)是自伴算子等价于存在\(V\)的子空间\(U\)，使得\(P=P_U\).
+
+\textit{Proof}
+必要性：考虑\(U\)和\(U^\bot\).\(\forall v,w \in V,v=v_1+v_2,w=w_1+w_2,v_1,w_1 \in U,v_2,w_2 \in U^\bot\).
+    \begin{align*}
+        \ip{Pv}{w}=\ip{v_1}{w_1+w_2}=\ip{v_1}{w_1}+\ip{v_1}{w_2}=\ip{v_1}{w_1}+\ip{v_2}{w_1}=\ip{v}{Pw}
+    \end{align*}
+充分性：根据\textit{5.B.4}，\(V= \Ker P \oplus \Img P\).
+考虑\(\forall v=v_1+v_2,v_1 \in \Ker P,v_2 \in \Img P\).
+    \begin{align*}
+        \ip{Pv}{v}=\ip{v_2}{v_1+v_2}=\ip{v_2}{v_1}+\norm{v_2}^2
+        =\ip{v_1}{v_2}+\norm{v_2}^2=\ip{v_1+v_2}{v_2}=\ip{v}{Pv}
+    \end{align*}
+因此\(\ip{v_1}{v_2}=0\)，即\(\Ker P\)和\(\Img P\)互为正交补，取\(U=\Img P\)即可.
+
+\newpage
+
+\textit{14.}
+设\(T \in L(V)\)是正规算子，且\(v,w \in V\)满足\(Tv=3v,Tw=4w,\norm{v}=\norm{w}=2\).
+
+\textit{Proof}
+根据定理7.22，\(\ip{v}{w}=0\)，从而\(\norm{T(v+w)}^2=\norm{3v+4w}^2=\norm{3v}^2+\norm{4w}^2=100\).
+
+根据范数的正定性，显然有\(\norm{T(v+w)}=10\).
+
+\hspace*{\fill}
+
+\textit{15.}
+给定\(u,x \in V\)，定义\(T \in L(V)\)为\(\forall v \in V,Tv=\ip{v}{u}x\).
+
+(\textit{a})当\(F=R\)时，证明：\(T\)是自伴算子等价于\(\exists \lambda \ne 0 \in R,x=\lambda u\).
+
+(\textit{b})证明：\(T\)是正规算子等价于\(\exists \lambda \ne 0,x=\lambda u\).
+
+\textit{a.Proof}
+    \begin{align*}
+        \ip{v}{T^*w}=\ip{Tv}{w}=\ip{v}{u}\ip{x}{w}=\ip{v}{\ip{x}{w}u},T^*w=\ip{x}{w}u
+    \end{align*}
+
+必要性：\(\ip{Tv}{w}=\ip{\lambda \ip{v}{u}}{w}u=\lambda \ip{v}{u} \ip{u}{w}\)
+\(=\ip{v}{\lambda \ip{w}{u}u}=\ip{v}{Tw}\).
+
+充分性：\(\ip{x}{w}u=T^*w=Tw=\ip{w}{u}x\).取\(w=u\)，得\(\lambda=\dfrac{\ip{x}{x}}{\ip{x}{u}}\).
+
+\textit{b.Proof}
+    \begin{align*}
+        &(T^*T)v=T^*(\ip{v}{u}x)=\ip{v}{u}T^*x=\norm{x}^2\ip{v}{u}u \\
+        &(TT^*)v=T(\ip{x}{v}u)=\ip{x}{v}Tu=\norm{u}^2\ip{x}{v}x
+    \end{align*}
+必要性：\((T^*T)v=\norm{\lambda u}^2 \ip{v}{u}u=\lambda \ol{\lambda} \norm{u}^2 \ip{v}{u}u\)
+\(=\norm{u}^2 \ip{v}{\lambda u}\lambda u=(TT^*)v\).
+
+充分性：\(\norm{x}^2\ip{v}{u}u=\norm{u}^2\ip{x}{v}x\).取\(v=x\)，得\(\lambda=\dfrac{\ip{x}{u}}{\ip{u}{u}}\).
+
+\hspace*{\fill}
+
+\textit{16.}
+设\(T \in L(V)\)是正规算子.求证：\(\Ker T^*=\Ker T,\Img T^*=\Img T\).
+
+\textit{Proof}
+\(\forall v \in V,Tv=0 \Leftrightarrow \norm{Tv}=0 \Leftrightarrow \norm{T^*v}=0 \Leftrightarrow T^*v=0\).
+
+\(\Img T^*=(\Ker T)^\bot=(\Ker T^*)^\bot=\Img T\).
+
+\(V=\Ker T \oplus (\Ker T)^\bot=\Ker T \oplus \Img T^*=\Ker T \oplus \Img T\).
+
+\hspace*{\fill}
+
+\textit{17.}
+设\(T \in L(V)\)是正规算子.求证：\(\forall n \in N^*,\Ker T^n=\Ker T,\Img T^n=\Img T\).
+
+\textit{Proof}
+先证明\(\Ker T^2 \subseteq \Ker T\).考虑\(v \in \Ker T^2\)，则\(\ip{T^2 v}{T^2 v}=0\).
+    \begin{align*}
+        &\ip{T^2 v}{T^2 v}=\ip{Tv}{T^*T^2v}=\ip{Tv}{T^2T^*v}=\ip{T^*Tv}{TT^*v}=0 \Rightarrow T^*Tv=0 \\
+        &\ip{T^*Tv}{v}=\ip{Tv}{Tv}=0 \Rightarrow Tv=0 \Rightarrow v \in \Ker T
+    \end{align*}
+结合显然的\(\Ker T \subseteq \Ker T^2\)有\(\Ker T^2=\Ker T\).
+
+根据定理8.3和\textit{8.A.17}，有\(\forall n \in N^*,\Ker T^n=\Ker T,\Img T^n=\Img T\).
+
