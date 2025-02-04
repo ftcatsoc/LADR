@@ -27,7 +27,7 @@ Special thanks to Sheldon Axler for writing *Linear Algebra Done Right* and prov
 
 I would also like to acknowledge the invaluable help and resources provided by [https://linearalgebras.com](https://linearalgebras.com), which greatly assisted in completing this project.
 
-Additionally, I would like to thank ChatGPT and Deepseek for providing helpful guidance and support during the development of this repository.
+Additionally, I would like to thank Deepseek, ChatGPT and Doubao for providing helpful guidance and support during the development of this repository.
 
 # 《Linear Algebra Done Right》习题解答 LaTeX 源代码
 
@@ -57,7 +57,7 @@ Additionally, I would like to thank ChatGPT and Deepseek for providing helpful g
 
 同时，感谢 [https://linearalgebras.com](https://linearalgebras.com) 提供的宝贵帮助和资源，它们在完成本项目过程中起到了重要作用。
 
-还要感谢 ChatGPT 和 Deepseek 在本项目开发过程中提供的有益指导和支持。
+还要感谢 Deepseek深度求索， ChatGPT 和豆包在本项目开发过程中提供的有益指导和支持。
 
 
 
