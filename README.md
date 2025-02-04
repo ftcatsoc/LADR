@@ -9,7 +9,7 @@ This repository contains LaTeX source code for solutions to exercises from *Line
 
 ## Example
 
-To access the solutions, simply download the precompiled PDF file, which contains all the solutions to the exercises in *Linear Algebra Done Right*.
+To access the solutions, simply download the precompiled PDF file, which contains part of the solutions to the exercises in *Linear Algebra Done Right*.
 
 ## Contributing
 
@@ -39,7 +39,7 @@ Additionally, I would like to thank Deepseek, ChatGPT and Doubao for providing h
 
 ## 示例
 
-你可以直接下载预编译的 PDF 文件，其中包含《Linear Algebra Done Right》所有习题的解答。
+你可以直接下载预编译的 PDF 文件，其中包含《Linear Algebra Done Right》大部分习题的解答。
 
 ## 贡献
 
