@@ -1,0 +1,149 @@
+\textit{Theorem 5.27.}
+对于任意的有限维复向量空间\(V\)和任意的\(T \in L(V)\)，总存在\(V\)的一组基，
+
+使得线性算子\(T\)的矩阵是上三角矩阵.
+
+\textit{Proof}
+使用数学归纳法.\(\mydim V=1\)的情况显然成立.
+
+现在假设对于任意的\(U\)满足\(\mydim U<\mydim V\)，\(U\)都满足条件.
+
+根据定理5.21，该复向量空间必存在一个特征值\(\lambda\)及对应的特征向量\(u\).
+
+令\(U=\myspan(u)\)，考虑商空间\(V/U\)，\(\mydim V/U=n-1\)，因此可以对其使用假设.
+
+构造\(T\)在\(V/U\)上的诱导变换\(T/U\)满足\(\forall v+U \in V/U,(T/U)(v+U)=Tv+U\).
+
+则\(V/U\)存在一组基\(v_1+U,\cdots,v_n+U\)满足\((T/U)(v_i+U) \in \myspan(v_1+U,\cdots,v_n+U)\).
+
+将商空间\(V/U\)的基提升至原空间，将有\(\forall i=1,\cdots,n,Tv_i=\mu u+\sum_{j=1}^i a_jv_j\).
+
+合并\(u\)和提升后的\(v_1,\cdots,v_n\).根据\textit{3.E.13}，\(u,v_1,\cdots,v_n\)是\(V\)的一组基.
+
+且满足\(\forall i=1,\cdots,n,Tv_i \in \myspan(u,v_1,\cdots,v_i)\).
+
+\hspace*{\fill}
+
+\textit{1.}
+设\(T \in L(V)\)且存在\(n \in N^+\)使得\(T^n=0\).
+求证：\(I-T\)是可逆，且\((I-T)^{-1}=\sum_{i=0}^{n-1} T^i\).
+
+\textit{Proof}
+\((I-T)\sum_{i=0}^{n-1} T^i=\sum_{i=0}^{n-1} T^i-\sum_{i=1}^n T^i=I-T^n=I\).
+
+\hspace*{\fill}
+
+\textit{3.}
+设\(T \in L(V)\)，满足\(T^2=I\)且\(-1\)不是\(T\)的特征值.证明\(T=I\).
+
+\textit{Proof}
+\(T^2=I \Rightarrow (T+I)(T-I)=0\)，因此\(1\)和\(-1\)至少有一个是\(T\)的特征值.
+
+而\(-1\)不是\(T\)的特征值，因此\(T=I\).
+
+\hspace*{\fill}
+
+\textit{4.}
+设\(P \in L(V)\)满足\(P^2=P\).证明\(V=\Ker P \oplus \Img P\).
+
+\textit{Proof}
+对于\(\forall v \in V,v=Pv+(v-Pv),Pv \in \Img P\).
+
+\(P(v-Pv)=(P-P^2)v=0 \Rightarrow v-Pv \in \Ker P\)，因此\(V=\Img P+\Ker P\).
+
+再考虑\(v \in \Ker P \cap \Img P\)，因此\(\exists u \in V\)，使得\(Pu=v\)，得\(v=Pu=P^2u=Pv=0\)，证毕.
+
+\hspace*{\fill}
+
+\textit{5.}
+设\(S,T \in L(V)\)且\(S\)是可逆变换.设\(p \in P(F)\)是一个多项式.
+
+求证：\(p(STS^{-1})=Sp(T)S^{-1}\)
+
+\textit{Proof}
+对于\(Sv \in V\)，有\((STS^{-1})^m (Sv)=(STS^{-1})^{m-1}(S(Tv))=\cdots=(ST^m)v\).
+    \begin{align*}
+        p(STS^{-1})(Sv)=\sum_{i=0}^m a_i(STS^{-1})^m (Sv) 
+        =\sum_{i=0}^m a_i(ST^m)v=Sp(T)v=Sp(T)S^{-1}(Sv)
+    \end{align*}
+
+\newpage
+
+\textit{6.}
+设\(T \in L(V)\)且\(U\)是\(T\)下的不变子空间.
+
+求证：对于任意多项式\(p \in P(F)\)，\(U\)都是\(p(T)\)下的不变子空间.
+
+\textit{Proof}
+使用数学归纳法.先验证\(n=1\)的情况.
+
+\(\forall u \in U,(a_0I+a_1T)u=a_0u+a_1(Tu) \in U\)，情况成立.
+
+接着假设结论在次数为\(n\)时成立，即\(\forall u \in U,p_n(T)u=\sum_{i=0}^n a_iT^iu \in U\).
+
+下面验证次数为\(n+1\)的情况.
+\(\forall u \in U,p_{n+1}(T)u=\sum_{i=0}^{n+1} a_iT^iu=\sum_{i=0}^n a_iT^iu+a_{n+1}T^{n+1}u\).
+
+由于\(\sum_{i=0}^n a_iT^iu \in U,a_{n+1}T^{n+1}u \in U\)，故\(p_{n+1}(T)u \in U\)，证毕.
+
+\hspace*{\fill}
+
+\textit{9.}
+设\(V\)是有限维向量空间且\(T \in L(V)\)，存在\(v \ne 0 \in V\).
+
+令\(p\)是能使得\(p(T)v=0\)的次数最低的多项式.求证：\(p\)的所有零点都是\(T\)的特征值.
+
+\textit{Proof}
+使用反证法.设\(\exists \lambda \in F,p(\lambda)=0\)但\(T-\lambda I\)可逆.
+
+根据代数基本定理，存在\(q(T) \in L(V)\)，使得\(p(T)=(T-\lambda I)q(T),\mydeg q<\mydeg p\).
+
+因此\(q(T)\)不能满足\(q(T)v=0\).但是\(v \ne 0\)，因而\((T-\lambda I)v \ne 0\).
+
+因此\(p(T)v=(T-\lambda I)q(T)v \ne 0\)，矛盾，从而原命题得证.
+
+\hspace*{\fill}
+
+\textit{11.}
+设\(T \in L(V)\)和一个多项式\(p \in P(C)\)，\(\alpha \in C\).
+
+求证：\(\alpha\)是\(p(T)\)的特征值和存在\(T\)的特征值\(\lambda\)使得\(\alpha=p(\lambda)\)等价.
+
+\textit{Proof}
+必要性：若\(Tv=\lambda v\)且\(\alpha=p(\lambda)\)，
+则\(p(T)v=\sum_{i=0}^n a_iT^iv=\sum_{i=0}^n a_i\lambda^iv=p(\lambda)v\).
+
+充分性：\(\exists v \ne 0,Tv=\alpha v \Rightarrow (p(T)-\alpha I)\)不可逆.
+
+因此\(p(T)-\alpha I=c\prod_{i=1}^n (T-\lambda_i I)\)不可逆，即至少存在一个\(\lambda_i\)使得\(T-\lambda_i I\)不可逆，
+
+即\(\lambda_i\)是\(T\)的特征值，因此\(p(T)v=p(\lambda_i)v=\alpha v\).
+
+\hspace*{\fill}
+
+\textit{13.}
+设\(W\)是复向量空间且\(T \in L(W)\)没有特征值.
+
+求证：若\(U\)在\(T\)下不变，则\(U=\{0\}\)或者\(U\)为无限维向量空间.
+
+\textit{Proof}
+\(\{0\}\)的情况显然成立.现在假设\(U\)是非零有限维复向量空间.
+
+则\(T|_U \in L(U)\)必有特征值\(\lambda\)，即\(T|_U u=\lambda u\).
+从而\(T \in L(W)\)实际上有一个特征值\(\lambda\)，矛盾.
+
+\hspace*{\fill}
+
+\textit{16.}
+令\(\varphi:P_n(C) \rightarrow V\)为\(\varphi p=p(T)v\)，以此证明定理5.21.
+
+\textit{Proof}
+先证明\(\varphi\)是线性变换.
+    \begin{align*}
+        \varphi(\lambda p+\mu q)=(\lambda p+\mu q)(T)v=(\lambda p(T)+\mu q(T))v
+        =\lambda p(T)v+\mu q(T)v=\lambda(\varphi p)+\mu(\varphi q)
+    \end{align*}
+由于\(\mydim P_n(C)=n+1,\mydim V=n\)，因此该变换不是单射变换，
+
+也即存在\(v \ne 0\)使得\(p(T)v=\sum_{i=0}^n a_i(T^iv)=0\)，后文证明与原文相同.
+
