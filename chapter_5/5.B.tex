@@ -6,18 +6,21 @@
 \textit{Proof}
 使用数学归纳法.\(\mydim V=1\)的情况显然成立.
 
-现在假设对于任意的\(W\)满足\(\mydim W<\mydim V\)，\(W\)都满足条件.
+现在假设对于任意的\(U\)满足\(\mydim U<\mydim V\)，\(U\)都满足条件.
 
-根据定理5.21，该复向量空间必存在一个特征值\(\lambda\)及对应的特征向量\(v_1\).
+根据定理5.21，该复向量空间必存在一个特征值\(\lambda\)及对应的特征向量\(u\).
 
-令\(U=\myspan(v_1)\)，考虑商空间\(V/U\)，\(\mydim V/U=n-1\)，因此可以对其使用假设.
+令\(U=\myspan(u)\)，考虑商空间\(V/U\)，\(\mydim V/U=n-1\)，因此可以对其使用假设.
 
 构造\(T\)在\(V/U\)上的诱导变换\(T/U\)满足\(\forall v+U \in V/U,(T/U)(v+U)=Tv+U\).
 
-根据假设，\(V/U\)存在一组基\(v_2+U,\cdots,v_n+U\)满足\((T/U)(v_i+U) \in \myspan(v_2+U,\cdots,v_n+U)\).
+则\(V/U\)存在一组基\(v_1+U,\cdots,v_n+U\)满足\((T/U)(v_i+U) \in \myspan(v_1+U,\cdots,v_n+U)\).
 
-根据\textit{3.E.13}，\(v_1,\cdots,v_n\)是\(V\)的一组基，
-且满足\(\forall i=1,\cdots,n,Tv_i \in \myspan(v_1,\cdots,v_i)\).
+将商空间\(V/U\)的基提升至原空间，将有\(\forall i=1,\cdots,n,Tv_i=\mu u+\sum_{j=1}^i a_jv_j\).
+
+合并\(u\)和提升后的\(v_1,\cdots,v_n\).根据\textit{3.E.13}，\(u,v_1,\cdots,v_n\)是\(V\)的一组基.
+
+且满足\(\forall i=1,\cdots,n,Tv_i \in \myspan(u,v_1,\cdots,v_i)\).
 
 \hspace*{\fill}
 
