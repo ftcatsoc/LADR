@@ -110,6 +110,64 @@
 
 \hspace*{\fill}
 
+\textit{12.}
+设\(T \in L(V)\)为自伴算子，满足\(\forall \varepsilon>0,\exists \lambda \in F,\norm{v}=1\)
+使得\(\norm{Tv-\lambda v}<\varepsilon\).
+
+求证：存在\(T\)的一个特征值\(\mu\)，满足\(\abs{\lambda-\mu}<\varepsilon\).
+
+\textit{Proof}
+设\(\norm{u}=1\)是\(\mu\)的特征向量.考虑\(\ip{Tv-\lambda v}{u}\).
+    \begin{align*}
+        \ip{Tv-\lambda v}{u}=\ip{Tv}{u}-\ip{\lambda v}{u}=\ip{v}{Tu}-\lambda \ip{v}{u}
+        =\mu \ip{v}{u}-\lambda \ip{v}{u}=(\mu-\lambda)\ip{v}{u}
+    \end{align*}
+第三个等号是因为自伴算子的特征值均为实数.随后有
+    \begin{align*}
+        &\abs{\ip{Tv-\lambda v}{u}} \leq \norm{Tv-\lambda v}\norm{u}=\norm{Tv-\lambda v}<\varepsilon \\
+        &\abs{\ip{Tv-\lambda v}{u}}=\abs{(\mu-\lambda)\ip{v}{u}} \leq \abs{\lambda-\mu}\norm{u}\norm{v}=\abs{\lambda-\mu}
+    \end{align*}
+联立两个不等式，有\(\abs{\lambda-\mu}<\varepsilon\).
+
+\newpage
+
+\textit{20*}{\kaishu 正规算子和不变子空间}
+设\(T \in L(V)\)是正规算子且\(U\)是\(T\)下的不变子空间，则有
+
+(\textit{a})\(U^\bot\)是\(T\)下的不变子空间. \quad
+(\textit{b})\(T|_U \in L(U),T|_{U^\bot} \in L(U^\bot)\)都是正规算子.
+
+\textit{a.Proof}
+根据\textit{7.A.16}，若\(T\)为正规算子，则\(\Img T=\Img T^*\).
+
+设\(\forall u \in U\)，则\(T^*u \in \Img T^*=\Img T \subseteq U\)，因此\(U\)也是\(T^*\)下的不变子空间.
+
+从而\(\forall u' \in U^\bot,\ip{u}{Tu'}=\ip{T^*u}{u'}=0\)，因此\(Tu' \in U^\bot\)，\(U^\bot\)是\(T\)下的不变子空间.
+
+\textit{b.Proof}
+\(\forall u \in U,\norm{T|_U u}^2=\norm{Tu}^2=\norm{T^*u}^2=\norm{T^*|_U u}^2\)，即\(T|_U \in L(U)\)是正规算子；
+
+\(\forall u' \in U^\bot,\norm{T|_{U^\bot}u'}^2=\norm{Tu'}^2=\norm{T^*u'}^2=\norm{T^*|_{U^\bot}u'}^2\)，
+即\(T|_{U^\bot} \in L(U^\bot)\)是正规算子.
+
+\hspace*{\fill}
+
+\textit{13.}
+沿用\textit{Theorem 7.24}的符号，但使用实谱定理的证明思路证明复谱定理.
+
+\textit{Proof}
+必要性的证明与原来一致.
+
+充分性：设\(\lambda_1\)是\(T\)的特征值，\(e_1\)满足\(\norm{e_1}=1\)是与之对应的特征向量，令\(U=\myspan(e_1)\).
+
+显然\(T|_{U^\bot}\)也是正规算子，设\(\lambda_2\)是其特征值，\(e_2\)满足\(\norm{e_2}=1\)是与之对应的特征向量.
+
+以此类推,\(T\)将有特征向量\(e_1,\cdots,e_n\)满足\(\forall i=1,\cdots,n,\norm{e_i}=1\).
+
+且这些特征向量两两正交，于是得到了\(V\)的一组规范正交特征基.
+
+\hspace*{\fill}
+
 \textit{14.}
 设\(V\)是有限维实内积空间且\(T \in L(V)\).
 
@@ -135,8 +193,4 @@
 在这种内积定义下，\(\forall i,j=1,\cdots,n,\ip{e_i}{e_j}=\delta_{i,j}\)，即\(e_1,\cdots,e_m\)是一组规范正交基.
 
 于是\(M(T)\)为对角矩阵且对角线上元素均为实数，则\(T\)是自伴算子.
-
-\hspace*{\fill}
-
-有算子范数和奇异值分解背景的\textit{12}题将单独列出.
 

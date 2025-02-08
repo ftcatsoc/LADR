@@ -1,0 +1,74 @@
+\textit{6.B.16.}
+设\(V\)是有限维复内积空间，\(T \in L(V)\)，\(\lambda_1,\cdots,\lambda_n\)是\(T\)的所有相异特征值.
+
+\(T\)的谱半径\(\rho(T)<1\).证明：\(\forall \varepsilon>0,\exists m \in N^*,\norm{T^m}_2<\varepsilon\).
+
+\textit{Proof}
+\(V=\oplus_{i=1}^n G(\lambda_i,T)=\oplus_{i=1}^n\oplus_{j=1}^{n_i} J_j(\lambda_i,T)\)，
+令\(\mydim J_j(\lambda_i,T)=d_{i,j}\).
+
+考虑\(M(T^m|_{J_j(\lambda_i,T)})\)，展开之，得到
+    \begin{align*}
+        M(T^m|_{J_j(\lambda_i,T)})=
+        \begin{pmatrix}
+            \lambda_i^m & C_m^1 \lambda_i^{m-1} & \cdots      & C_m^{m+1-d_{i,j}} \lambda_i^{m+1-d_{i,j}} \\
+                        & \lambda_i^m           & \ddots      & \vdots                                    \\
+                        &                       & \lambda_i^m & C_m^1 \lambda_i^{m-1}                     \\
+                 0      &                       &             & \lambda_i^m
+        \end{pmatrix}
+    \end{align*}
+因此\(M(T^m|_{J_j(\lambda_i,T)})\)中的元素具有统一形式\(C_m^k \lambda_i^{m-k},k=0,\cdots,d_{i,j}-1\)，考虑其绝对值.
+
+显然，由于\(\abs{\lambda_i}<1\)，故其最大值将在前半段取得.令\(a_k=C_m^k \abs{\lambda_i}^{m-k},k=0,\cdots,d_{i,j}-1\).令
+    \begin{align*}
+        \dfrac{a_{k+1}}{a_k}=\dfrac{C_m^{k+1}\abs{\lambda_i}^{m-(k+1)}}{C_m^k \abs{\lambda_i}^{m-k}}=
+        \dfrac{m-k}{k+1} \abs{\lambda_i}^{-1}=1,k=\dfrac{m-\abs{\lambda_i}}{1+\abs{\lambda_i}}
+    \end{align*}
+因此\(a_{\max}\)在\([\dfrac{m-\abs{\lambda_i}}{1+\abs{\lambda_i}}]\)或\(\{\dfrac{m-\abs{\lambda_i}}{1+\abs{\lambda_i}}\}\)处取得.
+随着\(m\)增长，将有\(\dfrac{m-\abs{\lambda_i}}{1+\abs{\lambda_i}}>d_{i,j}-1\).
+
+因此当\(m\)足够大时，数列在\([1,d_{i,j}-1]\)上单调增，其最大值将在最后一项取得，为
+    \begin{align*}
+        a_{d_{i,j}-1}=C_m^{d_{i,j}-1}\abs{\lambda}^{m-(d_{i,j}-1)} \leq 
+        \dfrac{m^{d_{i,j}-1}}{(d_{i,j}-1)!}\abs{\lambda}^{m-(d_{i,j}-1)}
+    \end{align*}
+选择最大行和范数\(\norm{\cdot}_{\infty}\)作为算子范数，因而
+    \begin{align*}
+        \norm{T^m|_{J_j(\lambda_i,T)}}_{\infty} \leq d_{i,j}\dfrac{m^{d_{i,j}-1}}{(d_{i,j}-1)!}\abs{\lambda}^{m-(d_{i,j}-1)}
+        =\dfrac{d_{i,j}}{(d_{i,j}-1)! \abs{\lambda}^{d_{i,j}-1}}m^{d_{i,j}-1}\abs{\lambda_i}^m
+    \end{align*}
+由于\(\abs{\lambda_i}<1\)，故\(\lim_{m \rightarrow +\infty}\norm{T^m|_{J_j(\lambda_i,T)}}_{\infty}=\)
+\(\lim_{m \rightarrow +\infty}m^{d_{i,j}-1}\abs{\lambda_i}^m=0\).
+
+令\(\sum_{i=1}^n n_i=N\)，则\(\forall \varepsilon>0,\exists m \in N^*,\)
+\(\norm{T^m|_{J_j(\lambda_i,T)}}_{\infty}<\dfrac{\varepsilon}{N \sqrt{d_{\max}}}\)，因此
+    \begin{align*}
+        \norm{T^m}_{\infty} \leq \sum_{i=1}^n \sum_{j=1}^{n_i}\norm{T^m|_{J_j(\lambda_i,T)}}<
+        N \cdot \dfrac{\varepsilon}{N \sqrt{d_{\max}}}=\dfrac{\varepsilon}{\sqrt{d_{\max}}}
+    \end{align*}
+由于\(\norm{T^m|_{J_j(\lambda_i,T)}}_2 \leq \sqrt{d_{i,j}}\norm{T^m|_{J_j(\lambda_i,T)}}_{\infty}\)，
+故\(\norm{T^m}_2 \leq \sqrt{d_{\max}}\norm{T^m}_{\infty}<\varepsilon\).
+
+范数的等价性证明将于下页补齐.
+
+\newpage
+
+\textit{6.B.16.Lemma}
+设\(V\)是有限维复向量空间，满足\(\mydim V=n,T \in L(V)\).
+
+最大行和范数\(\norm{T}_{\infty}=\max_{1 \leq i \leq n} \sum_{j=1}^n \abs{M(T)_{i,j}}\)和谱范数\(\norm{T}_2\)满足
+\(\norm{T}_2 \leq \sqrt{n}\norm{T}_{\infty}\).
+
+\textit{Proof}
+设\(e_1,\cdots,e_n\)是\(V\)的一组基.
+下证\(\forall v=\sum_{i=1}^n \ip{v}{e_i}e_i \in V,\norm{Tv}^2 \leq n \norm{Tv}_{\infty}^2\).
+    \begin{align*}
+        \norm{Tv}^2=\abs{\sum_{j=1}^n \ip{v}{e_i}Tv_i}^2 \leq \sum_{i=1}^n \ip{v}{e_i}^2 \norm{Tv_i}^2 
+        \leq n \norm{T}_{\infty}^2 \sum_{i=1}^n (\ip{v}{e_i}e_i)^2=n \norm{T}_{\infty}^2 \norm{v}^2
+    \end{align*}
+第一个不等号来自于柯西-施瓦兹不等式，第二个不等号来自于最大行和范数的定义.
+    \begin{align*}
+        \norm{T}_2^2=\sup_{v \ne 0} \dfrac{\norm{Tv}^2}{\norm{v}^2} \leq n \norm{T}_{\infty}^2,
+        \norm{T}_2 \leq \sqrt{n}\norm{T}_{\infty}
+    \end{align*}
+

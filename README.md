@@ -57,7 +57,7 @@ Additionally, I would like to thank Deepseek, ChatGPT and Doubao for providing h
 
 同时，感谢 [https://linearalgebras.com](https://linearalgebras.com) 提供的宝贵帮助和资源，它们在完成本项目过程中起到了重要作用。
 
-还要感谢 Deepseek深度求索， ChatGPT 和豆包在本项目开发过程中提供的有益指导和支持。
+还要感谢Deepseek深度求索，ChatGPT和豆包在本项目开发过程中提供的有益指导和支持。
 
 
 
