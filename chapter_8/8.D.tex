@@ -51,9 +51,13 @@
 
 根据\textit{3.E.13}，\(N^{m_1}v_1,\cdots,v_1,\cdots,N^{m_n}v_n,\cdots,v_n\)即为\(V\)的一组基.
 
-%关于\(x_i^j\)的存在性，具体的构造方式如下：
-%    \begin{align*}
-%        \forall i=2,\cdots,n,x_i^0=\sum_{k=0}^{m_1}c_k^iN^kv_1,
-%        \forall j=1,\cdots,m_i+1,x_i^j=\sum_{k=0}^{m_1}\dfrac{c_k^i}{(k+j)!}N^{k+j}v_1
-%    \end{align*}
+下面讨论\(\forall i=2,\cdots,n,x_i^{m_i+1} \in U\)的存在性.令\(x_i^0=\sum_{k=0}^{m_1}c_kN^kv_1\)，则
+    \begin{align*}
+        N^{m_i+1}x_i^{m_i+1}=x_i^0=\sum_{k=0}^{m_1}c_kN^k v_1 \Rightarrow x_i^{m_i+1}=\sum_{k=m_i+1}^{m_1}c_kN^k v_1
+    \end{align*}
+若\(m_i+1<m_1\)，上式自然成立，直接采用该调整公式即可；
+
+若\(m_i+1 \geq m_1\)，则\(x_i^{m_i+1}=0\)，即\(N^{m_i+1}u_i=0\)，此时\(v_i=u_i\)，不需要调整.
+
+因此\(\forall i=2,\cdots,n,v_i\)总存在，即\(x_i^{m_i+1}\)的存在性得到保证，归纳完成.
 
