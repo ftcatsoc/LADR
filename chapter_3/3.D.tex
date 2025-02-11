@@ -278,18 +278,16 @@
 证明：若\(T \in L(F^{n,1},F^{m,1})\)，则存在一个\(m-n\)矩阵\(A\)，使得\(\forall x \in F^{n,1},Tx=Ax\).
 
 \textit{Proof}
-使用\(F^{n,1}\)和\(F^{m,1}\)的标准基.
-
-定义\(T\)为\(T(x_1,\cdots,x_n)=(\sum_{i=1}^m A_{1,i}x_i,\cdots,\sum _{i=1}^m A_{n,i}x_i)\).
-在该定义下，矩阵\(A\)为
-    \begin{equation*}
-        \begin{pNiceMatrix}[first-row,first-col]
-               &   x_1   & \cdots &  x_n     \\
-        Tx_1   & A_{1,1} & \cdots & A_{1,n}  \\
-        \vdots & \vdots  & \ddots & \vdots   \\
-        Tx_n   & A_{m,1} & \cdots & A_{m,n}  \\
-        \end{pNiceMatrix}
-    \end{equation*}
+使用\(F^{n,1}\)和\(F^{m,1}\)的标准基\(e_1,\cdot,e_n\)和\(f_1,\cdots,f_m\).
+    \begin{align*}
+        M(T,(e_1,\cdots,e_n),(f_1,\cdots,f_m))=
+            \begin{pmatrix}
+                A_{1,1} & \cdots & A_{1,n}  \\
+                \vdots  & \ddots & \vdots   \\
+                A_{m,1} & \cdots & A_{m,n}
+            \end{pmatrix}
+        =A
+    \end{align*}
 因此总是存在这样的\(A_{i,j}\)，证毕.
 
 \newpage

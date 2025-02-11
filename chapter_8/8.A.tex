@@ -49,26 +49,23 @@
 使得\(M(N)\)是对角线元素均为\(0\)的上三角矩阵.
 
 \textit{Proof}
-设\(\mydim V=n\)，并令\(B_1\)是\(\Ker N\)的一组基.
+设\(\mydim V=n\)，并令\(B_1=\{v_1^1,\cdots,v_{n_1}^1\}\)是\(\Ker N\)的一组基.
 
-由于\(\Ker N^i \subseteq \Ker N^{i+1}\)，因此该基可以被依次扩充成\(\Ker N^2,\cdots,\Ker N^n\)的一组基.
+由于\(\forall i=1,\cdots,n,\Ker N^i \subseteq \Ker N^{i+1}\)，故扩充该基为\(\Ker N^2,\cdots,\Ker N^n\)的一组基.
 
-不妨设\(B_2,\cdots,B_n\)是依次扩充所得的基.
+由于\(\Ker N^n=V\)，所以\(B=\{B_1,\cdots,B_n\},\Ker N^i=\myspan(B_i)\)就是\(V\)的一组基.
 
-由于\(N\)是幂零算子，因此\(\Ker N^n=V\)，所以\(B_1,\cdots,B_n\)就是\(V\)的一组基.
+由于\(N(\Ker N^{i+1}) \subseteq \Ker N^i\)，因此\(N \myspan(B_i) \subseteq \myspan(B_1,\cdots,B_{i-1})\).
 
-由于\(NB_{i+1} \in \Ker B_i\)，因此\(B_i\)中的所有向量均可表示成\(B_1,\cdots,B_i\)中向量的线性组合，
-
-也即该列后面的元素均为\(0\).特别地，\(NB_1=0\)，因此\(B_1\)列的所有元素均为\(0\).
-    \begin{equation*}
-        \begin{pNiceMatrix}[first-row,first-col]
-                   & B_1 & B_2 & \cdots & B_n  \\
-             B_1   &  0  &  *  &   *    &  *   \\
-             B_2   &  0  &  0  &   *    &  *   \\
-            \vdots &  0  &  0  &   0    &  *   \\
-             B_n   &  0  &  0  &   0    &  0   \\
-        \end{pNiceMatrix}
-    \end{equation*}
+也即该列后面的元素均为\(0\).特别地，\(N \myspan(B_1)=0\)，因此\(B_1\)列的所有元素均为\(0\).
+    \begin{align*}
+        M(N,(B_1,\cdots,B_n))=
+        \begin{pmatrix}
+                0 &        & * \\
+                  & \ddots &   \\
+                0 &        & 0 \\
+        \end{pmatrix}
+    \end{align*}
 
 \newpage
 
