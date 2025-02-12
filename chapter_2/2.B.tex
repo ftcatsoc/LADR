@@ -1,3 +1,29 @@
+\textit{6.}
+若\(v_1,\cdots,v_4\)是\(V\)的一组基，证明：\(v_1+v_2,v_2+v_3,v_3+v_4,v_4\)是\(V\)的一组基.
+
+\textit{Proof}
+先证明它们线性无关.令\(a_1(v_1+v_2)+a_2(v_2+v_3)+a_3(v_3+v_4)+a_4v_4=0\).
+
+得到\(a_1v_1+(a_1+a_2)v_2+(a_2+a_3)v_3+(a_3+a_4)v_4=0\)，由\(v_1,\cdots,v_4\)线性无关，
+
+得\(a_1=0,a_1+a_2=0,a_2+a_3=0,a_3+a_4=0\)，即\(a_1=a_2=a_3=a_4=0\)，得证.
+
+令\(v_1+v_2=u_1,v_2+v_3=u_2,v_3+v_4=u_3,v_4=u_4\)，下证\(V=\myspan(u_1,u_2,u_3,u_4)\).
+
+由于\(v_1=u_1-u_2+u_3-u_4,v_2=u_2-u_3+u_4,v_3=u_3-u_4,v_4=u_4\)，于是有
+
+考虑\(\forall v=\sum_{i=1}^4 a_iv_i \in V,u=\sum_{i=1}^4 b_iu_i \in \myspan(u_1,u_2,u_3,u_4),a_i,b_i \in F\).
+    \begin{align*}
+        v&=a_1(u_1-u_2+u_3-u_4)+a_2(u_2-u_3+u_4)+a_3(u_3-u_4)+a_4u_4 \\
+         &=a_1u_1+(a_2-a_1)u_2+(a_3-a_2+a_1)u_3+(a_4-a_3+a_2-a_1)u_4 \in \myspan(u_1,u_2,u_3,u_4) \\
+        u&=b_1v_1+(b_1+b_2)v_2+(b_2+b_3)v_3+(b_3+b_4)v_4 \in \myspan(v_1,v_2,v_3,v_4)=V \\
+        & V \subseteq \myspan(u_1,u_2,u_3,u_4),\myspan(u_1,u_2,u_3,u_4)\subseteq V 
+        \Rightarrow V=\myspan(u_1,u_2,u_3,u_4)
+    \end{align*}
+于是\(u_1,u_2,u_3,u_4\)线性无关且\(V=\myspan(u_1,u_2,u_3,u_4)\)，即其确为\(V\)的一组基.
+
+\hspace*{\fill}
+
 \textit{8.}
 设\(U\)和\(W\)都是\(V\)的子空间，且满足\(V=U \oplus W\).
 

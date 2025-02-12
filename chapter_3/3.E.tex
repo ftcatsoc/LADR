@@ -66,7 +66,7 @@
 证明：\(V^n\)和\(L(F^n,V)\)同构.
 
 \textit{Proof}
-定义\(v=(v_1,\cdots,v_n) \in V^n\)，其中\(v_i \in V_i\)；
+定义\(v=(v_1,\cdots,v_n) \in V^n\)，其中\(v_i \in V\)；
 定义\(x=(x_1,\cdots,x_n) \in F^n\)，其中\(x_i \in F\).
 
 定义投影映射\(R_j \in (F^n,V)\)为\(R_j(x)=x_jv_j\).验证\(R_j\)的线性性.
@@ -81,7 +81,7 @@
         =c^\alpha \sum_{i=1}^n R_i^\alpha+c^\beta \sum_{i=1}^n R_i^\beta
         =c^\alpha \Gamma(v^\alpha)+c^\beta \Gamma(v^\beta)
     \end{align*}
-下面证明\(\Gamma\)是单射变换.令\(\sum_{i=1}^n R_i=\sum_{i=1}^n x_iv_i=0\).
+下面证明\(\Gamma\)是单射变换.令\(\sum_{i=1}^n R_i(x)=\sum_{i=1}^n x_iv_i=0\).
 定义\(e_1,\cdots,e_n \in F^n\)是\(F^n\)的标准基.
 
 令\(x_i=e_i\)，则可得\(\forall i=1,\cdots,n,v_i=0\)，即\(v=0\).
@@ -156,17 +156,15 @@
 考虑\(\gamma \sum_{i=1}^m \lambda_i v_i+(1-\gamma)\sum_{i=1}^m \lambda_i v_i\).
 
 由于\(\gamma \sum_{i=1}^m \lambda_i+(1-\gamma)\sum_{i=1}^m \mu_i=1\)，
-故根据\textit{3.E.8}，
+故根据仿射集的第二定义，
 
-\(\gamma \sum_{i=1}^m \lambda_i v_i+(1-\gamma)\sum_{i=1}^m \mu_i v_i \in A\)，
-即\(A\)是\(V\)的一个仿射集.
+\(\gamma \sum_{i=1}^m \lambda_i v_i+(1-\gamma)\sum_{i=1}^m \mu_i v_i\)
+\(=\sum_{i=1}^m(\gamma \lambda_i+(1-\gamma)\mu_i)v_i \in A\).即\(A\)是\(V\)的一个仿射集.
 
 \textit{b.Proof}
-根据\textit{3.E.11.a}，\(A\)是一个仿射集，
+由\(A\)是仿射集，故存在\(u_0 \in V\)和\(V\)的一个子空间\(U\)，满足\(A=u_0+U\).
 
-因此存在\(u_0 \in V\)和\(V\)的一个子空间\(U\)，满足\(A=u_0+U\).
-
-因此\(\forall i=1,\cdots,m\)，都有\(u_i \in U\)，使得\(v_i=u_0+u_i\).
+因此\(\forall i=1,\cdots,m,v_i \in A,\exists u_i \in U,v_i=u_0+u_i\).
 考虑\(\forall v=\sum_{i=1}^m \lambda_i v_i \in A\).
 
 将\(v_i=u_0+u_i\)代入，有\(\sum_{i=1}^m \lambda_i(u_0+u_i)=u_0+\sum_{i=1}^m \lambda_i u_i\).
@@ -180,7 +178,7 @@
 能够包含\(u_1,\cdots,u_m\)的子空间必然包含\(U\)，也即能够包含\(v_1,\cdots,v_m\)的仿射集必然包含\(A\).
 
 \textit{c.Proof}
-将\textit{3.E.11.a}中的\(u_0\)替换成\(v_1\)，则\(\forall i=2,\cdots,m,u_i=v_i-v_1\).
+将\textit{3.E.11.b}中的\(u_0\)替换成\(v_1\)，则\(\forall i=2,\cdots,m,u_i=v_i-v_1\).
 
 因此\(A=u_0+U=u_0+\myspan (u_1,\cdots,u_m)=v_1+\myspan (v_2-v_1,\cdots,v_m-v_1)\).
 
@@ -318,9 +316,10 @@
 (\textit{c})证明\(\Img  \Gamma=\{T \in L(V,W)|\forall u \in U,Tu=0 \}\).
 
 \textit{a.Proof}
+常规验证即可.
     \begin{align*}
-        &\Gamma(\lambda S_1+\mu S_2)=(\lambda S_1+\mu S_2) \circ \pi \\
-        &\lambda S_1 \circ \pi+\mu S_2 \circ \pi=\lambda \Gamma(S_1)+\mu \Gamma(S_2)
+        \Gamma(\lambda S_1+\mu S_2)=(\lambda S_1+\mu S_2) \circ \pi
+        =\lambda S_1 \circ \pi+\mu S_2 \circ \pi=\lambda \Gamma(S_1)+\mu \Gamma(S_2)
     \end{align*}
 \textit{b.Proof}
 令\(\Gamma(S)(v)=S \circ \pi(v)=S(v+U)=0\).

@@ -51,21 +51,19 @@
 \textit{Proof}
 设\(\mydim V=n\)，并令\(B_1=\{v_1^1,\cdots,v_{n_1}^1\}\)是\(\Ker N\)的一组基.
 
-由于\(\forall i=1,\cdots,n,\Ker N^i \subseteq \Ker N^{i+1}\)，故扩充该基为\(\Ker N^2,\cdots,\Ker N^n\)的一组基.
+由于\(\forall i=1,\cdots,n,\Ker N^i \subseteq \Ker N^{i+1}\)，故依次扩充该基为\(\Ker N^2,\cdots,\Ker N^n\)的一组基.
 
-由于\(\Ker N^n=V\)，所以\(B=\{B_1,\cdots,B_n\},\Ker N^i=\myspan(B_i)\)就是\(V\)的一组基.
+从\(\Ker N^{i-1}\)扩充至\(\Ker N^i\)时，所添加的向量组为\(B_i=\{v_{n_{i-1}+1}^i,\cdots,v_{n_i}^i\},i=1,\cdots,n\).
+
+因\(\Ker N^i=\myspan(B_1,\cdots,B_i)\)且\(\Ker N^n=V\)，故\(B_1,\cdots,B_n\)中向量顺序排列即得\(V\)的基.
 
 由于\(N(\Ker N^{i+1}) \subseteq \Ker N^i\)，因此\(N \myspan(B_i) \subseteq \myspan(B_1,\cdots,B_{i-1})\).
 
-也即该列后面的元素均为\(0\).特别地，\(N \myspan(B_1)=0\)，因此\(B_1\)列的所有元素均为\(0\).
-    \begin{align*}
-        M(N,(B_1,\cdots,B_n))=
-        \begin{pmatrix}
-                0 &        & * \\
-                  & \ddots &   \\
-                0 &        & 0 \\
-        \end{pmatrix}
-    \end{align*}
+因此\(M(N,(B_1,\cdots,B_n))\)中，\(B_i\)列中的\(B_i,\cdots,B_n\)行元素均为\(0\).
+
+因此在基\(B_1,\cdots,B_n\)下，\(\forall v \in \myspan(B_i),Nv\)都不会由对角线及其之下的分量构成.
+
+以矩阵语言表述，也就是\(M(N)\)是对角线元素均为\(0\)的上三角矩阵.
 
 \newpage
 

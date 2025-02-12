@@ -1,34 +1,62 @@
-\textit{Theorem 4.8.}
-设\(p,s \in P(F),s \ne 0\)，则存在唯一的\(q,r \in P(F)\)使得\(p=sq+r,\mydeg r < \mydeg s\).
+\textit{Theorem 4.6*}{\kaishu 多项式的因式分解}
+设\(\mydeg p=m\)且\(\lambda \in F\).
+
+那么\(p(\lambda)=0\)当且仅当存在\(\mydeg q=m-1\)，使得\(p(z)=(z-\lambda)q(z)\).
 
 \textit{Proof}
-令\(\mydeg p=n,\mydeg s=m\).由\(\mydeg p=\mydeg s+\mydeg q,\mydeg r < \mydeg s\).
+充分性显然，下证必要性.设\(p(z)=\sum_{i=0}^m a_iz^i,a_0,\cdots,a_m \in F\).
 
-因此\(q \in P_{n-m}(F),r \in P_{m-1}(F)\).
-定义\(T:P_{n-m}(F) \times P_{m-1}(F) \rightarrow P_{n}(F)\)为 
-    \begin{equation*}
-        T(q,r)=sq+r=p
-    \end{equation*}
-首先验证该变换是线性变换.
+因此\(p(z)=p(z)-p(\lambda)=\sum_{i=0}^m a_i(z^i-\lambda^i)\).
+利用\(a^n-b^n=(a-b)\sum_{i=1}^n a^{n-i}b^{i-1}\)，有
     \begin{align*}
-        &T(c_1q_1+c_2q_2,c_1r_1+c_2r_2)=s(c_1q_1+c_2q_2)+(c_1r_1+c_2r_2) \\
-        &=c_1(sq_1+r_1)+c_2(sq_2+r_2)=c_1T(q_1,r_1)+c_2T(q_2,r_2)
+        p(z)-p(\lambda)=\sum_{i=0}^m a_i(z^i-\lambda^i)
+                       =(z-\lambda)\sum_{i=0}^m \sum_{j=1}^i a_iz^{i-j}\lambda^{j-1}
+                       =(z-\lambda)\sum_{i=0}^m \sum_{j=0}^{i-1} a_{j+1}z^j\lambda^i
     \end{align*}
-如果该变换是一个单射变换，则对于任意给定的\(p,s\)，其商多项式和余数多项式均唯一；
+令\(q(z)=\sum_{i=0}^{m-1} \sum_{j=0}^{i-1} a_{j+1}z^j\lambda^{i-j}\)，则\(p(z)=(z-\lambda)q(z)\)，得证.
 
-如果该变换是一个满射变换，则对于任意给定的\(p,s\)，都有对应的商多项式和余数多项式.
+\hspace*{\fill}
 
-下面将证明两条性质都是成立的，先从单射开始.
+\textit{Theorem 4.8*}{\kaishu 多项式的零点上限}
+设\(p \in P(F),\mydeg p=m\)，那么\(p\)至多有\(m\)个零点.
 
-令\(sq+r=p=0\).由于\(\mydeg r < \mydeg sq\)，
-因此\(sq \ne -r \Rightarrow sq=0 \wedge r=0 \Rightarrow q=0 \wedge r=0\).
+\textit{Proof}
+使用数学归纳法.当\(m=1\)时，显然\(p(z)\)只有一个零点\(-\dfrac{a_0}{a_1}\).
 
-即\(T\)是单射变换，且下证该变换是满射变换.
-    \begin{align*}
-        &\mydim (P_{n-m}(F) \times P_{m-1}(F))=\mydim P_{n-m}(F)+\mydim P_{m-1}(F) \\
-        &=(n-m+1)+(m-1+1)=n+1=\mydim P_n(F)
-    \end{align*}
-两者采用的标准基一致，因此根据定理2.41，\(\mydim \Img T=\mydim  P_n(F)\)，从而\(T\)是满射变换.
+设结论对于任意\(\mydeg q=m-1\)的\(q(z)\)均成立.当\(\mydeg p=m\)时，若\(p\)无零点，则结论成立.
 
-于是\(T\)是可逆变换，存在性和唯一性均得证.
+若\(p\)有一个零点\(\lambda\)，则根据\textit{4.6*}，存在\(\mydeg q=m-1\)，使得\(p(z)=(z-\lambda)q(z)\).
+
+由于\(\mydeg q=m-1\)，根据归纳假设，\(q\)至多有\(m-1\)个零点，故\(p\)至多有\(m\)个零点，得证.
+
+\hspace*{\fill}
+
+\textit{Collary 4.8*}{\kaishu 多项式系数的确定性}
+若\(p(z)=\sum_{i=0}^m a_iz^i,q(z)=\sum_{i=0}^m b_iz^i\)，且\(p=q\).
+
+则\(\forall i=0,\cdots,m,a_i=b_i\)，也即\(p\)的系数唯一确定.
+
+\textit{Proof}
+使用反证法.若\(\exists i=0,\cdots,m,a_i \ne b_i\)，则\(p-q \ne 0\).
+
+于是\(p-q\)最多有\(n\)个零点，而\(p(z)-q(z)=0\)有无穷个零点，矛盾，得证.
+
+\hspace*{\fill}
+
+\textit{Theorem 4.9*}{\kaishu 多项式的带余除法}
+设\(p,s \in P(F),s \ne 0\)，
+
+则存在唯一的\(q,r \in P(F)\)使得\(p=sq+r\)，且满足\(\mydeg r<\mydeg s\).
+
+\textit{Proof}
+令\(\mydeg p=n,\mydeg s=m\)，则根据\textit{2.C.10}，\(1,\cdots,z^{m-1},s,zs,z^{n-m}s\)线性无关.
+
+由于该向量组长度为\(n+1=\mydim P_n(F)\)，故它是\(P_n(F)\)的一组基.
+
+因此\(\forall p \in P_n(F),\exists a_0,\cdots,a_{m-1},b_0,\cdots,b_{n-m},\)
+\(p=\sum_{i=0}^{m-1}a_iz^i+s\sum_{i=0}^{n-m}b_iz^i\).
+
+令\(q=\sum_{i=0}^{n-m}b_iz^i,r=\sum_{i=0}^{m-1}a_iz^i\).由系数和次数的唯一性，\(q,r\)唯一，得证.
+
+
 
