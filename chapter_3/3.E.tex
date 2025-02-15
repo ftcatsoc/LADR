@@ -30,7 +30,7 @@
 \(R_j^P(c^\alpha v^\alpha+c^\beta v^\beta)=c^\alpha v_j^\alpha+c^\beta v_j^\beta\)
 \(=c^\alpha R_j^P v^\alpha+c^\beta R_j^P v^\beta\).
 
-定义\(S=(S_1,\cdots,S_m) \in \prod_{i=1}^m L(V_i,W)\)，其中\(S_j \in L(V_j,W)\).
+定义\(S=(S_1,\cdots,S_m) \in \prod_{i=1}^m L(V_i,W)\)，其中\(S_i \in L(V_i,W)\).
 
 定义\(\Gamma \in L(\prod_{i=1}^m L(V_i,W),L(\prod_{i=1}^m V_i,W))\)为\(\Gamma(S)=\sum_{i=1}^m S_i \circ R_i^P\).
 验证\(\Gamma\)的线性性.
@@ -44,18 +44,20 @@
 \(R_j^I(c^\alpha v_j^\alpha+c^\beta v_j^\beta)=(0,\cdots,c^\alpha v_j^\alpha+c^\beta v_j^\beta,\cdots,0)\)
 \(=c^\alpha R_j^I v_j^\alpha+c^\beta R_j^I v_j^\beta\).
 
-\(\forall v_i \in V_i\)，定义\(S_i \in L(V_i,W)\)为\(S_i=T \circ R_i^I\)，其中\(T \in L(\prod_{i=1}^m V_i,W)\).
+定义\(T \in L(\prod_{i=1}^m V_i,W)\)为\(Tv=\sum_{i=1}^m S_iv_i\)，其中\(S_i \in L(V_i,W)\).
 
-定义\(\psi \in L(L(\prod_{i=1}^m V_i,W),L(\prod_{i=1}^m V_i,W))\)为\(\psi(T)=(S_1,\cdots,S_m)=S\).验证\(\psi\)的线性性.
+定义\(\psi \in L(L(\prod_{i=1}^m V_i,W),\prod_{i=1}^m L(V_i,W))\)为\(\psi(T)=(T \circ R_1^I,\cdots,T \circ R_m^I)\).
+验证\(\psi\)的线性性.
     \begin{align*}
-        \psi(c^\alpha T^\alpha+c^\beta T^\beta)=c^\alpha S^\alpha+c^\beta S^\beta
+        \psi(c^\alpha T^\alpha+c^\beta T^\beta)
+        =((c^\alpha T^\alpha+c^\beta T^\beta) \circ R_1^I,\cdots,(c^\alpha T^\alpha+c^\beta T^\beta) \circ R_m^I)
         =c^\alpha \psi(T^\alpha)+c^\beta \psi(T^\beta)
     \end{align*}
 下面验证\(\psi \circ \Gamma\)和\(\Gamma \circ \psi\)是单位变换.
     \begin{align*}
         &(\psi \circ \Gamma)(S)=\psi \sum_{i=1}^m S_i \circ R_i^P
-        =\psi \sum_{i=1}^m T \circ R_i^I \circ R_i^P=\psi(T)=S \\
-        &(\Gamma \circ \psi)(T)=\Gamma(S)=\sum_{i=1}^m S_i \circ R_i^P
+        =((\sum_{i=1}^m S_i \circ R_i^P) \circ R_1^I,\cdots,(\sum_{i=1}^m S_i \circ R_i^P) \circ R_m^I)=S \\
+        &(\Gamma \circ \psi)(T)=\Gamma(T \circ R_1^I,\cdots,T \circ R_m^I)
         =\sum_{i=1}^m T \circ R_i^I \circ R_i^P=T
     \end{align*}
 这里的嵌入映射和投影映射相当于\(\Gamma\)和\(\psi\)的“受体”.

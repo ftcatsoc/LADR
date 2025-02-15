@@ -1,3 +1,72 @@
+\textit{6.A.29.}
+对于\(u,v \in V\)，定义\(d(u,v)=\norm{u-v}\).
+
+(\textit{a})证明\(d\)是\(V\)上的测度.
+
+(\textit{b})设\(V\)是有限维内积空间，证明\(d\)是\(V\)上的完备度量.
+
+(\textit{c})证明\(V\)的所有有限维子空间在\(d\)都是闭集.
+
+\textit{a.Proof}
+正定性：\(d(u,v)=\norm{u-v} \geq 0\)，当且仅当\(u=v\)时\(\norm{u-v}=0\)，即\(d(u,v)=0\).
+
+对称性：\(d(u,v)=\norm{u-v}=\norm{(-1)(v-u)}=\abs{-1}\norm{v-u}=d(v,u)\).
+
+三角不等式：\(d(u,w)=\norm{(u-v)+(v-w)} \leq \norm{u-v}+\norm{v-w}=d(u,v)+d(v,w)\).
+
+\textit{b.Proof}
+设\(e_1,\cdots,e_n\)是\(V\)的一组规范正交基.考虑柯西收敛的实数列\(\{c_k^i\},i=1,\cdots,n\).
+
+由实数的完备性，\(\lim_{k \rightarrow +\infty}c_k^i=c^i \in R\)，于是考虑构造向量列\(\{c_k^ie_i\} \in V\).
+
+下证其在测度\(d\)下，\(\{c_k^ie_i\}\)一定收敛至\(c^ie_i \in V\).
+    \begin{align*}
+        \forall \varepsilon>0,\exists N_i \in N^*,\forall k>N_i,
+        d(c_k^ie_i,c^ie_i)=\norm{c_k^ie_i-c^ie_i}=\abs{c_k^i-c^i}<\varepsilon
+    \end{align*}
+下面考虑向量列\(\{v_k\},v_k=\sum_{i=1}^n \ip{v_k}{e_i}e_i\)，令\(\ip{v_k}{e_i}=c_k^i\)，定义\(v=\sum_{i=1}^n c^ie_i\).
+    \begin{align*}
+        \norm{v_k-v}^2=\norm{\sum_{i=1}^n(c_k^ie_i-c^ie_i)}^2=\norm{\sum_{i=1}^n(c_k^i-c^i)e_i}^2
+        =\sum_{i=1}^n(c_k^i-c^i)^2
+    \end{align*}
+由于\(\forall i=1,\cdots,n,\forall \varepsilon>0,\exists N_i \in N^*,\forall k>N_i,\)
+\(\abs{c_k^i-c^i}<\dfrac{\varepsilon}{\sqrt{n}}\).取\(N=\max\{N_1,\cdots,N_n\}\).
+
+于是\(\forall k>N,\norm{v_k-v}^2=\sum_{i=1}^n(c_k^i-c^i)^2<n(\dfrac{\varepsilon}{\sqrt{n}})^2=\varepsilon^2\)，
+即\(\norm{v_k-v}<\varepsilon\).
+
+\textit{c.Proof}
+由\textit{b}，其有限维子空间的度量是完备的，收敛序列的极限必在其中.
+
+\hspace*{\fill}
+
+\textit{6.B.16.Lemma}
+设\(V\)是有限维复向量空间，满足\(\mydim V=n,T \in L(V)\).
+
+最大行和范数\(\norm{T}_{\infty}=\max_{1 \leq i \leq n} \sum_{j=1}^n \abs{M(T)_{i,j}}\)和谱范数\(\norm{T}_2\)满足
+\(\norm{T}_2 \leq \sqrt{n}\norm{T}_{\infty}\).
+
+\textit{Proof}
+设\(e_1,\cdots,e_n\)是\(V\)的一组规范正交基.
+下证\(\forall v=\sum_{i=1}^n \ip{v}{e_i}e_i \in V,\norm{Tv}^2 \leq n \norm{Tv}_{\infty}^2\).
+    \begin{align*}
+        \norm{Tv}^2=\abs{\sum_{i=1}^n \ip{v}{e_i}Te_i}^2 \leq \sum_{i=1}^n \ip{v}{e_i}^2 \sum_{i=1}^n \norm{Te_i}^2 
+        =\norm{v}^2 \sum_{i=1}^n \norm{Te_i}^2
+    \end{align*}
+不等号来自于柯西-施瓦兹不等式，考虑\(\sum_{i=1}^n \norm{Te_i}^2\)，设最大行和为第\(r\)行.
+    \begin{align*}
+        \norm{Te_i}^2=\norm{\sum_{j=1}^n M(T)_{i,j}e_j}^2=\sum_{j=1}^n M(T)_{i,j}^2
+        \leq (\sum_{j=1}^n \abs{M(T)_{i,j}})^2 \leq (\sum_{j=1}^n \abs{M(T)_{r,j}})^2=\norm{T}_{\infty}^2
+    \end{align*}
+于是\(\sum_{i=1}^n \norm{Te_i}^2 \leq n\norm{Te_r}^2=n\norm{T}_{\infty}^2\).将结果代入原式，得到
+    \begin{align*}
+        \norm{T}_2^2=\sup_{v \ne 0} \dfrac{\norm{Tv}^2}{\norm{v}^2} 
+        \leq \sup_{v \ne 0} \dfrac{n \norm{v}^2 \norm{T}_{\infty}^2}{\norm{v}^2}=n \norm{T}_{\infty}^2,
+        \norm{T}_2 \leq \sqrt{n}\norm{T}_{\infty}
+    \end{align*}
+
+\newpage
+
 \textit{6.B.16.}
 设\(V\)是有限维复内积空间，\(T \in L(V)\)，\(\lambda_1,\cdots,\lambda_n\)是\(T\)的所有相异特征值.
 
@@ -52,75 +121,4 @@
     \end{align*}
 由于\(\norm{T^m|_{J_j(\lambda_i,T)}}_2 \leq \sqrt{d_{i,j}}\norm{T^m|_{J_j(\lambda_i,T)}}_{\infty}\)，
 故\(\norm{T^m}_2 \leq \sqrt{d_{\max}}\norm{T^m}_{\infty}<\varepsilon\).
-
-范数的等价性证明将于下页补齐.
-
-\newpage
-
-\textit{6.B.16.Lemma}
-设\(V\)是有限维复向量空间，满足\(\mydim V=n,T \in L(V)\).
-
-最大行和范数\(\norm{T}_{\infty}=\max_{1 \leq i \leq n} \sum_{j=1}^n \abs{M(T)_{i,j}}\)和谱范数\(\norm{T}_2\)满足
-\(\norm{T}_2 \leq \sqrt{n}\norm{T}_{\infty}\).
-
-\textit{Proof}
-设\(e_1,\cdots,e_n\)是\(V\)的一组规范正交基.
-下证\(\forall v=\sum_{i=1}^n \ip{v}{e_i}e_i \in V,\norm{Tv}^2 \leq n \norm{Tv}_{\infty}^2\).
-    \begin{align*}
-        \norm{Tv}^2=\abs{\sum_{i=1}^n \ip{v}{e_i}Te_i}^2 \leq \sum_{i=1}^n \ip{v}{e_i}^2 \sum_{i=1}^n \norm{Te_i}^2 
-        =\norm{v}^2 \sum_{i=1}^n \norm{Te_i}^2
-    \end{align*}
-不等号来自于柯西-施瓦兹不等式，考虑\(\sum_{i=1}^n \norm{Te_i}^2\)，设最大行和为第\(r\)行.
-    \begin{align*}
-        \norm{Te_i}^2=\norm{\sum_{j=1}^n M(T)_{i,j}e_j}^2=\sum_{j=1}^n M(T)_{i,j}^2
-        \leq (\sum_{j=1}^n \abs{M(T)_{i,j}})^2 \leq (\sum_{j=1}^n \abs{M(T)_{r,j}})^2=\norm{T}_{\infty}^2
-    \end{align*}
-于是\(\sum_{i=1}^n \norm{Te_i}^2 \leq n\norm{Te_r}^2=n\norm{T}_{\infty}^2\).将结果代入原式，得到
-    \begin{align*}
-        \norm{T}_2^2=\sup_{v \ne 0} \dfrac{\norm{Tv}^2}{\norm{v}^2} 
-        \leq \sup_{v \ne 0} \dfrac{n \norm{v}^2 \norm{T}_{\infty}^2}{\norm{v}^2}=n \norm{T}_{\infty}^2,
-        \norm{T}_2 \leq \sqrt{n}\norm{T}_{\infty}
-    \end{align*}
-
-\hspace*{\fill}
-
-\textit{6.A.29.}
-对于\(u,v \in V\)，定义\(d(u,v)=\norm{u-v}\).
-
-(\textit{a})证明\(d\)是\(V\)上的测度.
-
-(\textit{b})设\(V\)是有限维内积空间，证明\(d\)是\(V\)上的完备度量.
-
-(\textit{c})证明\(V\)的所有有限维子空间在\(d\)都是闭集.
-
-\textit{a.Proof}
-正定性：\(d(u,v)=\norm{u-v} \geq 0\)，当且仅当\(u=v\)时\(\norm{u-v}=0\)，即\(d(u,v)=0\).
-
-对称性：\(d(u,v)=\norm{u-v}=\norm{(-1)(v-u)}=\abs{-1}\norm{v-u}=d(v,u)\).
-
-三角不等式：\(d(u,w)=\norm{(u-v)+(v-w)} \leq \norm{u-v}+\norm{v-w}=d(u,v)+d(v,w)\).
-
-\textit{b.Proof}
-设\(e_1,\cdots,e_n\)是\(V\)的一组规范正交基.考虑柯西收敛的实数列\(\{c_k^i\},i=1,\cdots,n\).
-
-由实数的完备性，\(\lim_{k \rightarrow +\infty}c_k^i=c^i \in R\)，于是考虑构造向量列\(\{c_k^ie_i\} \in V\).
-
-下证其在测度\(d\)下，\(\{c_k^ie_i\}\)一定收敛至\(c^ie_i \in V\).
-    \begin{align*}
-        \forall \varepsilon>0,\exists N_i \in N^*,\forall k>N_i,
-        d(c_k^ie_i,c^ie_i)=\norm{c_k^ie_i-c^ie_i}=\abs{c_k^i-c^i}<\varepsilon
-    \end{align*}
-下面考虑向量列\(\{v_k\},v_k=\sum_{i=1}^n \ip{v_k}{e_i}e_i\)，令\(\ip{v_k}{e_i}=c_k^i\)，定义\(v=\sum_{i=1}^n c^ie_i\).
-    \begin{align*}
-        \norm{v_k-v}^2=\norm{\sum_{i=1}^n(c_k^ie_i-c^ie_i)}^2=\norm{\sum_{i=1}^n(c_k^i-c^i)e_i}^2
-        =\sum_{i=1}^n(c_k^i-c^i)^2
-    \end{align*}
-由于\(\forall i=1,\cdots,n,\forall \varepsilon>0,\exists N_i \in N^*,\forall k>N_i,\)
-\(\abs{c_k^i-c^i}<\dfrac{\varepsilon}{\sqrt{n}}\).取\(N=\max\{N_1,\cdots,N_n\}\).
-
-于是\(\forall k>N,\norm{v_k-v}^2=\sum_{i=1}^n(c_k^i-c^i)^2<n(\dfrac{\varepsilon}{\sqrt{n}})^2=\varepsilon^2\)，
-即\(\norm{v_k-v}<\varepsilon\).
-
-\textit{c.Proof}
-由\textit{b}，其有限维子空间的度量是完备的，收敛序列的极限必在其中.
 
